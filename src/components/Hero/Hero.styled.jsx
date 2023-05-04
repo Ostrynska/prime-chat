@@ -3,8 +3,8 @@ import { lightTheme } from '../../utils/theme';
 
 import { ReactComponent as SvgHomePage } from '../../images/home-dashboard.svg';
 
-import arrowDesktop from '../../images/home-arrow@1x.png';
-import arrowDesktopRetina from '../../images/home-arrow@2x.png';
+// import arrowDesktop from '../../images/home-arrow@1x.png';
+// import arrowDesktopRetina from '../../images/home-arrow@2x.png';
 import bgDesktop from '../../images/bgDesktop@1x.png';
 import bgDesktopRetina from '../../images/bgDesktop@2x.png';
 
@@ -14,20 +14,23 @@ export const Wrapper = styled.div`
 
  ${'' /* position: relative; */}
 `;
-export const HomeWrapper = styled.div`
+export const HomeSection = styled.section`
  ${'' /* display: flex; */}
 
- @media screen and (min-width: 1920px) {
+ ${
+  '' /* @media screen and (min-width: 1920px) {
   height: 825px;
-  background-image: url(${arrowDesktop});
-  background-image: url(${bgDesktop});
-  @media screen and (min-device-pixel-ratio: 2),
-   (min-resolution: 192dpi),
-   (min-resolution: 2dppx) {
-   background-image: url(${arrowDesktopRetina});
-   background-image: url(${bgDesktopRetina});
-  }
+  ${'' /* background-image: url(${arrowDesktop}); */
  }
+  ${'' /* background-image: url(${bgDesktop}); */}
+ ${'' /* @media screen and (min-device-pixel-ratio: 2), */}
+  ${'' /* (min-resolution: 192dpi), */}
+  ${'' /* (min-resolution: 2dppx) { */}
+  ${'' /* background-image: url(${arrowDesktopRetina}); */}
+  ${'' /* background-image: url(${bgDesktopRetina}); */}
+  ${'' /* } */}
+  ${'' /* } */} */
+ ${'' /* } */}
 `;
 
 export const TitleWrap = styled.div`
@@ -82,36 +85,6 @@ export const Title = styled.p`
  color: ${lightTheme.colors.contentColor};
 
  margin-bottom: 40px;
-`;
-
-export const ButtonStart = styled.button`
- width: 200px;
- height: 86px;
- background: ${lightTheme.colors.headerColor};
- border-radius: 72px;
- margin-right: 21px;
-
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 18px;
- line-height: 1.61;
- text-transform: uppercase;
- color: ${lightTheme.colors.whiteColor};
-`;
-
-export const ButtonDemo = styled.button`
- background: transparent;
- width: 259px;
- height: 86px;
- background: ${lightTheme.colors.lightGreyColor};
- border-radius: 72px;
-
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 18px;
- line-height: 1.61;
- text-transform: uppercase;
- color: ${lightTheme.colors.titleColor};
 `;
 
 export const HomePageImage = styled(SvgHomePage)``;
