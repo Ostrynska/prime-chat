@@ -5,33 +5,15 @@ import { ReactComponent as SvgHomePage } from '../../images/home-dashboard.svg';
 
 // import arrowDesktop from '../../images/home-arrow@1x.png';
 // import arrowDesktopRetina from '../../images/home-arrow@2x.png';
-import bgDesktop from '../../images/bgDesktop@1x.png';
-import bgDesktopRetina from '../../images/bgDesktop@2x.png';
+// import bgDesktop from '../../images/bgDesktop@1x.png';
+// import bgDesktopRetina from '../../images/bgDesktop@2x.png';
 
 export const Wrapper = styled.div`
  width: 710px;
- height: 497px;
-
- ${'' /* position: relative; */}
+ ${'' /* height: 497px; */}
+ display: inline-block;
 `;
-export const HomeSection = styled.section`
- ${'' /* display: flex; */}
-
- ${
-  '' /* @media screen and (min-width: 1920px) {
-  height: 825px;
-  ${'' /* background-image: url(${arrowDesktop}); */
- }
-  ${'' /* background-image: url(${bgDesktop}); */}
- ${'' /* @media screen and (min-device-pixel-ratio: 2), */}
-  ${'' /* (min-resolution: 192dpi), */}
-  ${'' /* (min-resolution: 2dppx) { */}
-  ${'' /* background-image: url(${arrowDesktopRetina}); */}
-  ${'' /* background-image: url(${bgDesktopRetina}); */}
-  ${'' /* } */}
-  ${'' /* } */} */
- ${'' /* } */}
-`;
+export const HomeSection = styled.section``;
 
 export const TitleWrap = styled.div`
  width: 151px;
