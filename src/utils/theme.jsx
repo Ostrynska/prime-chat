@@ -6,13 +6,6 @@ const mainVars = {
   tabMax: '1439px',
   desk: '1920px',
  },
- fontWeights: {
-  xs: 300,
-  s: 400,
-  m: 500,
-  l: 600,
-  xl: 700,
- },
  transitions: {
   main: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1)',
  },
@@ -28,6 +21,7 @@ export const lightTheme = {
  colors: {
   bgColor: '#FFFFFF',
   bgSecondaryColor: '#FFF3E1',
+  bgGrey: '#ECECEC',
   contentColor: '#4e4e4e',
   primaryColor: '#625FFB',
   secondaryColor: '#E2992B',
