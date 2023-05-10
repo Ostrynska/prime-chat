@@ -12,6 +12,8 @@ import {
  AltText,
  PlatformTitle,
  PlatformText,
+ MessengerImage,
+ AppImage,
 } from './Overview.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 
@@ -19,6 +21,9 @@ import bussinessMessengerLogo from '../../images/overview/bussiness-messenger.sv
 import managementToolLogo from '../../images/overview/management-tool.svg';
 import customerPlatformLogo from '../../images/overview/customer-platform.svg';
 import appLogo from '../../images/overview/app.svg';
+
+import messenger from '../../images/overview/welcome-image.png';
+import app from '../../images/overview/app-image.png';
 
 const Overview = () => {
  return (
@@ -44,6 +49,7 @@ const Overview = () => {
       Provide the best, most intuitive support across all channels. Proactively
       standerd customer needs serve excellence
      </PlatformText>
+     <MessengerImage src={messenger} alt="Wellcome" />
     </PlatformItem>
     <PlatformItem>
      <ReactSVG src={managementToolLogo} />
@@ -73,6 +79,7 @@ const Overview = () => {
       Provide the best, most intuitive support across all channels. Proactively
       standerd customer needs serve excellence.
      </PlatformText>
+     <AppImage src={app} alt="App" />
     </PlatformItem>
    </PlatformRvs>
   </Section>
