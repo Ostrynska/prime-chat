@@ -1,5 +1,5 @@
 import { Container } from '../Container/Conteiner';
-import { ButtonS } from '../Button/Button';
+import { Button } from '../Button/Button';
 
 import { ReactComponent as Logo } from '../../images/logo.svg';
 
@@ -46,7 +46,7 @@ const Header = () => {
       display: 'flex',
      }}
     >
-     <ButtonS variant="secondary" text={'Login'} />
+     <Button variant="secondary" text={'Login'} />
     </div>
    </HeaderWrap>
   </Container>
