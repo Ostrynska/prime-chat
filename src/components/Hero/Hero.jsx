@@ -1,8 +1,6 @@
 import { Button } from '../Button/Button';
-
+import { PreTitle } from '../PreTitle/PreTitle';
 import {
- TitleWrap,
- TitleWrapText,
  MainTitle,
  SpanTitle,
  SpanTitleHilight,
@@ -16,9 +14,7 @@ const Hero = () => {
  return (
   <HomeSection>
    <Wrapper>
-    <TitleWrap>
-     <TitleWrapText>Chatbot</TitleWrapText>
-    </TitleWrap>
+    <PreTitle variant="primary" text={'Chatbot'} />
     <MainTitle>
      Offer the <br />
      best <SpanTitle>Conversational</SpanTitle>
