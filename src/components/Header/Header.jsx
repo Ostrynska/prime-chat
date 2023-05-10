@@ -46,7 +46,7 @@ const Header = () => {
       display: 'flex',
      }}
     >
-     <ButtonS variant="secondary" text={'Logoin'} />
+     <ButtonS variant="secondary" text={'Login'} />
     </div>
    </HeaderWrap>
   </Container>
