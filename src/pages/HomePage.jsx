@@ -3,17 +3,23 @@ import Partners from '../components/Partners/Partners';
 import AboutUs from '../components/AboutUs/AboutUs';
 import Benefits from '../components/Benefits/Benefits';
 import Overview from '../components/Overview/Overview';
-import { Container } from '../components/Container/Conteiner';
+import Integration from '../components/Integration/Integration';
+import CustomerStories from '../components/CustomerStories/CustomerStories';
+// import { Container } from '../components/Container/Conteiner';
 
 const HomePage = () => {
  return (
-  <Container>
+  //   <Container>
+  <>
    <Hero />
    <Partners />
    <AboutUs />
    <Benefits />
    <Overview />
-  </Container>
+   <Integration />
+   <CustomerStories />
+   {/* </Container> */}
+  </>
  );
 };
 
