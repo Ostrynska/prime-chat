@@ -63,7 +63,6 @@ export const PlatformRvs = styled.ul`
 export const PlatformItem = styled.li`
  position: relative;
  background: #f8f8f8;
- border: 1px solid #4e4e4e;
  padding: 55px 44px 75px 44px;
  border-radius: 30px;
 `;
@@ -111,4 +110,17 @@ export const PlatformText = styled.p`
  /* or 32px */
 
  color: #4e4e4e;
+`;
+export const MessengerImage = styled.img`
+ position: absolute;
+ top: 0px;
+ left: -1px;
+`;
+
+export const AppImage = styled.img`
+ width: 920px;
+ height: 409px;
+ position: absolute;
+ top: -5px;
+ ${'' /* right: 1px; */}
 `;
