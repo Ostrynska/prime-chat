@@ -3,6 +3,9 @@ import { lightTheme } from '../../utils/theme';
 
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
+import aboutUsDesktop from '../../images/about-us/aboutUsDesktop@1x.png';
+import aboutUsDesktopRetina from '../../images/about-us/aboutUsDesktop@2x.png';
+
 export const Section = styled.section`
  padding-bottom: 135px;
 `;
@@ -98,4 +101,17 @@ export const CheckText = styled.p`
   `
     color: ${lightTheme.colors[p.color]};
   `}
+`;
+
+export const AboutUsImage = styled.div`
+ background-image: url(${aboutUsDesktop});
+ background-size: cover;
+ width: 100%;
+ max-width: 904px;
+ z-index: -1;
+ @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  background-image: url(${aboutUsDesktopRetina});
+ }
 `;
