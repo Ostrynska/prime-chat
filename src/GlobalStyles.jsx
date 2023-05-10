@@ -69,6 +69,17 @@ export const GlobalStyle = createGlobalStyle`
 }
   ${modernNormalize}
 
+  html {
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+  }
   code {
     font-family: 'OpenSans', sans-serif;
   }
