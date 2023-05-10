@@ -1,10 +1,15 @@
-import { TitleWrap, TitleWrapText } from './PreTitle.styled';
+import {
+ TitleWrap,
+ TitleWrapText,
+ TitleWrapSecondary,
+ TitleWrapTextSecondary,
+} from './PreTitle.styled';
 
 export const PreTitle = ({ text, variant = 'primary' }) => {
  return variant === 'secondary' ? (
-  <TitleWrap>
-   <TitleWrapText>{text}</TitleWrapText>
-  </TitleWrap>
+  <TitleWrapSecondary>
+   <TitleWrapTextSecondary>{text}</TitleWrapTextSecondary>
+  </TitleWrapSecondary>
  ) : (
   <TitleWrap>
    <TitleWrapText>{text}</TitleWrapText>
