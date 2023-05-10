@@ -1,6 +1,3 @@
-// import { ButtonS } from '../Button/Button';
-
-// import { ReactComponent as Logo } from '../../images/logo.svg';
 import { ReactSVG } from 'react-svg';
 import {
  PartnersSection,
@@ -9,26 +6,26 @@ import {
  PartnersItem,
 } from './Partners.styled';
 
-// import { ReactComponent as PartnerItem1 } from '../../images/companies/company-1.svg';
-// import { ReactComponent as PartnerItem2 } from '../../images/companies/company-2.svg';
-// import { ReactComponent as PartnerItem3 } from '../../images/companies/company-3.svg';
-// import { ReactComponent as PartnerItem4 } from '../../images/companies/company-4.svg';
-// import { ReactComponent as PartnerItem5 } from '../../images/companies/company-5.svg';
-// import { ReactComponent as PartnerItem6 } from '../../images/companies/company-6.svg';
-// import { ReactComponent as PartnerItem7 } from '../../images/companies/company-7.svg';
-// import { ReactComponent as PartnerItem8 } from '../../images/companies/company-8.svg';
-// import { ReactComponent as PartnerItem9 } from '../../images/companies/company-9.svg';
+import partner1 from '../../images/companies/company-1.svg';
+import partner2 from '../../images/companies/company-2.svg';
+import partner3 from '../../images/companies/company-3.svg';
+import partner4 from '../../images/companies/company-4.svg';
+import partner5 from '../../images/companies/company-5.svg';
+import partner6 from '../../images/companies/company-6.svg';
+import partner7 from '../../images/companies/company-7.svg';
+import partner8 from '../../images/companies/company-8.svg';
+import partner9 from '../../images/companies/company-9.svg';
 
 const logos = [
- 'images/companies/company-1.svg',
- 'images/companies/company-2.svg',
- 'images/companies/company-3.svg',
- 'images/companies/company-4.svg',
- 'images/companies/company-5.svg',
- 'images/companies/company-6.svg',
- 'images/companies/company-7.svg',
- 'images/companies/company-8.svg',
- 'images/companies/company-9.svg',
+ partner1,
+ partner2,
+ partner3,
+ partner4,
+ partner5,
+ partner6,
+ partner7,
+ partner8,
+ partner9,
 ];
 
 const Partners = () => {
