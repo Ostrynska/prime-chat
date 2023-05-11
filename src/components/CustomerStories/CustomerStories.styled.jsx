@@ -3,6 +3,7 @@ import { lightTheme } from '../../utils/theme';
 
 export const Wrapper = styled.div`
  margin-bottom: 56px;
+ position: 'relative';
 `;
 export const Section = styled.section`
  padding-top: 135px;
@@ -24,15 +25,10 @@ export const SpanTitle = styled.span`
  color: ${lightTheme.colors.headerColor};
 `;
 
-export const List = styled.ul`
- display: flex;
- gap: 35px;
-`;
-
-export const Item = styled.li`
+export const Item = styled.div`
  padding: 53px 68px;
 
- width: 749px;
+ max-width: 749px;
 
  background: #f8f8f8;
  border-radius: 30px;

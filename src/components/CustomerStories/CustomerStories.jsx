@@ -5,16 +5,15 @@ import {
  Title,
  Wrapper,
  Section,
- List,
  Item,
- Card,
  TitleWrap,
  Comment,
  User,
  UserName,
  UserPosition,
- //  HomePageImage,
 } from './CustomerStories.styled';
+
+import CenterMode from '../Slider/Slider';
 
 import userImageOne from '../../images/customer-stories/user1@1x.jpg';
 import logoOne from '../../images/customer-stories/companyLogo1.svg';
@@ -33,7 +32,9 @@ const CustomerStories = () => {
       About Customer <SpanTitle>stories</SpanTitle>
      </Title>
     </Wrapper>
-    <List>
+   </Container>
+   <div style={{ paddingLeft: 261 }}>
+    <CenterMode>
      <Item>
       <TitleWrap>
        <img
@@ -111,8 +112,8 @@ const CustomerStories = () => {
        us.”
       </Comment>
      </Item>
-    </List>
-   </Container>
+    </CenterMode>
+   </div>
   </Section>
  );
 };
