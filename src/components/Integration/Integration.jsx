@@ -3,7 +3,6 @@ import {
  Section,
  Title,
  TitleSpan,
- IntegrationImage,
  Text,
  List,
  ListItem,
