@@ -1,3 +1,4 @@
+import { Container } from '../Container/Conteiner';
 import {
  Section,
  Content,
@@ -17,7 +18,7 @@ import { Button } from '../Button/Button';
 const AboutUs = () => {
  return (
   <Section>
-   <div style={{ display: 'flex' }}>
+   <Container style={{ display: 'flex' }}>
     <Content>
      <PreTitle
       variant="primary"
@@ -56,7 +57,7 @@ const AboutUs = () => {
      <Button variant="primary" text={'Try for free'} />
     </Content>
     <AboutUsImage />
-   </div>
+   </Container>
   </Section>
  );
 };
