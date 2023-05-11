@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
 export const PartnersSection = styled.section`
- margin: 100px 0 135px 0;
+ padding-top: 100px;
+ padding-bottom: 135px;
+`;
+
+export const PartnersWrap = styled.div`
  padding: 126px 162px;
  width: 1400px;
  height: 488px;
