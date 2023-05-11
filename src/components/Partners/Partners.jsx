@@ -1,6 +1,8 @@
+import { Container } from '../Container/Conteiner';
 import { ReactSVG } from 'react-svg';
 import {
  PartnersSection,
+ PartnersWrap,
  PartnersTitle,
  PartnersList,
  PartnersItem,
@@ -31,16 +33,20 @@ const logos = [
 const Partners = () => {
  return (
   <PartnersSection>
-   <PartnersTitle>Trusted by 25K+ businesses</PartnersTitle>
-   <PartnersList>
-    {logos.map((logo, id) => {
-     return (
-      <PartnersItem key={id}>
-       <ReactSVG src={logo} onError={error => console.log(error.message)} />
-      </PartnersItem>
-     );
-    })}
-   </PartnersList>
+   <Container>
+    <PartnersWrap>
+     <PartnersTitle>Trusted by 25K+ businesses</PartnersTitle>
+     <PartnersList>
+      {logos.map((logo, id) => {
+       return (
+        <PartnersItem key={id}>
+         <ReactSVG src={logo} onError={error => console.log(error.message)} />
+        </PartnersItem>
+       );
+      })}
+     </PartnersList>
+    </PartnersWrap>
+   </Container>
   </PartnersSection>
  );
 };
