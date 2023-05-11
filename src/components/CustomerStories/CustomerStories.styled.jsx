@@ -23,3 +23,68 @@ export const SpanTitle = styled.span`
  font-weight: 700;
  color: ${lightTheme.colors.headerColor};
 `;
+
+export const List = styled.ul`
+ display: flex;
+ gap: 35px;
+`;
+
+export const Item = styled.li`
+ padding: 53px 68px;
+
+ width: 749px;
+
+ background: #f8f8f8;
+ border-radius: 30px;
+ border: 1px solid black;
+`;
+
+export const Comment = styled.div`
+ margin-top: 19px;
+ padding-top: 27px;
+
+ max-width: 613px;
+ border-top: 1px solid #cccccc;
+
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 160%;
+ /* or 32px */
+
+ color: #4e4e4e;
+`;
+
+export const TitleWrap = styled.div`
+ display: flex;
+`;
+
+export const User = styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: center;
+ margin-left: 20px;
+`;
+
+export const UserName = styled.h3`
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 600;
+ font-size: 30px;
+ line-height: 133.2%;
+ /* identical to box height, or 40px */
+
+ text-transform: capitalize;
+ color: #303030;
+`;
+
+export const UserPosition = styled.p`
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 160%;
+ /* identical to box height, or 29px */
+
+ text-transform: capitalize;
+ color: #625ffb;
+`;
