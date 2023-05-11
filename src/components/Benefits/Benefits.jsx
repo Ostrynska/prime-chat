@@ -1,3 +1,4 @@
+import { Container } from '../Container/Conteiner';
 import {
  Section,
  Title,
@@ -18,23 +19,25 @@ const awards = [award1, award2, award3, award4];
 const Benefits = () => {
  return (
   <Section>
-   <Title>
-    Customer-facing <TitleSpan>teams love </TitleSpan>Primchat
-   </Title>
-   <Post>
-    Provide the best, most intuitive support across all channels. Proactively
-    understand customer needs to serve excellence the first time.
-   </Post>
-   <AwardsList>
-    {awards.map((award, id) => {
-     return (
-      <AwardItem key={id}>
-       <img src={award} alt={`Award ${id}`} />
-      </AwardItem>
-     );
-    })}
-   </AwardsList>
-   <CustomerText>We've got happy customers, ☺️ too.</CustomerText>
+   <Container>
+    <Title>
+     Customer-facing <TitleSpan>teams love </TitleSpan>Primchat
+    </Title>
+    <Post>
+     Provide the best, most intuitive support across all channels. Proactively
+     understand customer needs to serve excellence the first time.
+    </Post>
+    <AwardsList>
+     {awards.map((award, id) => {
+      return (
+       <AwardItem key={id}>
+        <img src={award} alt={`Award ${id}`} />
+       </AwardItem>
+      );
+     })}
+    </AwardsList>
+    <CustomerText>We've got happy customers, ☺️ too.</CustomerText>
+   </Container>
   </Section>
  );
 };
