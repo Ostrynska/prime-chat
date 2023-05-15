@@ -36,3 +36,16 @@ export const SecondaryButton = styled(ButtonStyle)`
   background-color: #e2992b;
  }
 `;
+
+export const SecondaryButtonIcon = styled(ButtonStyle)`
+ display: flex;
+ align-items: center;
+ color: #263238;
+ padding: 23px 42px;
+ height: 86px;
+ background-color: #f3f3f3;
+ &:hover {
+  color: #ffffff;
+  background-color: #e2992b;
+ }
+`;
