@@ -8,9 +8,11 @@ export const Wrapper = styled.div`
 export const Section = styled.section`
  padding-top: 135px;
  padding-bottom: 135px;
+ ${'' /* border-width: 1400px; */}
+ ${'' /* border-bottom: 1px solid #cecece; */}
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
  font-size: 60px;
