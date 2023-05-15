@@ -2,7 +2,7 @@
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background-color: #f4f4f4;
+  background-color: #000000;
   display: inline-block;
   margin: 0 12px;
   transition: all 0.3s ease;
@@ -10,7 +10,7 @@
 }
 
 .active-dot {
-  background-color: #625FFB;
+  background-color: #403cfc;
 }
 
 .sample-next-arrow {
@@ -22,7 +22,7 @@
   border-radius: 72px;
   position: absolute;
   top: -131px;
-  right: 40px;
+  right: 350px;
 }
 
 .sample-next-arrow p {
