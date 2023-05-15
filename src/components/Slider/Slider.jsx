@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
 const CenterMode = ({ children }) => {
  const appendDots = dots => {
   return (
-   <div style={{ position: 'absolute', left: 420, top: '-111px' }}>
+   <div style={{ position: 'absolute', right: '-1290px', top: '-110px' }}>
     <ul style={{ display: 'flex', gap: 17 }}>
      {dots.map((dot, index) => (
       <li
