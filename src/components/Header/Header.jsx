@@ -42,8 +42,7 @@ const Header = () => {
     </HeaderNav>
     <div
      style={{
-      marginLeft: 'auto',
-      display: 'flex',
+      marginLeft: '115px',
      }}
     >
      <Button variant="secondary" text={'Login'} />
