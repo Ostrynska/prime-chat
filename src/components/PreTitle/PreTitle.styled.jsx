@@ -11,7 +11,7 @@ export const TitleWrap = styled.div`
  padding: 11px 40px;
  background: ${lightTheme.colors.bgSecondaryColor};
 
- margin-bottom: 10px;
+ margin-bottom: 17px;
 `;
 
 export const TitleWrapText = styled.p`
