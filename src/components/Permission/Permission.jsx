@@ -14,12 +14,14 @@ import { PreTitle } from '../PreTitle/PreTitle';
 import { Container } from '../Container/Conteiner';
 
 import permissionImage from '../../images/permission/permissionImage@1x.png';
+import permissionImageRetina from '../../images/permission/permissionImage@2x.png';
 
 const Permission = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container>
-    {/* <PermissionWrap> */}
     <Wrap>
      <PreTitle variant="secondary" text={'Permission'} />
      <Title>
@@ -47,15 +49,16 @@ const Permission = () => {
     </List>
 
     <img
-     src={permissionImage}
+     src={isRetina ? permissionImageRetina : permissionImage}
      alt="Permission"
+     width={877.03}
+     height={692}
      style={{
       position: 'absolute',
       top: '65px',
       right: '10px',
      }}
     />
-    {/* </PermissionWrap> */}
    </Container>
   </Section>
  );
