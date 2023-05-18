@@ -12,12 +12,13 @@ export const Section = styled.section`
  background: #625ffb;
  background-image: url(${integrationDesktop});
  background-size: cover;
+ background-repeat: no-repeat;
  width: 100%;
- ${'' /* max-width: 904px; */}
  z-index: -1;
  @media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
   background-image: url(${integrationDesktopRetina});
  }
 `;
@@ -25,10 +26,6 @@ export const Container = styled.div`
  text-align: center;
  margin-left: auto;
  margin-right: auto;
- ${
-  '' /* padding-left: 260px;
- padding-right: 260px; */
- }
  width: 1920px;
 `;
 
