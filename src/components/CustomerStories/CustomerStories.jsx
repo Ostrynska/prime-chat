@@ -32,8 +32,6 @@ const CustomerStories = () => {
       About Customer <SpanTitle>stories</SpanTitle>
      </Title>
     </Wrapper>
-   </Container>
-   <div style={{ paddingLeft: 261 }}>
     <CenterMode>
      <Item>
       <TitleWrap>
@@ -113,7 +111,7 @@ const CustomerStories = () => {
       </Comment>
      </Item>
     </CenterMode>
-   </div>
+   </Container>
   </Section>
  );
 };
