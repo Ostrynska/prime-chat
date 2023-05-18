@@ -54,12 +54,12 @@ const Hero = () => {
     <img
      src={isRetina ? bgImageDesktopRetina : bgImageDesktop}
      alt="Home img block"
-     height={623}
-     width={860}
+     height={631}
+     width={795}
      style={{
       position: 'absolute',
-      top: '230px',
-      right: '20px',
+      top: '206px',
+      right: '100px',
       zIndex: '4',
      }}
     />
