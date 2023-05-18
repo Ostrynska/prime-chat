@@ -19,34 +19,43 @@ const Permission = () => {
  return (
   <Section>
    <Container>
-    <PermissionWrap>
-     <Wrap>
-      <PreTitle variant="secondary" text={'Permission'} />
-      <Title>
-       User Role & <TitleSpan>Permissions</TitleSpan>
-      </Title>
-      <Text>
-       Increase engagement and make buying easy with our stylish live chat
-       widget. Provide personalized real-time support customers and visited
-       pages.
-      </Text>
-      <List>
-       <ListItem>
-        <Check />
-        <CheckText>Edit Messenger intro and localization</CheckText>
-       </ListItem>
-       <ListItem>
-        <Check />
-        <CheckText>Edit teammate permissions</CheckText>
-       </ListItem>
-       <ListItem>
-        <Check />
-        <CheckText>Can access people, companies, and account lists</CheckText>
-       </ListItem>
-      </List>
-     </Wrap>
-     <img src={permissionImage} alt="Permission" />{' '}
-    </PermissionWrap>
+    {/* <PermissionWrap> */}
+    <Wrap>
+     <PreTitle variant="secondary" text={'Permission'} />
+     <Title>
+      User Role & <TitleSpan>Permissions</TitleSpan>
+     </Title>
+     <Text>
+      Increase engagement and make buying easy with our stylish live chat
+      widget. Provide personalized real-time support customers and visited
+      pages.
+     </Text>
+    </Wrap>
+    <List>
+     <ListItem>
+      <Check />
+      <CheckText>Edit Messenger intro and localization</CheckText>
+     </ListItem>
+     <ListItem>
+      <Check />
+      <CheckText>Edit teammate permissions</CheckText>
+     </ListItem>
+     <ListItem>
+      <Check />
+      <CheckText>Can access people, companies, and account lists</CheckText>
+     </ListItem>
+    </List>
+
+    <img
+     src={permissionImage}
+     alt="Permission"
+     style={{
+      position: 'absolute',
+      top: '65px',
+      right: '10px',
+     }}
+    />
+    {/* </PermissionWrap> */}
    </Container>
   </Section>
  );
