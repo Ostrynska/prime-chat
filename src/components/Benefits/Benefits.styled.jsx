@@ -4,11 +4,24 @@ import { lightTheme } from '../../utils/theme';
 export const Section = styled.section`
  padding-top: 125px;
  padding-bottom: 125px;
- width: 1400px;
- border-top: 1px solid #cecece;
- border-bottom: 1px solid #cecece;
+ position: relative;
+ ::before,
+ ::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 1400px;
+  background-color: #cecece;
+ }
+ ::before {
+  top: 0;
+ }
+ ::after {
+  bottom: 0;
+ }
 `;
-
 export const Content = styled.div`
  width: 632px;
  padding-top: 53px;
