@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
-import { ReactComponent as SvgHomePage } from '../../images/home-dashboard.svg';
+// import { ReactComponent as SvgHomePage } from '../../images/home-dashboard.svg';
 
-// import arrowDesktop from '../../images/home-arrow@1x.png';
-// import arrowDesktopRetina from '../../images/home-arrow@2x.png';
-// import bgDesktop from '../../images/bgDesktop@1x.png';
-// import bgDesktopRetina from '../../images/bgDesktop@2x.png';
+import arrowDesktop from '../../images/home-arrow.svg';
 
 export const Wrapper = styled.div`
  width: 710px;
- ${'' /* height: 497px; */}
  display: inline-block;
 `;
-export const HomeSection = styled.section``;
+export const HomeSection = styled.section`
+ padding-bottom: 202px;
+ background-image: url(${arrowDesktop});
+ background-repeat: no-repeat;
+ background-position: 60% 80%;
+ width: 100%;
+ z-index: -1;
+`;
 
 export const MainTitle = styled.h1`
  font-family: 'Open Sans', sans-serif;
@@ -49,4 +52,4 @@ export const Title = styled.p`
  margin-bottom: 40px;
 `;
 
-export const HomePageImage = styled(SvgHomePage)``;
+// export const HomePageImage = styled(SvgHomePage)``;
