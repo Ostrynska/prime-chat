@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
  margin-right: auto;
  padding-left: 260px;
  padding-right: 260px;
- min-width: 1920px;
+ width: 1920px;
 
  ${
   '' /* @media screen and (max-width: ${p => p.theme.breakpoints.mobMax}) {
