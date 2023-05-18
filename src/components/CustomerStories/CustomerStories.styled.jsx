@@ -8,8 +8,19 @@ export const Wrapper = styled.div`
 export const Section = styled.section`
  padding-top: 135px;
  padding-bottom: 135px;
- ${'' /* border-width: 1400px; */}
- ${'' /* border-bottom: 1px solid #cecece; */}
+ position: relative;
+ ::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 1400px;
+  background-color: #cecece;
+ }
+ ::after {
+  bottom: 0;
+ }
 `;
 
 export const Title = styled.h2`
@@ -34,7 +45,7 @@ export const Item = styled.div`
 
  background: #f8f8f8;
  border-radius: 30px;
- border: 1px solid black;
+ ${'' /* border: 1px solid black; */}
 `;
 
 export const Comment = styled.div`
