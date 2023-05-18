@@ -27,7 +27,6 @@ export const Section = styled.section`
 `;
 export const Title = styled.h2`
  margin: auto;
- margin-top: 5px;
  margin-bottom: 46px;
  max-width: 761px;
 
