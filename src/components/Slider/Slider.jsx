@@ -1,51 +1,60 @@
 import { ReactSVG } from 'react-svg';
 import Slider from 'react-slick';
-import './styles.css';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import arrow from '../../images/arrow.svg';
 
+function SamplePrevArrow() {
+ return <></>;
+}
+
 function SampleNextArrow(props) {
  const { onClick } = props;
  return (
-  <div className="sample-next-arrow" onClick={onClick}>
-   <p>Next</p>
+  <div
+   style={{
+    display: 'flex',
+    alignItems: 'center',
+    padding: '17px 27px 18px',
+    width: '122px',
+    background: '#efefef',
+    borderRadius: '72px',
+    position: 'absolute',
+    top: '-131px',
+    right: ' 0px',
+   }}
+   onClick={onClick}
+  >
+   <p
+    style={{
+     fontFamily: 'Inter, sans-serif',
+     fontWeight: '600',
+     fontSize: '18px',
+     lineHeight: '160%',
+     color: '#263238',
+     marginRight: '10px',
+    }}
+   >
+    Next
+   </p>
    <ReactSVG src={arrow} onError={error => console.log(error.message)} />
   </div>
  );
 }
 
 const CenterMode = ({ children }) => {
- const appendDots = dots => {
-  return (
-   <div style={{ position: 'absolute', right: '-1290px', top: '-110px' }}>
-    <ul style={{ display: 'flex', gap: 17 }}>
-     {dots.map((dot, index) => (
-      <li
-       key={index}
-       className={`${dot.props.className} custom-dot${
-        dot.props.className === 'slick-active' ? ' active-dot' : ''
-       }`}
-      >
-       {dot.props.children}
-      </li>
-     ))}
-    </ul>
-   </div>
-  );
- };
  const settings = {
+  className: 'center',
   centerMode: true,
   infinite: true,
-  centerPadding: '15px',
-  slidesToShow: 2,
-  dots: true,
-  appendDots: appendDots,
+  centerPadding: '290px',
+  slidesToShow: 1,
   speed: 500,
-  slidesToScroll: 1,
+  dots: true,
   nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
  };
  return (
   <>
