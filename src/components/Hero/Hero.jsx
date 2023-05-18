@@ -8,10 +8,17 @@ import {
  Title,
  Wrapper,
  HomeSection,
- //  HomePageImage,
 } from './Hero.styled';
 
+import bgDesktop from '../../images/bgDesktop@1x.png';
+import bgDesktopRetina from '../../images/bgDesktop@2x.png';
+
+import bgImageDesktop from '../../images/home-dashboard@1x.png';
+import bgImageDesktopRetina from '../../images/home-dashboard@2x.png';
+
 const Hero = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <HomeSection>
    <Container>
@@ -32,7 +39,30 @@ const Hero = () => {
      </div>
      <Button variant="secondary" text={'Book a demo'} />
     </Wrapper>
-    {/* <HomePageImage /> */}
+    <img
+     src={isRetina ? bgDesktopRetina : bgDesktop}
+     alt="Home block"
+     height={1028}
+     width={481}
+     style={{
+      position: 'absolute',
+      top: '-10px',
+      right: '0px',
+      zIndex: '-2',
+     }}
+    />
+    <img
+     src={isRetina ? bgImageDesktopRetina : bgImageDesktop}
+     alt="Home img block"
+     height={623}
+     width={860}
+     style={{
+      position: 'absolute',
+      top: '230px',
+      right: '20px',
+      zIndex: '4',
+     }}
+    />
    </Container>
   </HomeSection>
  );
