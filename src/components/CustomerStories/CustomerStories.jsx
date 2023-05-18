@@ -16,13 +16,18 @@ import {
 import CenterMode from '../Slider/Slider';
 
 import userImageOne from '../../images/customer-stories/user1@1x.jpg';
+import userImageOneRetina from '../../images/customer-stories/user1@2x.jpg';
 import logoOne from '../../images/customer-stories/companyLogo1.svg';
 import userImageTwo from '../../images/customer-stories/user2@1x.jpg';
+import userImageTwoRetina from '../../images/customer-stories/user2@2x.jpg';
 import logoTwo from '../../images/customer-stories/companyLogo2.svg';
 import userImageThree from '../../images/customer-stories/user3@1x.jpg';
+import userImageThreeRetina from '../../images/customer-stories/user3@2x.jpg';
 import logoThree from '../../images/customer-stories/companyLogo3.svg';
 
 const CustomerStories = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container>
@@ -36,9 +41,10 @@ const CustomerStories = () => {
      <Item>
       <TitleWrap>
        <img
-        src={userImageOne}
+        src={isRetina ? userImageOneRetina : userImageOne}
         alt="Alex Bass"
         style={{ borderRadius: '50%' }}
+        width={94}
        />
        <User>
         <UserName>Alex Bass</UserName>
@@ -61,9 +67,10 @@ const CustomerStories = () => {
      <Item>
       <TitleWrap>
        <img
-        src={userImageTwo}
+        src={isRetina ? userImageTwoRetina : userImageTwo}
         alt="Rose Simmon"
         style={{ borderRadius: '50%' }}
+        width={94}
        />
        <User>
         <UserName>Rose Simmon</UserName>
@@ -88,9 +95,10 @@ const CustomerStories = () => {
      <Item>
       <TitleWrap>
        <img
-        src={userImageThree}
+        src={isRetina ? userImageThreeRetina : userImageThree}
         alt="Son Heung-min"
         style={{ borderRadius: '50%' }}
+        width={94}
        />
        <User>
         <UserName>Son Heung-min</UserName>
