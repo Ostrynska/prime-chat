@@ -20,7 +20,7 @@ export const HeaderWrap = styled.header`
  margin: 42px 0 81px 0;
  display: flex;
  align-items: center;
- justify-content: center;
+ justify-content: stretch;
  flex-wrap: wrap;
 `;
 
