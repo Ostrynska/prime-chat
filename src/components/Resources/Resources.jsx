@@ -16,12 +16,19 @@ import {
 
 import iconChat from '../../images/resources/resourcesIconChat.svg';
 import chatImage from '../../images/resources/chat@1x.png';
+import chatImageRetina from '../../images/resources/chat@2x.png';
+
 import iconTraining from '../../images/resources/resourcesIconTraining.svg';
 import trainingImage from '../../images/resources/training@1x.png';
+import trainingImageRetina from '../../images/resources/training@2x.png';
+
 import iconSupport from '../../images/resources/resourcesIconSupport.svg';
 import supportImage from '../../images/resources/customer@1x.png';
+import supportImageRetina from '../../images/resources/customer@2x.png';
 
 const Resources = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container>
@@ -50,16 +57,19 @@ const Resources = () => {
        </div>
       </ItemContent>
       <img
-       src={chatImage}
+       src={isRetina ? chatImageRetina : chatImage}
        alt="Chat"
-       style={{ margin: '0 auto' }}
        width={703}
       />
      </Item>
 
      <Item>
-      <img src={trainingImage} alt="Training" width={640} />
-      <ItemContent style={{ margin: '0 auto' }}>
+      <img
+       src={isRetina ? trainingImageRetina : trainingImage}
+       alt="Training"
+       width={640}
+      />
+      <ItemContent>
        <ReactSVG src={iconTraining} />
        <ItemTitle>Free training and demos from the Primachat team</ItemTitle>
        <ItemText>
@@ -89,9 +99,8 @@ const Resources = () => {
        </div>
       </ItemContent>
       <img
-       src={supportImage}
+       src={isRetina ? supportImageRetina : supportImage}
        alt="Support"
-       style={{ margin: '0 auto' }}
        width={762}
       />
      </Item>
