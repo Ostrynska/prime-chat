@@ -10,19 +10,15 @@ import {
  List,
  Item,
  ItemTitle,
+ ItemText,
+ Button,
+ Icon,
 } from './Solutions.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 import { ButtonWithIcon } from '../Button/Button';
 
 import solutionImage from '../../images/solutions/solutionImage@1x.png';
 import solutionImageRetina from '../../images/solutions/solutionImage@2x.png';
-import {
- Accordion,
- AccordionItem,
- AccordionButton,
- AccordionPanel,
- AccordionIcon,
-} from '@chakra-ui/react';
 
 const Solutions = () => {
  const isRetina = window.devicePixelRatio > 1;
@@ -45,47 +41,39 @@ const Solutions = () => {
      </PostTitle>
     </TitleContent>
     <Post>
-     <List>
-      <Accordion defaultIndex={[0]} allowMultiple>
-       <Item>
-        <AccordionItem>
-         <AccordionButton>
-          <ItemTitle>Support</ItemTitle>
-          <AccordionIcon />
-         </AccordionButton>
-         <AccordionPanel pb={4}>
-          Shorten the time between intent and purchase by connecting with
-          visitors when they’re on your website, and most likely to act.
-         </AccordionPanel>
-        </AccordionItem>
-       </Item>
+     <List allowToggle>
+      <Item>
+       <Button>
+        <ItemTitle>Support</ItemTitle>
+        <Icon />
+       </Button>
+       <ItemText>
+        Shorten the time between intent and purchase by connecting with visitors
+        when they’re on your website, and most likely to act.
+       </ItemText>
+      </Item>
 
-       <Item>
-        <AccordionItem>
-         <AccordionButton>
-          <ItemTitle>Engage</ItemTitle>
-          <AccordionIcon />
-         </AccordionButton>
-         <AccordionPanel pb={4}>
-          Shorten the time between intent and purchase by connecting with
-          visitors when they’re on your website, and most likely to act.
-         </AccordionPanel>
-        </AccordionItem>
-       </Item>
+      <Item>
+       <Button>
+        <ItemTitle>Engage</ItemTitle>
+        <Icon />
+       </Button>
+       <ItemText>
+        Shorten the time between intent and purchase by connecting with visitors
+        when they’re on your website, and most likely to act.
+       </ItemText>
+      </Item>
 
-       <Item>
-        <AccordionItem>
-         <AccordionButton>
-          <ItemTitle>Conver</ItemTitle>
-          <AccordionIcon />
-         </AccordionButton>
-         <AccordionPanel pb={4}>
-          Shorten the time between intent and purchase by connecting with
-          visitors when they’re on your website, and most likely to act.
-         </AccordionPanel>
-        </AccordionItem>
-       </Item>
-      </Accordion>
+      <Item>
+       <Button>
+        <ItemTitle>Conver</ItemTitle>
+        <Icon />
+       </Button>
+       <ItemText>
+        Shorten the time between intent and purchase by connecting with visitors
+        when they’re on your website, and most likely to act.
+       </ItemText>
+      </Item>
      </List>
      <img
       src={isRetina ? solutionImageRetina : solutionImage}
