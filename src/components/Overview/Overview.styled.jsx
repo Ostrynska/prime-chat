@@ -10,10 +10,11 @@ export const TitleContent = styled.div`
  display: flex;
 `;
 export const Content = styled.div`
- max-width: 466px;
+ ${'' /* max-width: 466px; */}
 `;
 
 export const Title = styled.h2`
+ width: 466px;
  font-family: 'Open Sans', sans-serif;
  font-style: normal;
  font-weight: 300;
@@ -31,8 +32,8 @@ export const TitleSpan = styled.span`
 `;
 
 export const PostTitle = styled.div`
- max-width: 586px;
- margin-left: auto;
+ ${'' /* max-width: 586px; */}
+ margin-left: 348px;
  display: flex;
  align-items: center;
 
@@ -122,5 +123,5 @@ export const AppImage = styled.img`
  height: 409px;
  position: absolute;
  top: -5px;
- ${'' /* right: 1px; */}
+ left: 0px;
 `;
