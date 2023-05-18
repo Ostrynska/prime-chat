@@ -7,6 +7,8 @@ import integrationDesktop from '../../images/integration/bgPatternDesktop@1x.png
 import integrationDesktopRetina from '../../images/integration/bgPatternDesktop@2x.png';
 
 export const Section = styled.section`
+ padding-top: 165px;
+ padding-bottom: 165px;
  background: #625ffb;
  background-image: url(${integrationDesktop});
  background-size: cover;
@@ -20,9 +22,14 @@ export const Section = styled.section`
  }
 `;
 export const Container = styled.div`
- padding-top: 165px;
- padding-bottom: 165px;
  text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ ${
+  '' /* padding-left: 260px;
+ padding-right: 260px; */
+ }
+ width: 1920px;
 `;
 
 export const Title = styled.h2`
