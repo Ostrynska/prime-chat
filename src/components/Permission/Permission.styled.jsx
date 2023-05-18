@@ -5,20 +5,20 @@ import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 export const Section = styled.section`
  background: #625ffb;
+ position: relative;
  padding-top: 165px;
  padding-bottom: 165px;
 `;
 
-export const PermissionWrap = styled.div`
- display: flex;
-`;
 export const Wrap = styled.div`
- width: 578px;
- margin-right: 100px;
+ ${'' /* position: relative, */}
+ max-width: 578px;
+ ${'' /* margin-right: 100px; */}
 `;
 
 export const Title = styled.h2`
  margin-bottom: 21px;
+ ${'' /* max-width: 578px; */}
 
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
@@ -36,6 +36,7 @@ export const TitleSpan = styled.span`
 
 export const Text = styled.p`
  margin-bottom: 42px;
+ ${'' /* max-width: 578px; */}
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
@@ -50,6 +51,7 @@ export const List = styled.ul`
  display: flex;
  flex-direction: column;
  gap: 22px;
+ max-width: 578px;
 `;
 
 export const ListItem = styled.li`
