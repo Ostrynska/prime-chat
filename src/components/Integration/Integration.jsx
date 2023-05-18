@@ -15,6 +15,8 @@ import imageIntegration from '../../images/integration/integrationDesktop@1x.png
 import imageIntegrationRetina from '../../images/integration/integrationDesktop@2x.png';
 
 const Integration = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container>
@@ -22,7 +24,11 @@ const Integration = () => {
     <Title>
      Connect with your customers on <TitleSpan>all channels</TitleSpan>
     </Title>
-    <img src={imageIntegration} alt="Integration" />
+    <img
+     src={isRetina ? imageIntegrationRetina : imageIntegration}
+     alt="Integration"
+     width={1238}
+    />
     <Text>
      Increase engagement and make buying easy with our stylish live chat widget.
      Provide personalized real-time support and invite your customers to chat
