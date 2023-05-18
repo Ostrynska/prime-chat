@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
+
 import bgSubscribe from '../../images/subscribe/bgSubscribe@1x.png';
+import bgSubscribeRetina from '../../images/subscribe/bgSubscribe@2x.png';
 
 export const Section = styled.section``;
 
@@ -13,6 +15,12 @@ export const TitleContent = styled.div`
  background-repeat: no-repeat;
  width: 1399px;
  height: 361px;
+ @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  background-image: url(${bgSubscribeRetina});
+ }
 `;
 
 export const Title = styled.h2`
