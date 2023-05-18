@@ -14,7 +14,6 @@ import Subscribe from '../components/Subscribe/Subscribe';
 
 const HomePage = () => {
  return (
-  //   <Container>
   <>
    <Hero />
    <Partners />
@@ -28,7 +27,6 @@ const HomePage = () => {
    <Permission />
    <Solutions />
    <Subscribe />
-   {/* </Container> */}
   </>
  );
 };
