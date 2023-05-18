@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
+import {
+ Accordion,
+ AccordionItem,
+ AccordionButton,
+ AccordionPanel,
+ AccordionIcon,
+} from '@chakra-ui/react';
 
 export const Section = styled.section`
  padding-top: 135px;
@@ -40,14 +47,14 @@ export const Post = styled.div`
  margin-top: 53px;
 `;
 
-export const List = styled.ul`
+export const List = styled(Accordion)`
  display: flex;
  flex-direction: column;
  gap: 22px;
  margin-right: 40px;
 `;
 
-export const Item = styled.li`
+export const Item = styled(AccordionItem)`
  padding: 47px 50px;
  width: 662px;
 
@@ -64,4 +71,30 @@ export const ItemTitle = styled.h3`
 
  text-transform: capitalize;
  color: #303030;
+`;
+
+export const ItemText = styled(AccordionPanel)`
+ margin-top: 10px;
+ max-width: 534px;
+
+ font-family: 'Inter', sans-serif;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 160%;
+ /* or 32px */
+
+ color: #4e4e4e;
+`;
+
+export const Button = styled(AccordionButton)`
+ display: flex;
+ margin-left: auto;
+ align-items: flex-end;
+`;
+
+export const Icon = styled(AccordionIcon)`
+ display: flex;
+ margin-left: auto;
+ align-items: flex-end;
 `;
