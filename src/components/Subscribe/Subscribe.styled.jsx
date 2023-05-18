@@ -51,6 +51,11 @@ export const Input = styled.input`
  /* identical to box height, or 32px */
 
  color: #a0a0a0;
+ &:hover,
+ &:focus {
+  border: 1px solid #e2992b;
+  color: #ffffff;
+ }
 `;
 
 export const Button = styled.button`
