@@ -13,7 +13,7 @@ export const HomeSection = styled.section`
  padding-bottom: 202px;
  background-image: url(${arrowDesktop});
  background-repeat: no-repeat;
- background-position: 60% 80%;
+ background-position: 60% 90%;
  width: 100%;
  z-index: -1;
 `;
