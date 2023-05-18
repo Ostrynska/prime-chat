@@ -10,12 +10,17 @@ import {
  ListItem,
  Check,
  CheckText,
- AboutUsImage,
+ //  AboutUsImage,
 } from './AboutUs.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 import { Button } from '../Button/Button';
 
+import aboutUsDesktop from '../../images/about-us/aboutUsDesktop@1x.png';
+import aboutUsDesktopRetina from '../../images/about-us/aboutUsDesktop@2x.png';
+
 const AboutUs = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container style={{ display: 'flex' }}>
@@ -56,7 +61,19 @@ const AboutUs = () => {
      </List>
      <Button variant="primary" text={'Try for free'} />
     </Content>
-    <AboutUsImage />
+    {/* <AboutUsImage /> */}
+    <img
+     src={isRetina ? aboutUsDesktopRetina : aboutUsDesktop}
+     alt="About us img block"
+     height={909}
+     width={902}
+     style={{
+      position: 'absolute',
+      top: '-20px',
+      right: '20px',
+      zIndex: '4',
+     }}
+    />
    </Container>
   </Section>
  );
