@@ -69,9 +69,11 @@ export const AwardsList = styled.ul`
  display: flex;
  align-items: center;
  justify-content: center;
- gap: 76px;
+ gap: 52px;
 `;
-export const AwardItem = styled.li``;
+export const AwardItem = styled.li`
+ width: 100%;
+`;
 
 export const CustomerText = styled.p`
  font-family: 'Inter', sans-serif;
