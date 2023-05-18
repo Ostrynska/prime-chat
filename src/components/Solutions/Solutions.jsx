@@ -15,6 +15,7 @@ import { PreTitle } from '../PreTitle/PreTitle';
 import { ButtonWithIcon } from '../Button/Button';
 
 import solutionImage from '../../images/solutions/solutionImage@1x.png';
+import solutionImageRetina from '../../images/solutions/solutionImage@2x.png';
 import {
  Accordion,
  AccordionItem,
@@ -24,6 +25,8 @@ import {
 } from '@chakra-ui/react';
 
 const Solutions = () => {
+ const isRetina = window.devicePixelRatio > 1;
+
  return (
   <Section>
    <Container>
@@ -84,7 +87,11 @@ const Solutions = () => {
        </Item>
       </Accordion>
      </List>
-     <img src={solutionImage} alt="Solutions" />
+     <img
+      src={isRetina ? solutionImageRetina : solutionImage}
+      alt="Solutions"
+      width={698}
+     />
     </Post>
    </Container>
   </Section>
