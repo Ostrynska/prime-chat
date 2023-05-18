@@ -11,14 +11,11 @@ export const Section = styled.section`
 `;
 
 export const Wrap = styled.div`
- ${'' /* position: relative, */}
  max-width: 578px;
- ${'' /* margin-right: 100px; */}
 `;
 
 export const Title = styled.h2`
  margin-bottom: 21px;
- ${'' /* max-width: 578px; */}
 
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
