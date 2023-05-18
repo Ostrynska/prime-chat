@@ -8,7 +8,7 @@ export const PartnersSection = styled.section`
 
 export const PartnersWrap = styled.div`
  padding: 126px 162px;
- width: 1400px;
+ width: 100%;
  height: 488px;
 
  background: ${lightTheme.colors.bgGrey};
