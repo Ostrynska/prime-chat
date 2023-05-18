@@ -84,10 +84,7 @@ const Solutions = () => {
        </Item>
       </Accordion>
      </List>
-
-     <div style={{ display: 'flex', margin: '0 auto' }}>
-      <img src={solutionImage} alt="Solutions" />
-     </div>
+     <img src={solutionImage} alt="Solutions" />
     </Post>
    </Container>
   </Section>

@@ -31,7 +31,7 @@ export const TitleSpan = styled.span`
 
 export const PostTitle = styled.div`
  display: flex;
- margin: 0 auto;
+ margin-left: auto;
  align-items: flex-end;
 `;
 
@@ -44,7 +44,7 @@ export const List = styled.ul`
  display: flex;
  flex-direction: column;
  gap: 22px;
- ${'' /* margin-right: 40px; */}
+ margin-right: 40px;
 `;
 
 export const Item = styled.li`
