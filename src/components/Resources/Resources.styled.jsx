@@ -6,7 +6,7 @@ export const Section = styled.section`
  padding-bottom: 135px;
 `;
 export const Title = styled.h2`
- margin: auto;
+ margin: 0 auto;
  margin-top: 7px;
  margin-bottom: 90px;
  max-width: 659px;
@@ -35,6 +35,8 @@ export const List = styled.ul`
 
 export const Item = styled.li`
  display: flex;
+ flex-direction: row;
+ gap: 120px;
 `;
 
 export const ItemContent = styled.div`
@@ -47,6 +49,7 @@ export const ItemContent = styled.div`
 export const ItemTitle = styled.h3`
  margin-top: 25px;
  margin-bottom: 28px;
+ max-width: 506px;
 
  font-family: 'Open Sans', sans-serif;
  font-weight: 600;
