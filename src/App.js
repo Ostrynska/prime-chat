@@ -7,7 +7,7 @@ import FooterPage from './pages/Footer.jsx';
 function App() {
  return (
   <>
-   {/* <HeaderPage /> */}
+   <HeaderPage />
    <HomePage />
    <FooterPage />
    <GlobalStyle />
