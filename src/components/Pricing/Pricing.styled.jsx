@@ -4,7 +4,9 @@ import { lightTheme } from '../../utils/theme';
 import { MdDone } from 'react-icons/md';
 
 import imageBg from '../../images/pricing/bg@1x.png';
+import imageBgRetina from '../../images/pricing/bg@2x.png';
 import imageBgAccent from '../../images/pricing/bgAccent@1x.png';
+import imageBgAccentRetina from '../../images/pricing/bgAccent@2x.png';
 import bgArrow from '../../images/pricing/bgArrow.svg';
 
 export const Check = styled(MdDone)`
@@ -79,6 +81,12 @@ export const Background = styled.div`
  width: 370px;
  height: 206px;
  padding: 11px 47px 35px 47px;
+ @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  background-image: url(${imageBgRetina});
+ }
 `;
 
 export const BackgroundAccent = styled.div`
@@ -86,6 +94,12 @@ export const BackgroundAccent = styled.div`
  width: 370px;
  height: 206px;
  padding: 11px 47px 35px 47px;
+ @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  background-image: url(${imageBgAccentRetina});
+ }
 `;
 
 export const PriceSpan = styled.span`
