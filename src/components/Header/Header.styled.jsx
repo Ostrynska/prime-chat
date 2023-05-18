@@ -55,11 +55,3 @@ export const MenuLink = styled.a`
   font-weight: 500;
  }
 `;
-
-// export const Background = styled.div`
-//  position: absolute;
-//  background-image: url(${bgDesktop});
-//  background-position: right top;
-//  background-repeat: no-repeat;
-//  z-index: -1;
-// `;
