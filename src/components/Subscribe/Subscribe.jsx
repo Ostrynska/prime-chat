@@ -11,7 +11,7 @@ import {
 
 const Subscribe = () => {
  return (
-  <Section>
+  <Section id="subscribes">
    <Container>
     <TitleContent>
      <Title>
