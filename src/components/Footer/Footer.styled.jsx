@@ -56,7 +56,6 @@ export const UpToTop = styled(IoIosArrowDropupCircle)`
 
 export const Section = styled.section`
  padding-top: 135px;
- ${'' /* padding-bottom: 135px; */}
 `;
 
 export const FooterWrap = styled.div`
