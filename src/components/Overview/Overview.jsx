@@ -32,7 +32,7 @@ const Overview = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="platform">
    <Container>
     <TitleContent>
      <Content>

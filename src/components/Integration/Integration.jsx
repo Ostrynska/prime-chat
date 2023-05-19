@@ -18,7 +18,7 @@ const Integration = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="integration">
    <Container>
     <PreTitle variant="secondary" text={'Integration'} />
     <Title>

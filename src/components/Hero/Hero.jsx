@@ -20,7 +20,7 @@ const Hero = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <HomeSection>
+  <HomeSection id="chatbot">
    <Container>
     <Wrapper>
      <PreTitle variant="primary" text={'Chatbot'} />

@@ -24,19 +24,29 @@ const Header = () => {
      </LogoLink>
      <MenuList>
       <MenuItem>
-       <MenuLink href="#about-us">About Us</MenuLink>
+       <MenuLink to="about-us" smooth={true} duration={500}>
+        About Us
+       </MenuLink>
       </MenuItem>
       <MenuItem>
-       <MenuLink href="#platform">Platform</MenuLink>
+       <MenuLink to="platform" smooth={true} duration={500}>
+        Platform
+       </MenuLink>
       </MenuItem>
       <MenuItem>
-       <MenuLink href="#resources">Resources</MenuLink>
+       <MenuLink to="resources" smooth={true} duration={500}>
+        Resources
+       </MenuLink>
       </MenuItem>
       <MenuItem>
-       <MenuLink href="#solution">Solution</MenuLink>
+       <MenuLink to="solution" smooth={true} duration={500}>
+        Solution
+       </MenuLink>
       </MenuItem>
       <MenuItem>
-       <MenuLink href="#pricing">Pricing</MenuLink>
+       <MenuLink to="pricing" smooth={true} duration={500}>
+        Pricing
+       </MenuLink>
       </MenuItem>
      </MenuList>
     </HeaderNav>

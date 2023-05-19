@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { Container } from '../Container/Conteiner';
 import {
  Section,
@@ -72,31 +73,47 @@ const Footer = () => {
       <nav>
        <FooterSupportList>
         <FooterSupportItem>
-         <FooterSupportLink href="#">About</FooterSupportLink>
+         <FooterSupportLink to="about-us" smooth={true} duration={500}>
+          About Us
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Platform</FooterSupportLink>
+         <FooterSupportLink to="platform" smooth={true} duration={500}>
+          Platform
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Resources</FooterSupportLink>
+         <FooterSupportLink to="resources" smooth={true} duration={500}>
+          Resources
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
          <FooterSupportLink href="#">Blog</FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Pricing</FooterSupportLink>
+         <FooterSupportLink to="pricing" smooth={true} duration={500}>
+          Pricing
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Integration</FooterSupportLink>
+         <FooterSupportLink to="integration" smooth={true} duration={500}>
+          Integration
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Testimonials</FooterSupportLink>
+         <FooterSupportLink to="testimonials" smooth={true} duration={500}>
+          Testimonials
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Permission</FooterSupportLink>
+         <FooterSupportLink to="permission" smooth={true} duration={500}>
+          Permission
+         </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Subscribe</FooterSupportLink>
+         <FooterSupportLink to="subscribe" smooth={true} duration={500}>
+          Subscribe
+         </FooterSupportLink>
         </FooterSupportItem>
        </FooterSupportList>
       </nav>
@@ -142,7 +159,9 @@ const Footer = () => {
         <FooterCopyrightSpan>VictorFlow</FooterCopyrightSpan> powered by{' '}
         <FooterCopyrightSpan>Webflow</FooterCopyrightSpan>.
        </FooterCopyrightText>
-       <UpToTop size={50} />
+       <Link to="chatbot" smooth={true} duration={500}>
+        <UpToTop size={50} />
+       </Link>
       </FooterCopyright>
      </FooterCopyrightWrap>
     </FooterSocialWrap>

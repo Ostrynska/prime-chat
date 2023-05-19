@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
@@ -133,7 +135,7 @@ export const FooterSupportList = styled.ul`
 `;
 
 export const FooterSupportItem = styled.li``;
-export const FooterSupportLink = styled.a`
+export const FooterSupportLink = styled(Link)`
  font-family: 'Inter', sans-serif;
  font-weight: 600;
  font-size: 20px;
@@ -211,4 +213,7 @@ export const FooterCopyrightText = styled.p`
 export const FooterCopyrightSpan = styled.span`
  font-weight: 500;
  color: #625ffb;
+ &:hover {
+  color: #ffb545;
+ }
 `;

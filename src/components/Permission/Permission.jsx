@@ -20,7 +20,7 @@ const Permission = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="permission">
    <Container>
     <Wrap>
      <PreTitle variant="secondary" text={'Permission'} />

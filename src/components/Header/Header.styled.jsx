@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
@@ -40,7 +42,7 @@ export const MenuList = styled.ul`
     margin-left: 263px;
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(Link)`
  text-decoration: none;
  font-family: 'Inter', sans-serif;
  font-weight: 400;

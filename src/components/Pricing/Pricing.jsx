@@ -25,7 +25,7 @@ import {
 
 const Pricing = () => {
  return (
-  <Section>
+  <Section id="pricing">
    <Container>
     <div
      style={{

@@ -24,7 +24,7 @@ const Solutions = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="solution">
    <Container>
     <TitleContent>
      <Content>

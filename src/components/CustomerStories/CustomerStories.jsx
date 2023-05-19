@@ -29,7 +29,7 @@ const CustomerStories = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="testimonials">
    <Container>
     <Wrapper>
      <PreTitle variant="primary" text={'Testimonials'} />

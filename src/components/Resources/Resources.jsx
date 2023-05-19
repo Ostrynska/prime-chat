@@ -30,7 +30,7 @@ const Resources = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="resources">
    <Container>
     <div
      style={{

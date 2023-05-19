@@ -3,10 +3,15 @@ import { lightTheme } from '../../utils/theme';
 import {
  Accordion,
  AccordionItem,
- AccordionButton,
  AccordionPanel,
  AccordionIcon,
+ AccordionButton,
 } from '@chakra-ui/react';
+
+import {
+ IoIosArrowDroprightCircle,
+ IoIosArrowDropdownCircle,
+} from 'react-icons/io';
 
 export const Section = styled.section`
  padding-top: 135px;
@@ -97,4 +102,13 @@ export const Icon = styled(AccordionIcon)`
  display: flex;
  margin-left: auto;
  align-items: flex-end;
+ color: #625ffb;
 `;
+
+// export const DropdownIcon = styled(IoIosArrowDropdownCircle)`
+//  color: #625ffb;
+// `;
+
+// export const DroprighIcon = styled(IoIosArrowDroprightCircle)`
+//  color: #303030;
+// `;

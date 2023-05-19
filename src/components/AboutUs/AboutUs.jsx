@@ -22,7 +22,7 @@ const AboutUs = () => {
  const isRetina = window.devicePixelRatio > 1;
 
  return (
-  <Section>
+  <Section id="about-us">
    <Container style={{ display: 'flex' }}>
     <Content>
      <PreTitle
