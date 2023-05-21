@@ -2,19 +2,22 @@ import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
 export const Section = styled.section`
+ ${'' /* padding: 0 135px; */}
  padding-top: 135px;
  padding-bottom: 135px;
 `;
 
 export const TitleContent = styled.div`
  display: flex;
+ flex-direction: column;
+ @media screen and (min-width: 1200px) {
+  flex-direction: row;
+ }
 `;
-export const Content = styled.div`
- ${'' /* max-width: 466px; */}
-`;
+export const Content = styled.div``;
 
 export const Title = styled.h2`
- width: 466px;
+ max-width: 310px;
  font-family: 'Open Sans', sans-serif;
  font-style: normal;
  font-weight: 300;
@@ -23,8 +26,16 @@ export const Title = styled.h2`
  /* or 53px */
 
  text-transform: capitalize;
-
  color: #303030;
+ @media screen and (min-width: 480px) {
+  max-width: 408px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 446px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 466px;
+ }
 `;
 
 export const TitleSpan = styled.span`
@@ -32,8 +43,7 @@ export const TitleSpan = styled.span`
 `;
 
 export const PostTitle = styled.div`
- ${'' /* max-width: 586px; */}
- margin-left: 348px;
+ margin-top: 30px;
  display: flex;
  align-items: center;
 
@@ -44,28 +54,59 @@ export const PostTitle = styled.div`
  /* or 32px */
 
  color: #4e4e4e;
+ @media screen and (min-width: 1200px) {
+  margin-left: 177px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-left: 348px;
+ }
 `;
 
 export const Platform = styled.ul`
- max-width: 1400px;
  margin-top: 48px;
-
- display: grid;
- grid-template-columns: 920px 442px;
- gap: 36px;
+ @media screen and (min-width: 1200px) {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 544px 382px;
+  gap: 36px;
+ }
+ @media screen and (min-width: 1920px) {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 920px 442px;
+  gap: 36px;
+ }
 `;
+
 export const PlatformRvs = styled.ul`
  margin-top: 32px;
- max-width: 1400px;
- display: grid;
- grid-template-columns: 442px 920px;
- gap: 36px;
+ @media screen and (min-width: 1200px) {
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 382px 544px;
+  gap: 36px;
+ }
+ @media screen and (min-width: 1920px) {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 442px 920px;
+  gap: 36px;
+ }
 `;
 export const PlatformItem = styled.li`
+ ${'' /* border: 1px solid #4e4e4e; */}
+ margin-bottom: 36px;
+
  position: relative;
  background: #f8f8f8;
- padding: 55px 44px 75px 44px;
+ padding: 55px 30px;
  border-radius: 30px;
+ @media screen and (min-width: 1200px) {
+  margin-bottom: 0;
+ }
+ @media screen and (min-width: 1920px) {
+  padding: 55px 44px 75px 44px;
+ }
 `;
 
 export const AltText = styled.div`
@@ -113,15 +154,23 @@ export const PlatformText = styled.p`
  color: #4e4e4e;
 `;
 export const MessengerImage = styled.img`
- position: absolute;
- top: 0px;
- left: -1px;
+ display: none;
+ @media screen and (min-width: 1920px) {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: -1px;
+ }
 `;
 
 export const AppImage = styled.img`
- width: 920px;
- height: 409px;
- position: absolute;
- top: -5px;
- left: 0px;
+ display: none;
+ @media screen and (min-width: 1920px) {
+  display: inline-block;
+  width: 920px;
+  height: 409px;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+ }
 `;
