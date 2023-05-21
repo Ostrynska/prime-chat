@@ -15,8 +15,20 @@ export const Section = styled.section`
   left: 50%;
   transform: translateX(-50%);
   height: 1px;
-  width: 1400px;
   background-color: #cecece;
+  width: 290px;
+  @media screen and (min-width: 480px) {
+   width: 440px;
+  }
+  @media screen and (min-width: 768px) {
+   width: 488px;
+  }
+  @media screen and (min-width: 1200px) {
+   width: 956px;
+  }
+  @media screen and (min-width: 1920px) {
+   width: 1400px;
+  }
  }
  ::after {
   bottom: 0;
@@ -46,6 +58,11 @@ export const Item = styled.div`
  background: #f8f8f8;
  border-radius: 30px;
  ${'' /* border: 1px solid black; */}
+ @media screen and (min-width: 1200px) {
+ }
+ @media screen and (min-width: 1920px) {
+  margin-right: 35px;
+ }
 `;
 
 export const Comment = styled.div`
