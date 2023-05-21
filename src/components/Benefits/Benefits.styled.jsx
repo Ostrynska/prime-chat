@@ -12,8 +12,20 @@ export const Section = styled.section`
   left: 50%;
   transform: translateX(-50%);
   height: 1px;
-  width: 1400px;
   background-color: #cecece;
+  width: 290px;
+  @media screen and (min-width: 480px) {
+   width: 440px;
+  }
+  @media screen and (min-width: 768px) {
+   width: 488px;
+  }
+  @media screen and (min-width: 1200px) {
+   width: 956px;
+  }
+  @media screen and (min-width: 1920px) {
+   width: 1400px;
+  }
  }
  ::before {
   top: 0;
@@ -67,13 +79,22 @@ export const AwardsList = styled.ul`
  margin-bottom: 60px;
 
  display: flex;
+ gap: 52px;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
- gap: 52px;
+
+ @media screen and (min-width: 1200px) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 80px;
+  @media screen and (min-width: 1920px) {
+   flex-wrap: nowrap;
+   gap: 80px;
+  }
+ }
 `;
-export const AwardItem = styled.li`
- width: 100%;
-`;
+export const AwardItem = styled.li``;
 
 export const CustomerText = styled.p`
  font-family: 'Inter', sans-serif;

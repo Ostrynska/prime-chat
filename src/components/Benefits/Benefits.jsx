@@ -40,7 +40,7 @@ const Benefits = () => {
       ? awardsRetina.map((award, id) => {
          return (
           <AwardItem key={id}>
-           <img src={award} alt={`Award ${id}`} height={225} />
+           <img src={award} alt={`Award ${id}`} height={225} width={'100%'} />
           </AwardItem>
          );
         })
