@@ -12,6 +12,9 @@ import {
  ItemContent,
  ItemTitle,
  ItemText,
+ ItemImageFirst,
+ ItemImageSecond,
+ ItemImageThird,
 } from './Resources.styled';
 
 import iconChat from '../../images/resources/resourcesIconChat.svg';
@@ -56,18 +59,13 @@ const Resources = () => {
         <Button variant="primary" text={'Get started'} />
        </div>
       </ItemContent>
-      <img
-       src={isRetina ? chatImageRetina : chatImage}
-       alt="Chat"
-       width={703}
-      />
+      <ItemImageFirst src={isRetina ? chatImageRetina : chatImage} alt="Chat" />
      </Item>
 
      <Item>
-      <img
+      <ItemImageSecond
        src={isRetina ? trainingImageRetina : trainingImage}
        alt="Training"
-       width={640}
       />
       <ItemContent>
        <ReactSVG src={iconTraining} />
@@ -98,10 +96,9 @@ const Resources = () => {
         <Button variant="primary" text={'Get started'} />
        </div>
       </ItemContent>
-      <img
+      <ItemImageThird
        src={isRetina ? supportImageRetina : supportImage}
        alt="Support"
-       width={762}
       />
      </Item>
     </List>
