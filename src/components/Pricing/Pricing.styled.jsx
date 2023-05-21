@@ -50,17 +50,36 @@ export const SpanTitle = styled.span`
 
 export const List = styled.ul`
  display: flex;
+ flex-direction: column;
  gap: 54px;
+ flex-wrap: wrap;
+ @media screen and (min-width: 1200px) {
+  flex-direction: row;
+  gap: 54px;
+ }
+ @media screen and (min-width: 1920px) {
+  flex-wrap: nowrap;
+ }
 `;
 
 export const Item = styled.li`
- width: 430px;
+ width: 100%;
  height: 100%;
- padding: 47px 30px;
+ padding: 47px 10px;
  background: #ffffff;
  border-radius: 30px;
  display: flex;
  flex-direction: column;
+ @media screen and (min-width: 480px) {
+  padding: 47px 20px;
+ }
+ @media screen and (min-width: 768px) {
+  padding: 47px 35px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 430px;
+  padding: 47px 30px;
+ }
 `;
 
 export const ItemTitle = styled.h3`
@@ -78,7 +97,7 @@ export const ItemTitle = styled.h3`
 
 export const Background = styled.div`
  background-image: url(${imageBg});
- width: 370px;
+ width: 100%;
  height: 206px;
  padding: 11px 47px 35px 47px;
  @media screen and (min-device-pixel-ratio: 2),
@@ -91,7 +110,7 @@ export const Background = styled.div`
 
 export const BackgroundAccent = styled.div`
  background-image: url(${imageBgAccent});
- width: 370px;
+ width: 100%;
  height: 206px;
  padding: 11px 47px 35px 47px;
  @media screen and (min-device-pixel-ratio: 2),
@@ -128,12 +147,18 @@ export const PriceText = styled.p`
  margin-top: 14px;
  font-family: 'Inter', sans-serif;
  font-weight: 500;
- font-size: 18px;
+ font-size: 14px;
  line-height: 141.5%;
  /* or 25px */
 
  text-align: center;
  color: #ffffff;
+ @media screen and (min-width: 768px) {
+  font-size: 16px;
+ }
+ @media screen and (min-width: 1200px) {
+  font-size: 18px;
+ }
 `;
 
 export const PriceTitle = styled.h4`
@@ -186,9 +211,9 @@ export const PriceListTextHighlight = styled.span`
 
 export const Button = styled.button`
  margin-top: 22px;
- padding: 16px 123px;
+ padding: 16px 40px;
 
- width: 370px;
+ width: 100%;
  height: 61px;
 
  background: #303030;
