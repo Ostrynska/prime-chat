@@ -3,23 +3,32 @@ import { lightTheme } from '../../utils/theme';
 
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
-import aboutUsDesktop from '../../images/about-us/aboutUsDesktop@1x.png';
-import aboutUsDesktopRetina from '../../images/about-us/aboutUsDesktop@2x.png';
-
 export const Section = styled.section`
- position: relative;
  padding-bottom: 135px;
 `;
 
+export const AboutUsWrap = styled.div`
+ display: flex;
+ gap: 20px;
+ ${'' /* position: absolute; */}
+ justify-content: center;
+`;
+
 export const Content = styled.div`
- width: 632px;
+ width: 100%;
  padding-top: 53px;
  padding-bottom: 53px;
+ @media screen and (min-width: 1200px) {
+  width: 410px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 632px;
+ }
 `;
 
 export const Title = styled.h2`
  margin-bottom: 20px;
- width: 474px;
+ width: 100%;
 
  font-family: 'Open Sans', sans-serif;
  font-style: normal;
@@ -31,6 +40,15 @@ export const Title = styled.h2`
  text-transform: capitalize;
 
  color: #303030;
+ @media screen and (min-width: 480px) {
+  width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 455px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 458px;
+ }
 `;
 
 export const TitleSpan = styled.span`
@@ -46,6 +64,15 @@ export const Post = styled.p`
  /* or 32px */
 
  color: #4e4e4e;
+ @media screen and (min-width: 480px) {
+  width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 488px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 100%;
+ }
 `;
 
 export const PostWrap = styled.div`
@@ -62,9 +89,13 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
  display: flex;
- padding: 12.5px 0 13.5px 15px;
+ align-items: center;
+ padding: 10px 0 12px 13px;
 
- height: 54px;
+ @media screen and (min-width: 480px) {
+  padding: 12.5px 0 13.5px 15px;
+  height: 54px;
+ }
 
  ${p =>
   p.color &&
@@ -91,7 +122,7 @@ export const CheckText = styled.p`
  font-family: 'Inter', sans-serif;
  font-style: normal;
  font-weight: 600;
- font-size: 18px;
+ font-size: 12px;
  line-height: 160%;
  /* identical to box height, or 29px */
 
@@ -102,18 +133,29 @@ export const CheckText = styled.p`
   `
     color: ${lightTheme.colors[p.color]};
   `}
+ @media screen and (min-width: 480px) {
+  font-size: 18px;
+ }
 `;
 
-// export const AboutUsImage = styled.div`
-//  background-image: url(${aboutUsDesktop});
-//  background-size: cover;
-//  width: 100%;
-//  max-width: 904px;
-//  z-index: -1;
-//  @media screen and (min-device-pixel-ratio: 2),
-//   screen and (min-resolution: 192dpi),
-//   (-webkit-min-device-pixel-ratio: 2),
-//   screen and (min-resolution: 2dppx) {
-//   background-image: url(${aboutUsDesktopRetina});
-//  }
-// `;
+export const ImageWrap = styled.div`
+ display: flex;
+ @media screen and (min-width: 1200px) {
+  margin-top: 24%;
+  margin-bottom: 15%;
+  width: 550px;
+  height: 557px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 902px;
+  height: 909px;
+  margin: 0;
+ }
+`;
+
+export const Image = styled.img`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: inline-block;
+ }
+`;
