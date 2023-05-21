@@ -7,9 +7,8 @@ export const Section = styled.section`
 `;
 export const Title = styled.h2`
  margin: 0 auto;
- margin-top: 7px;
  margin-bottom: 90px;
- max-width: 659px;
+ max-width: 300px;
 
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
@@ -20,6 +19,12 @@ export const Title = styled.h2`
  text-align: center;
  text-transform: capitalize;
  color: ${lightTheme.colors.headerColor};
+ @media screen and (min-width: 768px) {
+  max-width: 760px;
+ }
+ @media screen and (min-width: 768px) {
+  max-width: 659px;
+ }
 `;
 
 export const SpanTitle = styled.span`
@@ -29,21 +34,46 @@ export const SpanTitle = styled.span`
 
 export const List = styled.ul`
  display: flex;
+ justify-content: center;
  flex-direction: column;
- gap: 150px;
+ gap: 50px;
+ @media screen and (min-width: 768px) {
+  gap: 100px;
+ }
+ @media screen and (min-width: 1200px) {
+  gap: 150px;
+ }
 `;
 
 export const Item = styled.li`
  display: flex;
- flex-direction: row;
- gap: 120px;
+ flex-direction: column;
+ gap: 30px;
+ @media screen and (min-width: 768px) {
+  gap: 50px;
+ }
+ @media screen and (min-width: 1200px) {
+  flex-direction: row;
+  gap: 120px;
+ }
 `;
 
 export const ItemContent = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: center;
- width: 556px;
+ width: 100%;
+ ${
+  '' /* @media screen and (min-width: 480px) {
+  width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 760px;
+ } */
+ }
+ @media screen and (min-width: 1200px) {
+  width: 556px;
+ }
 `;
 
 export const ItemTitle = styled.h3`
@@ -71,4 +101,52 @@ export const ItemText = styled.p`
  /* or 32px */
 
  color: #4e4e4e;
+`;
+
+export const ItemImageFirst = styled.img`
+ width: 270px;
+ @media screen and (min-width: 480px) {
+  width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 540px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 480px;
+  height: 500px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 703px;
+  height: 645px;
+ }
+`;
+
+export const ItemImageSecond = styled.img`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: inline-block;
+  width: 420px;
+  height: 400px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 703px;
+  height: 589px;
+ }
+`;
+
+export const ItemImageThird = styled.img`
+ width: 270px;
+ @media screen and (min-width: 480px) {
+  width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  margin-top: 5%;
+  width: 420px;
+  height: 430px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin: 0;
+  width: 762px;
+  height: 502px;
+ }
 `;
