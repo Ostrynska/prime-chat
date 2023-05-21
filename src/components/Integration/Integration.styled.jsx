@@ -26,7 +26,20 @@ export const Container = styled.div`
  text-align: center;
  margin-left: auto;
  margin-right: auto;
- width: 1920px;
+ width: 100%;
+
+ @media screen and (min-width: 480px) {
+  width: 480px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 768px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 1200px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 1920px;
+ }
 `;
 
 export const Title = styled.h2`
@@ -54,7 +67,7 @@ export const Text = styled.p`
  margin: auto;
  margin-top: 45px;
  margin-bottom: 56px;
- max-width: 927px;
+ max-width: 100%;
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
@@ -65,14 +78,28 @@ export const Text = styled.p`
  text-align: center;
 
  color: #ffffff;
+ @media screen and (min-width: 1200px) {
+  max-width: 927px;
+ }
 `;
 
 export const List = styled.ul`
  display: flex;
- flex-direction: row;
- gap: 80px;
- align-items: center;
- justify-content: center;
+ flex-direction: column;
+ gap: 20px;
+
+ @media screen and (min-width: 768px) {
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+ }
+ @media screen and (min-width: 947px) {
+  gap: 30px;
+ }
+ @media screen and (min-width: 1200px) {
+  gap: 80px;
+ }
 `;
 
 export const ListItem = styled.li`
@@ -86,21 +113,41 @@ export const ListItem = styled.li`
 `;
 
 export const Check = styled(IoIosCheckmarkCircle)`
- margin-right: 12px;
+ margin-right: 10px;
  width: 28px;
  height: 28px;
 
  color: #ffffff;
+ @media screen and (min-width: 1200px) {
+  margin-right: 12px;
+ }
 `;
 
 export const CheckText = styled.p`
  font-family: 'Inter', sans-serif;
  font-weight: 600;
- font-size: 18px;
+ font-size: 14px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: uppercase;
-
  color: #ffffff;
+ @media screen and (min-width: 1200px) {
+  font-size: 18px;
+ }
+`;
+
+export const Image = styled.img`
+ width: 310px;
+ @media screen and (min-width: 480px) {
+  width: 460px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 760px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 1038px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 1238px;
+ }
 `;
