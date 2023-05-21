@@ -8,6 +8,7 @@ import {
  ListItem,
  Check,
  CheckText,
+ Image,
 } from './Integration.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 
@@ -24,10 +25,9 @@ const Integration = () => {
     <Title>
      Connect with your customers on <TitleSpan>all channels</TitleSpan>
     </Title>
-    <img
+    <Image
      src={isRetina ? imageIntegrationRetina : imageIntegration}
      alt="Integration"
-     width={1238}
     />
     <Text>
      Increase engagement and make buying easy with our stylish live chat widget.
