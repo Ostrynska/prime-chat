@@ -59,7 +59,7 @@ const Hero = () => {
      style={{
       position: 'absolute',
       top: '206px',
-      right: '100px',
+      right: '150px',
       zIndex: '4',
      }}
     />
