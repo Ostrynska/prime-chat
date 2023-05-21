@@ -13,7 +13,7 @@ import {
  UserPosition,
 } from './CustomerStories.styled';
 
-import CenterMode from '../Slider/Slider';
+import Responsive from '../Slider/Slider';
 
 import userImageOne from '../../images/customer-stories/user1@1x.jpg';
 import userImageOneRetina from '../../images/customer-stories/user1@2x.jpg';
@@ -37,7 +37,7 @@ const CustomerStories = () => {
       About Customer <SpanTitle>stories</SpanTitle>
      </Title>
     </Wrapper>
-    <CenterMode>
+    <Responsive>
      <Item>
       <TitleWrap>
        <img
@@ -118,7 +118,7 @@ const CustomerStories = () => {
        us.”
       </Comment>
      </Item>
-    </CenterMode>
+    </Responsive>
    </Container>
   </Section>
  );
