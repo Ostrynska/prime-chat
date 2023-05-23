@@ -11,42 +11,62 @@ export const LogoLink = styled.a`
 export const LogoText = styled.p`
  font-family: 'Open Sans', sans-serif;
  font-weight: 700;
- font-size: 40px;
+ font-size: 30px;
  line-height: 1.3;
  color: ${lightTheme.colors.headerColor};
 
- margin-left: 10px;
+ margin-left: 2px;
+ @media screen and (min-width: 1920px) {
+  margin-left: 10px;
+  font-size: 40px;
+ }
 `;
 
 export const HeaderWrap = styled.header`
- margin: 42px 0 81px 0;
  display: flex;
- align-items: center;
- justify-content: stretch;
- flex-wrap: wrap;
+ align-items: flex-start;
+ margin: 42px 0 60px 0;
+ @media screen and (min-width: 1200px) {
+  margin: 42px 0 81px 0;
+  align-items: center;
+  justify-content: stretch;
+ }
+ @media screen and (min-width: 1920px) {
+  flex-wrap: wrap;
+ }
 `;
 
 export const HeaderNav = styled.nav`
  display: flex;
  align-items: center;
  justify-content: center;
- flex-wrap: wrap;
+
+ @media screen and (min-width: 1200px) {
+  flex-wrap: wrap;
 `;
 
 export const MenuItem = styled.li``;
 
 export const MenuList = styled.ul`
-    display: flex:
-    list-style: none;
-    gap: 45px;
-    margin-left: 263px;
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin-left: 70px;
+  gap: 30px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-left: 263px;
+  gap: 45px;
+ }
 `;
 
 export const MenuLink = styled(Link)`
  text-decoration: none;
  font-family: 'Inter', sans-serif;
  font-weight: 400;
- font-size: 18px;
+ font-size: 16px;
  line-height: 1.61;
  text-transform: capitalize;
  transition: ${lightTheme.transitions.main};
@@ -55,5 +75,19 @@ export const MenuLink = styled(Link)`
  &:hover {
   color: ${lightTheme.colors.primaryColor};
   font-weight: 500;
+ }
+ @media screen and (min-width: 1920px) {
+  font-size: 18px;
+ }
+`;
+
+export const BtnWrap = styled.div`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: inline-block;
+  margin-left: 48px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-left: 115px;
  }
 `;
