@@ -9,9 +9,12 @@ export const Section = styled.section`
 
 export const AboutUsWrap = styled.div`
  display: flex;
- gap: 20px;
+
  ${'' /* position: absolute; */}
  justify-content: center;
+ @media screen and (min-width: 1920px) {
+  gap: 20px;
+ }
 `;
 
 export const Content = styled.div`
