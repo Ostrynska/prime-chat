@@ -78,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
   *::before,
   *::after {
     -webkit-box-sizing: inherit;
-        box-sizing: inherit;
+    box-sizing: inherit;
   }
   code {
     font-family: 'OpenSans', sans-serif;
