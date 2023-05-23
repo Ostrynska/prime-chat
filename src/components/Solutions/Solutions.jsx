@@ -13,6 +13,8 @@ import {
  ItemText,
  Button,
  Icon,
+ Image,
+ ButtonWrap,
 } from './Solutions.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 import { ButtonWithIcon } from '../Button/Button';
@@ -34,9 +36,9 @@ const Solutions = () => {
       </Title>
      </Content>
      <PostTitle>
-      <div style={{ display: 'inline-block', marginRight: '22px' }}>
+      <ButtonWrap>
        <ButtonWithIcon variant="primary" text={'Chat With Us'} />
-      </div>
+      </ButtonWrap>
       <ButtonWithIcon variant="icon" text={'Watch Videos'} />
      </PostTitle>
     </TitleContent>
@@ -75,10 +77,9 @@ const Solutions = () => {
        </ItemText>
       </Item>
      </List>
-     <img
+     <Image
       src={isRetina ? solutionImageRetina : solutionImage}
       alt="Solutions"
-      width={698}
      />
     </Post>
    </Container>
