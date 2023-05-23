@@ -49,29 +49,51 @@ export const Youtube = styled(AiFillYoutube)`
 `;
 
 export const UpToTop = styled(IoIosArrowDropupCircle)`
- margin-left: 100px;
  color: #303030;
  &:hover {
   color: #625ffb;
  }
+ @media screen and (min-width: 1200px) {
+  margin-left: 42px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-left: 100px;
+ }
 `;
 
-export const Section = styled.section`
+export const FooterSection = styled.footer`
  padding-top: 135px;
 `;
 
 export const FooterWrap = styled.div`
  display: flex;
- gap: 120px;
- align-items: center;
+ flex-direction: column;
+ @media screen and (min-width: 1200px) {
+  gap: 110px;
+  align-items: center;
+  flex-direction: row;
+ }
+ @media screen and (min-width: 1920px) {
+  gap: 120px;
+ }
 `;
 
 export const FooterLogoWrap = styled.div`
- padding: 60px 61px;
- width: 543px;
-
  background: #eeeeee;
  border-radius: 30px;
+ padding: 20px 21px;
+ width: 100%;
+ @media screen and (min-width: 768px) {
+  padding: 30px 31px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding: 40px 41px;
+  width: 443px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding: 60px 61px;
+  width: 543px;
+ }
 `;
 
 export const FooterContactsWrap = styled.ul`
@@ -114,7 +136,12 @@ export const LogoText = styled.p`
  margin-left: 14px;
 `;
 
-export const FooterSupportWrap = styled.div``;
+export const FooterSupportWrap = styled.div`
+ margin-top: 30px;
+ @media screen and (min-width: 1200px) {
+  margin-top: 0px;
+ }
+`;
 
 export const FooterSupportTitle = styled.h2`
  margin-bottom: 32px;
@@ -130,8 +157,12 @@ export const FooterSupportTitle = styled.h2`
 export const FooterSupportList = styled.ul`
  display: grid;
  grid-template-columns: repeat(2, 1.2fr);
- column-gap: 140px;
- row-gap: 5px;
+ column-gap: 20px;
+ row-gap: 2px;
+ @media screen and (min-width: 1200px) {
+  column-gap: 140px;
+  row-gap: 5px;
+ }
 `;
 
 export const FooterSupportItem = styled.li``;
@@ -149,8 +180,18 @@ export const FooterSupportLink = styled(Link)`
 `;
 
 export const FooterSocial = styled.div`
+ margin-top: 30px;
+ margin-bottom: 15px;
  display: flex;
- padding: 26.5px 0 30.5px 0;
+ flex-wrap: wrap;
+ justify-content: stretch;
+ @media screen and (min-width: 480px) {
+  justify-content: space-between;
+ }
+ @media screen and (min-width: 1200px) {
+  padding: 26.5px 0 30.5px 0;
+  margin-top: 0px;
+ }
 `;
 
 export const FooterSocialTitle = styled.h2`
@@ -164,12 +205,18 @@ export const FooterSocialTitle = styled.h2`
  color: #303030;
 `;
 export const FooterSocialList = styled.ul`
- margin-left: 32px;
-
  display: flex;
  gap: 15px;
  flex-direction: row;
  align-items: baseline;
+ margin-top: 15px;
+ @media screen and (min-width: 430px) {
+  margin-top: 0px;
+  margin-left: 5px;
+ }
+ @media screen and (min-width: 768px) {
+  margin-left: 32px;
+ }
 `;
 
 export const FooterSocialItem = styled.li``;
@@ -184,14 +231,20 @@ export const FooterSocialLink = styled.a`
 `;
 
 export const FooterSocialWrap = styled.div`
- display: flex;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+ }
 `;
 
 export const FooterCopyrightWrap = styled.div`
- margin-left: 244px;
  max-width: 751px;
-
  border-top: 1px solid #cecece;
+ @media screen and (min-width: 1200px) {
+  margin-left: 180px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-left: 244px;
+ }
 `;
 
 export const FooterCopyright = styled.div`
