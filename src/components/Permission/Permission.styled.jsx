@@ -11,7 +11,10 @@ export const Section = styled.section`
 `;
 
 export const Wrap = styled.div`
- max-width: 578px;
+ max-width: 100%;
+ @media screen and (min-width: 1200px) {
+  max-width: 578px;
+ }
 `;
 
 export const Title = styled.h2`
@@ -72,10 +75,39 @@ export const Check = styled(IoIosCheckmarkCircle)`
 export const CheckText = styled.p`
  font-family: 'Inter', sans-serif;
  font-weight: 600;
- font-size: 18px;
+ font-size: 12px;
  line-height: 160%;
  /* identical to box height, or 29px */
 
  text-transform: uppercase;
  color: #ffffff;
+ @media screen and (min-width: 1200px) {
+  font-size: 14px;
+ }
+ @media screen and (min-width: 1920px) {
+  font-size: 18px;
+ }
+`;
+
+export const Image = styled.img`
+ @media screen and (min-width: 1200px) {
+ }
+ @media screen and (min-width: 1920px) {
+ }
+`;
+
+export const ImageWrap = styled.div`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+  margin: 0;
+  margin-top: 10%;
+  width: 577.03px;
+  height: 392px;
+ }
+ @media screen and (min-width: 1920px) {
+  margin-top: 0;
+  width: 777.03px;
+  height: 592px;
+ }
 `;
