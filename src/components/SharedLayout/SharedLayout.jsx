@@ -9,11 +9,11 @@ import { Loader } from '../Loader/Loader';
 export const SharedLayout = () => {
  return (
   <>
-   {/* <Header /> */}
+   <Header />
    <Suspense fallback={<Loader />}>
     <Outlet />
    </Suspense>
-   {/* <Footer /> */}
+   <Footer />
   </>
  );
 };
