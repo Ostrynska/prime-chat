@@ -110,14 +110,15 @@ export const ItemImageFirst = styled.img`
  }
  @media screen and (min-width: 768px) {
   width: 540px;
+  height: 458px;
  }
  @media screen and (min-width: 1200px) {
   width: 480px;
-  height: 500px;
+  height: 464px;
  }
  @media screen and (min-width: 1920px) {
   width: 703px;
-  height: 645px;
+  height: 608px;
  }
 `;
 
