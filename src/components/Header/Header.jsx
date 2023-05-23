@@ -1,6 +1,7 @@
 import { Container } from '../Container/Conteiner';
 import { Button } from '../Button/Button';
 
+import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
 
 import {
@@ -11,6 +12,7 @@ import {
  MenuList,
  MenuItem,
  MenuLink,
+ BtnWrap,
 } from './Header.styled';
 
 const Header = () => {
@@ -50,13 +52,10 @@ const Header = () => {
       </MenuItem>
      </MenuList>
     </HeaderNav>
-    <div
-     style={{
-      marginLeft: '115px',
-     }}
-    >
+    <BtnWrap>
      <Button variant="secondary" text={'Login'} />
-    </div>
+    </BtnWrap>
+    <BurgerMenu />
    </HeaderWrap>
   </Container>
  );
