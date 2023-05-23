@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 import { Container } from '../Container/Conteiner';
 import {
- Section,
+ FooterSection,
  LogoLink,
  LogoText,
  FooterLogoWrap,
@@ -36,7 +36,7 @@ import { ReactComponent as Logo } from '../../images/logo.svg';
 
 const Footer = () => {
  return (
-  <Section>
+  <FooterSection>
    <Container>
     <FooterWrap>
      <FooterLogoWrap>
@@ -166,7 +166,7 @@ const Footer = () => {
      </FooterCopyrightWrap>
     </FooterSocialWrap>
    </Container>
-  </Section>
+  </FooterSection>
  );
 };
 
