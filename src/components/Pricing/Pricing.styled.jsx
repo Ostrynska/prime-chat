@@ -53,7 +53,7 @@ export const List = styled.ul`
  flex-direction: column;
  gap: 54px;
  flex-wrap: wrap;
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 768px) {
   flex-direction: row;
   gap: 54px;
  }
@@ -63,17 +63,22 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
- width: 100%;
+ width: 290px;
  height: 100%;
  padding: 47px 10px;
  background: #ffffff;
  border-radius: 30px;
  display: flex;
  flex-direction: column;
+ @media screen and (min-width: 340px) {
+  width: 100%;
+ }
  @media screen and (min-width: 480px) {
+  width: 420px;
   padding: 47px 20px;
  }
  @media screen and (min-width: 768px) {
+  width: 448px;
   padding: 47px 35px;
  }
  @media screen and (min-width: 1200px) {
@@ -97,19 +102,27 @@ export const ItemTitle = styled.h3`
 
 export const Background = styled.div`
  background-image: url(${imageBg});
+ background-repeat: no-repeat;
  width: 100%;
  height: 206px;
  padding: 11px 47px 35px 47px;
+ @media screen and (min-width: 480px) {
+  width: 380px;
+ }
  @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   (-webkit-min-device-pixel-ratio: 2),
   screen and (min-resolution: 2dppx) {
   background-image: url(${imageBgRetina});
  }
+ @media screen and (min-width: 768px) {
+  width: 100%;
+ }
 `;
 
 export const BackgroundAccent = styled.div`
  background-image: url(${imageBgAccent});
+ background-repeat: no-repeat;
  width: 100%;
  height: 206px;
  padding: 11px 47px 35px 47px;
