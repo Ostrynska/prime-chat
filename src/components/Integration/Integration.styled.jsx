@@ -7,19 +7,31 @@ import integrationDesktop from '../../images/integration/bgPatternDesktop@1x.png
 import integrationDesktopRetina from '../../images/integration/bgPatternDesktop@2x.png';
 
 export const Section = styled.section`
- padding-top: 165px;
- padding-bottom: 165px;
  background: #625ffb;
  background-image: url(${integrationDesktop});
  background-size: cover;
  background-repeat: no-repeat;
  width: 100%;
  z-index: -1;
+ padding-top: 65px;
+ padding-bottom: 65px;
  @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   (-webkit-min-device-pixel-ratio: 2),
   screen and (min-resolution: 2dppx) {
   background-image: url(${integrationDesktopRetina});
+ }
+ @media screen and (min-width: 768px) {
+  padding-top: 95px;
+  padding-bottom: 95px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 145px;
+  padding-bottom: 145px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 165px;
+  padding-bottom: 165px;
  }
 `;
 export const Container = styled.div`
