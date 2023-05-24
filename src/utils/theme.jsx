@@ -28,5 +28,13 @@ export const mainVars = {
   platformColor: '#f8f8f8',
   iconColor: '#d2d2d2',
   opacityGreyColor: 'rgba(237, 237, 255, 0.5)',
+  inputOrange:
+   'linear-gradient(89.88deg, #FFEDD1 1.51%, rgba(255, 255, 255, 0) 84.54%)',
+  checkPurple: '#625FFB',
+  inputPurple:
+   'linear-gradient(89.88deg, #D3D2FF 1.51%, rgba(255, 255, 255, 0) 84.54%)',
+  checkGreen: '#65CB7B',
+  inputGreen:
+   'linear-gradient(89.88deg, #D6F4DC 1.51%, rgba(255, 255, 255, 0) 84.54%)',
  },
 };
