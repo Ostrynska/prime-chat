@@ -146,7 +146,7 @@ export const PriceSpan = styled.span`
  line-height: 133.2%;
 
  text-transform: capitalize;
- color: #${mainVars.colors.bgColor};
+ color: ${mainVars.colors.whiteColor};
 `;
 
 export const Price = styled.p`
