@@ -14,18 +14,26 @@ export const Check = styled(MdDone)`
 `;
 
 export const Section = styled.section`
- padding-top: 135px;
- padding-bottom: 135px;
- background: linear-gradient(
-  180deg,
-  #f5f5f5 0%,
-  rgba(245, 245, 245, 0) 114.83%
- );
  background-image: url(${bgArrow});
  background-repeat: no-repeat;
  background-position: 10% 98%;
  width: 100%;
- z-index: -1;
+ background-color: #f7f7f7;
+ ${'' /* z-index: -1; */}
+ padding-top: 45px;
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-top: 75px;
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 115px;
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 135px;
+  padding-bottom: 135px;
+ }
 `;
 export const Title = styled.h2`
  margin: auto;
