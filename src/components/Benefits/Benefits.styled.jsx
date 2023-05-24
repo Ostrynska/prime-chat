@@ -2,9 +2,21 @@ import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
 export const Section = styled.section`
- padding-top: 125px;
- padding-bottom: 125px;
  position: relative;
+ padding-top: 25px;
+ padding-bottom: 25px;
+ @media screen and (min-width: 768px) {
+  padding-top: 55px;
+  padding-bottom: 55px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 125px;
+  padding-bottom: 125px;
+ }
  ::before,
  ::after {
   content: '';
