@@ -10,11 +10,10 @@ import Pricing from '../components/Pricing/Pricing';
 import Permission from '../components/Permission/Permission';
 import Solutions from '../components/Solutions/Solutions';
 import Subscribe from '../components/Subscribe/Subscribe';
-// import { Container } from '../components/Container/Conteiner';
 
 const HomePage = () => {
  return (
-  <main id="page-wrap">
+  <main>
    <Hero />
    <Partners />
    <AboutUs />
