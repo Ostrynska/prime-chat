@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
@@ -7,7 +7,7 @@ import integrationDesktop from '../../images/integration/bgPatternDesktop@1x.png
 import integrationDesktopRetina from '../../images/integration/bgPatternDesktop@2x.png';
 
 export const Section = styled.section`
- background: #625ffb;
+ background: ${mainVars.colors.primaryColor};
  background-image: url(${integrationDesktop});
  background-size: cover;
  background-repeat: no-repeat;
@@ -63,12 +63,11 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-align: center;
  text-transform: capitalize;
 
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
 `;
 
 export const TitleSpan = styled.span`
@@ -85,11 +84,9 @@ export const Text = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
  text-align: center;
-
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  @media screen and (min-width: 1200px) {
   max-width: 927px;
  }
@@ -129,7 +126,7 @@ export const Check = styled(IoIosCheckmarkCircle)`
  width: 28px;
  height: 28px;
 
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  @media screen and (min-width: 1200px) {
   margin-right: 12px;
  }
@@ -142,7 +139,7 @@ export const CheckText = styled.p`
  line-height: 160%;
 
  text-transform: uppercase;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  @media screen and (min-width: 1200px) {
   font-size: 18px;
  }

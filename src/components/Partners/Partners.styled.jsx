@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const PartnersSection = styled.section`
  padding-top: 20px;
@@ -20,19 +20,10 @@ export const PartnersSection = styled.section`
 
 export const PartnersWrap = styled.div`
  padding: 46px 54px;
- ${'' /* width: 100%; */}
  height: 100%;
 
- background: ${lightTheme.colors.bgGrey};
+ background: ${mainVars.colors.bgGrey};
  border-radius: 30px;
- ${
-  '' /* @media screen and (min-width: 480px) {
- }
- @media screen and (min-width: 768px) {
- }
- @media screen and (min-width: 1200px) {
- } */
- }
  @media screen and (min-width: 1920px) {
   padding: 126px 162px;
   height: 488px;
@@ -47,7 +38,7 @@ export const PartnersTitle = styled.h2`
  line-height: 1.2;
  text-align: center;
 
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
  @media screen and (min-width: 480px) {
   font-size: 23px;
  }

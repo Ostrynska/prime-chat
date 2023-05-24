@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import arrowDesktop from '../../images/home-arrow.svg';
 
@@ -90,7 +90,7 @@ export const MainTitle = styled.h1`
  font-size: 40px;
  line-height: 1.33;
  text-transform: capitalize;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 
  margin-bottom: 29px;
  @media screen and (min-width: 480px) {
@@ -104,13 +104,13 @@ export const MainTitle = styled.h1`
 export const SpanTitle = styled.span`
  font-family: 'Open Sans', sans-serif;
  font-weight: 700;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const SpanTitleHilight = styled.span`
  font-family: 'Open Sans', sans-serif;
  font-weight: 700;
- color: ${lightTheme.colors.primaryColor};
+ color: ${mainVars.colors.primaryColor};
 `;
 
 export const Title = styled.p`
@@ -119,7 +119,7 @@ export const Title = styled.p`
  font-size: 20px;
  line-height: 1.6;
  text-transform: capitalize;
- color: ${lightTheme.colors.contentColor};
+ color: ${mainVars.colors.contentColor};
 
  margin-bottom: 40px;
  @media screen and (min-width: 1920px) {

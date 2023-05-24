@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import { MdDone } from 'react-icons/md';
 
@@ -10,7 +10,7 @@ import imageBgAccentRetina from '../../images/pricing/bgAccent@2x.png';
 import bgArrow from '../../images/pricing/bgArrow.svg';
 
 export const Check = styled(MdDone)`
- color: #2fcf3f;
+ color: ${mainVars.colors.successColor};
 `;
 
 export const Section = styled.section`
@@ -18,8 +18,7 @@ export const Section = styled.section`
  background-repeat: no-repeat;
  background-position: 10% 98%;
  width: 100%;
- background-color: #f7f7f7;
- ${'' /* z-index: -1; */}
+ background-color: ${mainVars.colors.lightGreyColor};
  padding-top: 45px;
  padding-bottom: 45px;
  @media screen and (min-width: 768px) {
@@ -44,11 +43,10 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-align: center;
  text-transform: capitalize;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const SpanTitle = styled.span`
@@ -74,7 +72,7 @@ export const Item = styled.li`
  width: 290px;
  height: 100%;
  padding: 47px 10px;
- background: #ffffff;
+ background: ${mainVars.colors.bgColor};
  border-radius: 30px;
  display: flex;
  flex-direction: column;
@@ -101,11 +99,10 @@ export const ItemTitle = styled.h3`
  font-weight: 700;
  font-size: 30px;
  line-height: 133.2%;
- /* identical to box height, or 40px */
 
  text-transform: capitalize;
  text-align: center;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const Background = styled.div`
@@ -147,10 +144,9 @@ export const PriceSpan = styled.span`
  font-weight: 700;
  font-size: 60px;
  line-height: 133.2%;
- /* identical to box height, or 80px */
 
  text-transform: capitalize;
- color: #ffffff;
+ color: #${mainVars.colors.bgColor};
 `;
 
 export const Price = styled.p`
@@ -158,10 +154,9 @@ export const Price = styled.p`
  font-weight: 500;
  font-size: 17px;
  line-height: 160%;
- /* or 27px */
 
  text-align: center;
- color: #878787;
+ color: ${mainVars.colors.priceColor};
 `;
 
 export const PriceText = styled.p`
@@ -170,10 +165,9 @@ export const PriceText = styled.p`
  font-weight: 500;
  font-size: 14px;
  line-height: 141.5%;
- /* or 25px */
 
  text-align: center;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  @media screen and (min-width: 768px) {
   font-size: 16px;
  }
@@ -189,17 +183,16 @@ export const PriceTitle = styled.h4`
  font-weight: 500;
  font-size: 20px;
  line-height: 160%;
- /* identical to box height, or 32px */
 
  text-align: center;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const PriceList = styled.ul`
  padding-top: 32px;
  padding-bottom: 32px;
- border-top: 1px solid #d0d0d0;
- border-bottom: 1px solid #d0d0d0;
+ border-top: 1px solid ${mainVars.colors.borderColor};
+ border-bottom: 1px solid ${mainVars.colors.borderColor};
  display: flex;
  flex-direction: column;
  gap: 3px;
@@ -216,9 +209,8 @@ export const PriceListText = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 213.5%;
- /* or 43px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
 `;
 
 export const PriceListTextSpan = styled.span`
@@ -237,18 +229,18 @@ export const Button = styled.button`
  width: 100%;
  height: 61px;
 
- background: #303030;
+ background: ${mainVars.colors.headerColor};
  border-radius: 20px;
 
  font-family: 'Inter', sans-serif;
  font-weight: 600;
  font-size: 18px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: uppercase;
- color: #ffffff;
+ transition: ${mainVars.transitions.main};
+ color: ${mainVars.colors.whiteColor};
  &:hover {
-  background: #625ffb;
+  background: #${mainVars.colors.primaryColor};
  }
 `;

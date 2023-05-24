@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import {
  AiOutlineInstagram,
@@ -14,44 +14,50 @@ import {
 import { IoIosArrowDropupCircle } from 'react-icons/io';
 
 export const Instagram = styled(AiOutlineInstagram)`
- color: #d2d2d2;
+ color: ${mainVars.colors.iconColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const Facebook = styled(AiFillFacebook)`
- color: #d2d2d2;
+ color: ${mainVars.colors.iconColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const Twitter = styled(AiOutlineTwitter)`
- color: #d2d2d2;
+ color: ${mainVars.colors.iconColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const Linkedin = styled(AiFillLinkedin)`
- color: #d2d2d2;
+ color: ${mainVars.colors.iconColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const Youtube = styled(AiFillYoutube)`
- color: #d2d2d2;
+ color: ${mainVars.colors.iconColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const UpToTop = styled(IoIosArrowDropupCircle)`
- color: #303030;
+ color: ${mainVars.colors.headerColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
  @media screen and (min-width: 1200px) {
   margin-left: 42px;
@@ -77,7 +83,7 @@ export const FooterWrap = styled.div`
 `;
 
 export const FooterLogoWrap = styled.div`
- background: #eeeeee;
+ background: ${mainVars.colors.bgFooter};
  border-radius: 30px;
  padding: 20px 21px;
  width: 100%;
@@ -110,9 +116,8 @@ export const FooterContactsLink = styled.a`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
 `;
 
 export const FooterContactsSpan = styled.span`
@@ -129,7 +134,7 @@ export const LogoText = styled.p`
  font-weight: 700;
  font-size: 40px;
  line-height: 1.3;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 
  margin-left: 14px;
 `;
@@ -147,10 +152,9 @@ export const FooterSupportTitle = styled.h2`
  font-weight: 700;
  font-size: 25px;
  line-height: 133.2%;
- /* or 33px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 export const FooterSupportList = styled.ul`
  display: grid;
@@ -169,11 +173,11 @@ export const FooterSupportLink = styled(Link)`
  font-weight: 600;
  font-size: 20px;
  line-height: 248.5%;
- /* or 50px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
+ transition: ${mainVars.transitions.main};
  &:hover {
-  color: #625ffb;
+  color: ${mainVars.colors.primaryColor};
  }
 `;
 
@@ -197,10 +201,9 @@ export const FooterSocialTitle = styled.h2`
  font-weight: 700;
  font-size: 25px;
  line-height: 133.2%;
- /* or 33px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 export const FooterSocialList = styled.ul`
  display: flex;
@@ -223,9 +226,8 @@ export const FooterSocialLink = styled.a`
  font-weight: 600;
  font-size: 20px;
  line-height: 248.5%;
- /* or 50px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
 `;
 
 export const FooterSocialWrap = styled.div`
@@ -236,7 +238,7 @@ export const FooterSocialWrap = styled.div`
 
 export const FooterCopyrightWrap = styled.div`
  max-width: 751px;
- border-top: 1px solid #cecece;
+ border-top: 1px solid ${mainVars.colors.lineColor};
  @media screen and (min-width: 1200px) {
   margin-left: 180px;
  }
@@ -256,15 +258,14 @@ export const FooterCopyrightText = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* identical to box height, or 32px */
 
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const FooterCopyrightSpan = styled.span`
  font-weight: 500;
- color: #625ffb;
+ color: ${mainVars.colors.primaryColor};
  &:hover {
-  color: #ffb545;
+  color: ${mainVars.colors.checkOrange};
  }
 `;

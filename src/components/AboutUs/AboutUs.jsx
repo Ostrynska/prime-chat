@@ -13,7 +13,6 @@ import {
  ImageWrap,
  Image,
  AboutUsWrap,
- //  AboutUsImage,
 } from './AboutUs.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 import { Button } from '../Button/Button';

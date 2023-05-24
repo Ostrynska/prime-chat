@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const Section = styled.section`
  padding-top: 45px;
@@ -26,11 +26,10 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-align: center;
  text-transform: capitalize;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
  @media screen and (min-width: 768px) {
   max-width: 760px;
  }
@@ -75,14 +74,6 @@ export const ItemContent = styled.div`
  flex-direction: column;
  justify-content: center;
  width: 100%;
- ${
-  '' /* @media screen and (min-width: 480px) {
-  width: 440px;
- }
- @media screen and (min-width: 768px) {
-  width: 760px;
- } */
- }
  @media screen and (min-width: 1200px) {
   width: 556px;
  }
@@ -97,10 +88,9 @@ export const ItemTitle = styled.h3`
  font-weight: 600;
  font-size: 30px;
  line-height: 133.2%;
- /* or 40px */
 
  text-transform: capitalize;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 export const ItemText = styled.p`
  margin-bottom: 25px;
@@ -110,9 +100,8 @@ export const ItemText = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
 `;
 
 export const ItemImageFirst = styled.img`

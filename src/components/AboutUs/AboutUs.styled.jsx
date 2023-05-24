@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
@@ -18,8 +18,6 @@ export const Section = styled.section`
 
 export const AboutUsWrap = styled.div`
  display: flex;
-
- ${'' /* position: absolute; */}
  justify-content: center;
  @media screen and (min-width: 1920px) {
   gap: 20px;
@@ -47,11 +45,9 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
-
- color: #303030;
+ color: ${mainVars.colors.headerColor};
  @media screen and (min-width: 480px) {
   width: 440px;
  }
@@ -73,9 +69,8 @@ export const Post = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.contentColor};
  @media screen and (min-width: 480px) {
   width: 440px;
  }
@@ -112,9 +107,8 @@ export const ListItem = styled.li`
  ${p =>
   p.color &&
   `
-    background: ${lightTheme.colors[p.color]};
+    background: ${mainVars.colors[p.color]};
   `}
-
  border-radius: 44px;
 `;
 
@@ -126,7 +120,7 @@ export const Check = styled(IoIosCheckmarkCircle)`
  ${p =>
   p.color &&
   `
-    color: ${lightTheme.colors[p.color]};
+    color: ${mainVars.colors[p.color]};
   `}
 `;
 
@@ -136,14 +130,13 @@ export const CheckText = styled.p`
  font-weight: 600;
  font-size: 12px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: capitalize;
 
  ${p =>
   p.color &&
   `
-    color: ${lightTheme.colors[p.color]};
+    color: ${mainVars.colors[p.color]};
   `}
  @media screen and (min-width: 480px) {
   font-size: 18px;

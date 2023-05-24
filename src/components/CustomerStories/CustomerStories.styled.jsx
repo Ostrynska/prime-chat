@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const Wrapper = styled.div`
  margin-bottom: 56px;
@@ -27,7 +27,7 @@ export const Section = styled.section`
   left: 50%;
   transform: translateX(-50%);
   height: 1px;
-  background-color: #cecece;
+  background-color: ${mainVars.colors.lineColor};
   width: 290px;
   @media screen and (min-width: 480px) {
    width: 440px;
@@ -53,19 +53,19 @@ export const Title = styled.h2`
  font-size: 60px;
  line-height: 1.33;
  text-transform: capitalize;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const SpanTitle = styled.span`
  font-family: 'Open Sans', sans-serif;
  font-weight: 700;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const Item = styled.div`
  padding: 53px 28px;
  max-width: 100%;
- background: #f8f8f8;
+ background: ${mainVars.colors.platformColor};
  border-radius: 30px;
  @media screen and (min-width: 768px) {
   padding: 53px 48px;
@@ -80,15 +80,14 @@ export const Comment = styled.div`
  margin-top: 19px;
  padding-top: 27px;
  max-width: 100%;
- border-top: 1px solid #cccccc;
+ border-top: 1px solid ${mainVars.colors.commentLineColor};
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
  @media screen and (min-width: 1920px) {
   max-width: 613px;
  }
@@ -122,10 +121,9 @@ export const UserName = styled.h3`
  font-weight: 600;
  font-size: 30px;
  line-height: 133.2%;
- /* identical to box height, or 40px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const UserPosition = styled.p`
@@ -133,10 +131,9 @@ export const UserPosition = styled.p`
  font-weight: 400;
  font-size: 18px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: capitalize;
- color: #625ffb;
+ color: ${mainVars.colors.primaryColor};
 `;
 
 export const CompanyLogo = styled.img`

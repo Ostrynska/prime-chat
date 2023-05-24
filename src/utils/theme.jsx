@@ -6,7 +6,7 @@ export const mainVars = {
   bgColor: '#FFFFFF',
   bgSecondaryColor: '#FFF3E1',
   bgGrey: '#ECECEC',
-  contentColor: '#4e4e4e',
+  bgFooter: '#eeeeee',
   primaryColor: '#625FFB',
   secondaryColor: '#E2992B',
   headerColor: '#303030',
@@ -17,41 +17,16 @@ export const mainVars = {
   darkGreyColor: '#454545',
   lightGreyColor: '#F7F7F7',
   checkOrange: '#FFB545',
-  inputOrange:
-   'linear-gradient(89.88deg, #FFEDD1 1.51%, rgba(255, 255, 255, 0) 84.54%)',
-  checkPurple: '#625FFB',
-  inputPurple:
-   'linear-gradient(89.88deg, #D3D2FF 1.51%, rgba(255, 255, 255, 0) 84.54%)',
-  checkGreen: '#65CB7B',
-  inputGreen:
-   'linear-gradient(89.88deg, #D6F4DC 1.51%, rgba(255, 255, 255, 0) 84.54%)',
- },
-};
-
-export const lightTheme = {
- ...mainVars,
- colors: {
-  bgColor: '#FFFFFF',
-  bgSecondaryColor: '#FFF3E1',
-  bgGrey: '#ECECEC',
-  contentColor: '#4e4e4e',
-  primaryColor: '#625FFB',
-  secondaryColor: '#E2992B',
-  headerColor: '#303030',
-  titleColor: '#263238',
-  textColor: '#4E4E4E',
-  whiteColor: '#FFFFFF',
-  greyColor: '#F3F3F3',
-  darkGreyColor: '#454545',
-  lightGreyColor: '#F7F7F7',
-  checkOrange: '#FFB545',
-  inputOrange:
-   'linear-gradient(89.88deg, #FFEDD1 1.51%, rgba(255, 255, 255, 0) 84.54%)',
-  checkPurple: '#625FFB',
-  inputPurple:
-   'linear-gradient(89.88deg, #D3D2FF 1.51%, rgba(255, 255, 255, 0) 84.54%)',
-  checkGreen: '#65CB7B',
-  inputGreen:
-   'linear-gradient(89.88deg, #D6F4DC 1.51%, rgba(255, 255, 255, 0) 84.54%)',
+  textInputColor: '#a0a0a0',
+  priceColor: '#878787',
+  successColor: '#2fcf3f',
+  lineColor: '#cecece',
+  commentLineColor: '#cccccc',
+  purpleColor: '#7976ff',
+  borderColor: '#d0d0d0',
+  borderLightColor: '#eaeaf7',
+  platformColor: '#f8f8f8',
+  iconColor: '#d2d2d2',
+  opacityGreyColor: 'rgba(237, 237, 255, 0.5)',
  },
 };

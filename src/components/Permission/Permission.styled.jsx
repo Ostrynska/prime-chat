@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 export const Section = styled.section`
- background: #625ffb;
+ background: ${mainVars.colors.primaryColor};
  position: relative;
  padding-top: 65px;
  padding-bottom: 65px;
@@ -36,10 +36,9 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
 `;
 
 export const TitleSpan = styled.span`
@@ -48,15 +47,13 @@ export const TitleSpan = styled.span`
 
 export const Text = styled.p`
  margin-bottom: 42px;
- ${'' /* max-width: 578px; */}
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
 `;
 
 export const List = styled.ul`
@@ -81,7 +78,7 @@ export const Check = styled(IoIosCheckmarkCircle)`
  width: 28px;
  height: 28px;
 
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
 `;
 
 export const CheckText = styled.p`
@@ -89,10 +86,9 @@ export const CheckText = styled.p`
  font-weight: 600;
  font-size: 12px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: uppercase;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  @media screen and (min-width: 1200px) {
   font-size: 14px;
  }

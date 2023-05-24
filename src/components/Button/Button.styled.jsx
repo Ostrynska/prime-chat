@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const ButtonStyle = styled.button`
  display: inline-block;
@@ -12,40 +12,40 @@ export const ButtonStyle = styled.button`
  height: 86px;
  border-radius: 72px;
 
- transition: ${lightTheme.transitions.main};
+ transition: ${mainVars.transitions.main};
 `;
 
 export const PrimaryButton = styled(ButtonStyle)`
  display: inline-block;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  padding: 28px 60px 29px;
- background-color: #303030;
+ background-color: ${mainVars.colors.headerColor};
  &:hover {
-  color: #ffffff;
-  background-color: #625ffb;
+  color: ${mainVars.colors.whiteColor};
+  background-color: ${mainVars.colors.primaryColor};
  }
 `;
 
 export const SecondaryButton = styled(ButtonStyle)`
  display: inline-block;
- color: #263238;
+ color: ${mainVars.colors.titleColor};
  padding: 28px 66px 29px;
- background-color: #f3f3f3;
+ background-color: ${mainVars.colors.greyColor};
  &:hover {
-  color: #ffffff;
-  background-color: #e2992b;
+  color: ${mainVars.colors.whiteColor};
+  background-color: ${mainVars.colors.secondaryColor};
  }
 `;
 
 export const SecondaryButtonIcon = styled(ButtonStyle)`
  display: flex;
  align-items: center;
- color: #263238;
+ color: ${mainVars.colors.titleColor};
  padding: 23px 42px;
  height: 86px;
- background-color: #f3f3f3;
+ background-color: ${mainVars.colors.greyColor};
  &:hover {
-  color: #ffffff;
-  background-color: #e2992b;
+  color: ${mainVars.colors.whiteColor};
+  background-color: ${mainVars.colors.secondaryColor};
  }
 `;

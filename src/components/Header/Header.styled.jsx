@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const LogoLink = styled.a`
  display: flex;
@@ -13,7 +13,7 @@ export const LogoText = styled.p`
  font-weight: 700;
  font-size: 30px;
  line-height: 1.3;
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
 
  margin-left: 2px;
  @media screen and (min-width: 1920px) {
@@ -69,11 +69,11 @@ export const MenuLink = styled(Link)`
  font-size: 16px;
  line-height: 1.61;
  text-transform: capitalize;
- transition: ${lightTheme.transitions.main};
+ transition: ${mainVars.transitions.main};
 
- color: ${lightTheme.colors.headerColor};
+ color: ${mainVars.colors.headerColor};
  &:hover {
-  color: ${lightTheme.colors.primaryColor};
+  color: ${mainVars.colors.primaryColor};
   font-weight: 500;
  }
  @media screen and (min-width: 1920px) {

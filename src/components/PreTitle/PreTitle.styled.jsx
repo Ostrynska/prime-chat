@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
-
-export const HomeSection = styled.section``;
+import { mainVars } from '../../utils/theme';
 
 export const TitleWrap = styled.div`
  display: inline-block;
@@ -9,7 +7,7 @@ export const TitleWrap = styled.div`
  height: 51px;
  border-radius: 72px;
  padding: 11px 40px;
- background: ${lightTheme.colors.bgSecondaryColor};
+ background: ${mainVars.colors.bgSecondaryColor};
 
  margin-bottom: 17px;
 `;
@@ -21,7 +19,7 @@ export const TitleWrapText = styled.p`
  line-height: 1.61;
  text-align: center;
  text-transform: capitalize;
- color: ${lightTheme.colors.secondaryColor};
+ color: ${mainVars.colors.secondaryColor};
 `;
 
 export const TitleWrapSecondary = styled.div`
@@ -30,7 +28,7 @@ export const TitleWrapSecondary = styled.div`
  height: 51px;
  border-radius: 72px;
  padding: 11px 40px;
- background: #7976ff;
+ background: ${mainVars.colors.purpleColor};
 
  margin-bottom: 17px;
 `;
@@ -42,5 +40,5 @@ export const TitleWrapTextSecondary = styled.p`
  line-height: 1.61;
  text-align: center;
  text-transform: capitalize;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
 `;

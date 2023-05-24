@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 import {
  Accordion,
  AccordionItem,
@@ -8,10 +8,10 @@ import {
  AccordionButton,
 } from '@chakra-ui/react';
 
-import {
- IoIosArrowDroprightCircle,
- IoIosArrowDropdownCircle,
-} from 'react-icons/io';
+// import {
+//  IoIosArrowDroprightCircle,
+//  IoIosArrowDropdownCircle,
+// } from 'react-icons/io';
 
 export const Section = styled.section`
  padding-top: 45px;
@@ -51,11 +51,10 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
+ color: ${mainVars.colors.headerColor};
 
- color: #303030;
  @media screen and (min-width: 1200px) {
   margin-bottom: 0;
  }
@@ -95,9 +94,8 @@ export const List = styled(Accordion)`
 
 export const Item = styled(AccordionItem)`
  padding: 47px 50px;
- ${'' /* width: 100%; */}
 
- background: #f3f3f3;
+ background: ${mainVars.colors.greyColor};
  border-radius: 30px;
 
  @media screen and (min-width: 1200px) {
@@ -115,10 +113,9 @@ export const ItemTitle = styled.h3`
  font-weight: 600;
  font-size: 30px;
  line-height: 133.2%;
- /* identical to box height, or 40px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
  @media screen and (min-width: 1200px) {
   font-size: 18px;
  }
@@ -136,9 +133,8 @@ export const ItemText = styled(AccordionPanel)`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
  @media screen and (min-width: 1200px) {
   font-size: 16px;
  }
@@ -157,7 +153,7 @@ export const Icon = styled(AccordionIcon)`
  display: flex;
  margin-left: auto;
  align-items: flex-end;
- color: #625ffb;
+ color: ${mainVars.colors.primaryColor};
 `;
 export const Image = styled.img`
  display: none;

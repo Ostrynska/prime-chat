@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const Section = styled.section`
  padding-top: 45px;
@@ -29,15 +29,15 @@ export const Content = styled.div``;
 
 export const Title = styled.h2`
  max-width: 310px;
+
  font-family: 'Open Sans', sans-serif;
  font-style: normal;
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
  @media screen and (min-width: 480px) {
   max-width: 408px;
  }
@@ -62,9 +62,8 @@ export const PostTitle = styled.div`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
  @media screen and (min-width: 1200px) {
   margin-left: 177px;
  }
@@ -105,11 +104,10 @@ export const PlatformRvs = styled.ul`
  }
 `;
 export const PlatformItem = styled.li`
- ${'' /* border: 1px solid #4e4e4e; */}
  margin-bottom: 36px;
 
  position: relative;
- background: #f8f8f8;
+ background: ${mainVars.colors.platformColor};
  padding: 55px 30px;
  border-radius: 30px;
  @media screen and (min-width: 1200px) {
@@ -125,8 +123,8 @@ export const AltText = styled.div`
  top: 95px;
  left: 85px;
 
- background: rgba(237, 237, 255, 0.5);
- border: 1px solid #eaeaf7;
+ background: ${mainVars.colors.opacityGreyColor};
+ border: 1px solid ${mainVars.colors.borderLightColor};
  backdrop-filter: blur(5px);
  border-radius: 10px;
  padding: 12px 16px;
@@ -135,8 +133,8 @@ export const AltText = styled.div`
  font-weight: 600;
  font-size: 18px;
  line-height: 133.2%;
- /* identical to box height, or 24px */
- color: #625ffb;
+
+ color: ${mainVars.colors.primaryColor};
 `;
 
 export const PlatformTitle = styled.h3`
@@ -147,10 +145,9 @@ export const PlatformTitle = styled.h3`
  font-weight: 600;
  font-size: 30px;
  line-height: 133.2%;
- /* identical to box height, or 40px */
 
  text-transform: capitalize;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const PlatformText = styled.p`
@@ -160,9 +157,8 @@ export const PlatformText = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
- color: #4e4e4e;
+ color: ${mainVars.colors.textColor};
 `;
 export const MessengerImage = styled.img`
  display: none;

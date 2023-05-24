@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 import bgSubscribe from '../../images/subscribe/bgSubscribe@1x.png';
 import bgSubscribeRetina from '../../images/subscribe/bgSubscribe@2x.png';
@@ -55,10 +55,9 @@ export const Title = styled.h2`
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
- color: #ffffff;
+ color: ${mainVars.colors.whiteColor};
  margin-bottom: 15px;
  text-align: center;
  @media screen and (min-width: 380px) {
@@ -85,30 +84,32 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
- background: #454545;
+ background: ${mainVars.colors.darkGreyColor};
  border-radius: 72px;
  padding: 27px 37px;
+
+ width: 100%;
+ margin-bottom: 8px;
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* identical to box height, or 32px */
 
- color: #a0a0a0;
- &:hover,
- &:focus {
-  border: 1px solid #e2992b;
-  color: #ffffff;
- }
- width: 100%;
- margin-bottom: 8px;
+ color: ${mainVars.colors.textInputColor};
+ transition: ${mainVars.transitions.main};
+
  @media screen and (min-width: 1200px) {
   width: 368px;
   margin-right: 8px;
  }
  @media screen and (min-width: 1920px) {
   margin-right: 12px;
+ }
+ &:hover,
+ &:focus {
+  border: 1px solid ${mainVars.colors.secondaryColor};
+  color: ${mainVars.colors.whiteColor};
  }
 `;
 
@@ -117,19 +118,18 @@ export const Button = styled.button`
  padding: 28px 49px 29px;
  width: 168px;
 
- background: #ffffff;
+ background: ${mainVars.colors.bgColor};
  border-radius: 72px;
 
  font-family: 'Inter', sans-serif;
  font-weight: 600;
  font-size: 18px;
  line-height: 160%;
- /* identical to box height, or 29px */
 
  text-transform: uppercase;
  color: #303030;
  &:hover {
   color: #ffffff;
-  background-color: #e2992b;
+  background-color: ${mainVars.colors.secondaryColor};
  }
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const Section = styled.section`
  position: relative;
@@ -60,11 +60,10 @@ export const Title = styled.h2`
  font-weight: 300;
  font-size: 40px;
  line-height: 133.2%;
- /* or 53px */
 
  text-transform: capitalize;
  text-align: center;
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;
 
 export const TitleSpan = styled.span`
@@ -80,10 +79,9 @@ export const Post = styled.p`
  font-weight: 400;
  font-size: 20px;
  line-height: 160%;
- /* or 32px */
 
  text-align: center;
- color: #4e4e4e;
+ color: ${mainVars.colors.contentColor};
 `;
 
 export const AwardsList = styled.ul`
@@ -113,10 +111,9 @@ export const CustomerText = styled.p`
  font-weight: 400;
  font-size: 25px;
  line-height: 160%;
- /* identical to box height, or 40px */
 
  text-align: center;
  text-transform: capitalize;
 
- color: #303030;
+ color: ${mainVars.colors.headerColor};
 `;

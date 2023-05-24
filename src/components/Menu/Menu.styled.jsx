@@ -2,19 +2,19 @@ import { Link } from 'react-scroll';
 import { RxCross1 } from 'react-icons/rx';
 
 import styled from 'styled-components';
-import { lightTheme } from '../../utils/theme';
+import { mainVars } from '../../utils/theme';
 
 export const BurgerMenuStyles = {
  bmBurgerButton: {
   position: 'absolute',
-  width: '24px',
-  height: '16px',
+  width: '26px',
+  height: '18px',
   right: '33px',
   top: '61px',
  },
  bmCrossButton: {
-  height: '14px',
-  width: '14px',
+  height: '26px',
+  width: '18px',
   top: '32px',
   right: '32px',
  },
@@ -40,7 +40,7 @@ export const BurgerMenuStyles = {
 };
 
 export const IconCross = styled(RxCross1)`
- color: #ececec;
+ color: ${mainVars.colors.bgGrey};
 `;
 
 export const BurgerMenuContainer = styled.div`
@@ -69,11 +69,11 @@ export const MenuLink = styled(Link)`
  font-size: 18px;
  line-height: 1.61;
  text-transform: capitalize;
- transition: ${lightTheme.transitions.main};
+ transition: ${mainVars.transitions.main};
 
- color: ${lightTheme.colors.whiteColor};
+ color: ${mainVars.colors.whiteColor};
  &:hover {
-  color: ${lightTheme.colors.secondaryColor};
+  color: ${mainVars.colors.secondaryColor};
   font-weight: 500;
  }
 `;

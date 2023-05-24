@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ReactSVG } from 'react-svg';
-// import { useMediaQuery } from 'react-responsive';
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -21,7 +20,7 @@ function SampleNextArrow(props) {
    setShowBtn(window.innerWidth >= 1200);
   };
 
-  handleResize(); // Перевірка при завантаженні компонента
+  handleResize();
 
   window.addEventListener('resize', handleResize);
   return () => {
