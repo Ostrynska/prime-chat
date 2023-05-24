@@ -23,6 +23,8 @@ export const Container = styled.div`
  }
  @media screen and (min-width: 1920px) {
   min-width: 1522px;
+  padding-left: 0px;
+  padding-right: 0px;
  }
 `;
 
@@ -60,18 +62,25 @@ export const Image = styled.img`
  }
  @media screen and (min-width: 1920px) {
   width: 710px;
-  height: 520px;
+  height: 582px;
  }
 `;
 
 export const HomeSection = styled.section`
- padding-bottom: 202px;
  background-image: url(${arrowDesktop});
  background-repeat: no-repeat;
  width: 100%;
  z-index: -1;
+ padding-bottom: 102px;
+ @media screen and (min-width: 768px) {
+  padding-bottom: 142px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-bottom: 182px;
+ }
  @media screen and (min-width: 1920px) {
   background-position: 60% 90%;
+  padding-bottom: 202px;
  }
 `;
 
