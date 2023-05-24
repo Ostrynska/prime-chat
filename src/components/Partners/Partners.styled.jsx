@@ -2,8 +2,20 @@ import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
 export const PartnersSection = styled.section`
- padding-top: 100px;
- padding-bottom: 135px;
+ padding-top: 20px;
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-top: 40px;
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 80px;
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 100px;
+  padding-bottom: 135px;
+ }
 `;
 
 export const PartnersWrap = styled.div`
