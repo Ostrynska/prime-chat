@@ -59,9 +59,6 @@ export const UpToTop = styled(IoIosArrowDropupCircle)`
  &:hover {
   color: ${mainVars.colors.primaryColor};
  }
- @media screen and (min-width: 1200px) {
-  margin-left: 42px;
- }
  @media screen and (min-width: 1920px) {
   margin-left: 100px;
  }
@@ -184,6 +181,7 @@ export const FooterSupportLink = styled(Link)`
 export const FooterSocial = styled.div`
  margin-top: 30px;
  margin-bottom: 15px;
+
  display: flex;
  flex-wrap: wrap;
  justify-content: stretch;
@@ -193,6 +191,7 @@ export const FooterSocial = styled.div`
  @media screen and (min-width: 1200px) {
   padding: 26.5px 0 30.5px 0;
   margin-top: 0px;
+  margin-bottom: 0px;
  }
 `;
 
@@ -211,11 +210,22 @@ export const FooterSocialList = styled.ul`
  flex-direction: row;
  align-items: baseline;
  margin-top: 15px;
+ @media screen and (min-width: 417px) {
+  margin-top: 0px;
+  mardin-left: 10px;
+  display: inline-flex;
+ }
  @media screen and (min-width: 430px) {
   margin-top: 0px;
   margin-left: 5px;
  }
  @media screen and (min-width: 768px) {
+  margin-left: 32px;
+ }
+ @media screen and (min-width: 1200px) {
+  margin-left: 0px;
+ }
+ @media screen and (min-width: 1920px) {
   margin-left: 32px;
  }
 `;
@@ -250,7 +260,11 @@ export const FooterCopyrightWrap = styled.div`
 export const FooterCopyright = styled.div`
  display: flex;
  align-items: center;
- padding: 18px 0 22px 0;
+ padding: 26.5px 0px 30.5px;
+
+ @media screen and (min-width: 1920px) {
+  padding: 18px 0 22px 0;
+ }
 `;
 
 export const FooterCopyrightText = styled.p`
