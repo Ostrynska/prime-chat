@@ -2,8 +2,20 @@ import styled from 'styled-components';
 import { lightTheme } from '../../utils/theme';
 
 export const Section = styled.section`
- padding-top: 135px;
- padding-bottom: 135px;
+ padding-top: 45px;
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-top: 75px;
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 115px;
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 135px;
+  padding-bottom: 135px;
+ }
 `;
 export const Title = styled.h2`
  margin: 0 auto;
@@ -114,7 +126,7 @@ export const ItemImageFirst = styled.img`
  }
  @media screen and (min-width: 1200px) {
   width: 480px;
-  height: 464px;
+  height: 440px;
  }
  @media screen and (min-width: 1920px) {
   width: 703px;
@@ -143,7 +155,7 @@ export const ItemImageThird = styled.img`
  @media screen and (min-width: 768px) {
   margin-top: 5%;
   width: 420px;
-  height: 430px;
+  height: 370px;
  }
  @media screen and (min-width: 1920px) {
   margin: 0;
