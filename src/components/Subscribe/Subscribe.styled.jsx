@@ -4,7 +4,18 @@ import { lightTheme } from '../../utils/theme';
 import bgSubscribe from '../../images/subscribe/bgSubscribe@1x.png';
 import bgSubscribeRetina from '../../images/subscribe/bgSubscribe@2x.png';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-bottom: 135px;
+ }
+`;
 
 export const TitleContent = styled.div`
  background-image: url(${bgSubscribe});
