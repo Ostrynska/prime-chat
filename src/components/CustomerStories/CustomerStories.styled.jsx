@@ -6,9 +6,21 @@ export const Wrapper = styled.div`
  position: 'relative';
 `;
 export const Section = styled.section`
- padding-top: 135px;
- padding-bottom: 135px;
  position: relative;
+ padding-top: 45px;
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-top: 75px;
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 115px;
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 135px;
+  padding-bottom: 135px;
+ }
  ::after {
   content: '';
   position: absolute;
@@ -51,25 +63,23 @@ export const SpanTitle = styled.span`
 `;
 
 export const Item = styled.div`
- padding: 53px 68px;
-
- max-width: 749px;
-
+ padding: 53px 28px;
+ max-width: 100%;
  background: #f8f8f8;
  border-radius: 30px;
- ${'' /* border: 1px solid black; */}
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 768px) {
+  padding: 53px 48px;
  }
- @media screen and (min-width: 1920px) {
-  margin-right: 35px;
+ @media screen and (min-width: 1200px) {
+  padding: 53px 68px;
+  max-width: 749px;
  }
 `;
 
 export const Comment = styled.div`
  margin-top: 19px;
  padding-top: 27px;
-
- max-width: 613px;
+ max-width: 100%;
  border-top: 1px solid #cccccc;
 
  font-family: 'Inter', sans-serif;
@@ -79,18 +89,32 @@ export const Comment = styled.div`
  /* or 32px */
 
  color: #4e4e4e;
+ @media screen and (min-width: 1920px) {
+  max-width: 613px;
+ }
 `;
 
 export const TitleWrap = styled.div`
  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ @media screen and (min-width: 1200px) {
+  flex-direction: row;
+ }
 `;
 
 export const User = styled.div`
  display: flex;
  flex-direction: column;
- align-items: flex-start;
+ align-items: center;
  justify-content: center;
- margin-left: 20px;
+
+ @media screen and (min-width: 1200px) {
+  margin-left: 20px;
+  align-items: flex-start;
+  justify-content: center;
+ }
 `;
 
 export const UserName = styled.h3`
@@ -113,4 +137,15 @@ export const UserPosition = styled.p`
 
  text-transform: capitalize;
  color: #625ffb;
+`;
+
+export const CompanyLogo = styled.img`
+ margin-top: 10px;
+ @media screen and (min-width: 1920px) {
+  margin-top: 0px;
+ }
+`;
+
+export const UserPic = styled.img`
+ border-radius: 50%;
 `;
