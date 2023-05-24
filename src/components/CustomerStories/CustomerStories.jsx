@@ -11,6 +11,8 @@ import {
  User,
  UserName,
  UserPosition,
+ CompanyLogo,
+ UserPic,
 } from './CustomerStories.styled';
 
 import Responsive from '../Slider/Slider';
@@ -40,23 +42,16 @@ const CustomerStories = () => {
     <Responsive>
      <Item>
       <TitleWrap>
-       <img
+       <UserPic
         src={isRetina ? userImageOneRetina : userImageOne}
         alt="Alex Bass"
-        style={{ borderRadius: '50%' }}
         width={94}
        />
        <User>
         <UserName>Alex Bass</UserName>
         <UserPosition>Founder & Head of Product</UserPosition>
        </User>
-       <img
-        src={logoOne}
-        alt="Company logo"
-        style={{
-         marginLeft: 'auto',
-        }}
-       />
+       <CompanyLogo src={logoOne} alt="Company logo" />
       </TitleWrap>
       <Comment>
        “Primchat was the modern customer service software solution that was
@@ -66,23 +61,16 @@ const CustomerStories = () => {
      </Item>
      <Item>
       <TitleWrap>
-       <img
+       <UserPic
         src={isRetina ? userImageTwoRetina : userImageTwo}
         alt="Rose Simmon"
-        style={{ borderRadius: '50%' }}
         width={94}
        />
        <User>
         <UserName>Rose Simmon</UserName>
         <UserPosition>Founder & Head of Product</UserPosition>
        </User>
-       <img
-        src={logoTwo}
-        alt="Company logo"
-        style={{
-         marginLeft: 'auto',
-        }}
-       />
+       <CompanyLogo src={logoTwo} alt="Company logo" />
       </TitleWrap>
       <Comment>
        “Our team was able to teach themselves primchat in a day. It's like using
@@ -94,23 +82,16 @@ const CustomerStories = () => {
      </Item>
      <Item>
       <TitleWrap>
-       <img
+       <UserPic
         src={isRetina ? userImageThreeRetina : userImageThree}
         alt="Son Heung-min"
-        style={{ borderRadius: '50%' }}
         width={94}
        />
        <User>
         <UserName>Son Heung-min</UserName>
         <UserPosition>Founder & Head of Product</UserPosition>
        </User>
-       <img
-        src={logoThree}
-        alt="Company logo"
-        style={{
-         marginLeft: 'auto',
-        }}
-       />
+       <CompanyLogo src={logoThree} alt="Company logo" />
       </TitleWrap>
       <Comment>
        “Modern customer service software solution that was exactly what we were
