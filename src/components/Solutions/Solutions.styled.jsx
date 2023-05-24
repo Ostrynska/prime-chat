@@ -14,8 +14,20 @@ import {
 } from 'react-icons/io';
 
 export const Section = styled.section`
- padding-top: 135px;
- padding-bottom: 135px;
+ padding-top: 45px;
+ padding-bottom: 45px;
+ @media screen and (min-width: 768px) {
+  padding-top: 75px;
+  padding-bottom: 75px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 115px;
+  padding-bottom: 115px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 135px;
+  padding-bottom: 135px;
+ }
 `;
 
 export const TitleContent = styled.div`
