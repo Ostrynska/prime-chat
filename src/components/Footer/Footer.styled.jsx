@@ -61,9 +61,7 @@ export const UpToTop = styled(IoIosArrowDropupCircle)`
  }
 `;
 
-export const FooterSection = styled.footer`
- padding-top: 135px;
-`;
+export const FooterSection = styled.footer``;
 
 export const FooterWrap = styled.div`
  display: flex;
