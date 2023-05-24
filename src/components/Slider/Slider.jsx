@@ -72,6 +72,8 @@ const Responsive = ({ children }) => {
   infinite: true,
   speed: 500,
   initialSlide: 0,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
   responsive: [
@@ -79,36 +81,50 @@ const Responsive = ({ children }) => {
     breakpoint: 1919,
     settings: {
      slidesToShow: 2,
-     slidesToScroll: 1,
-     infinite: true,
-     dots: true,
+     className: 'center',
+     centerPadding: '20px',
     },
    },
    {
-    breakpoint: 1201,
+    breakpoint: 1918,
     settings: {
      slidesToShow: 1,
-     slidesToScroll: 1,
-     infinite: true,
-     dots: true,
+     centerMode: true,
+     centerPadding: '40px',
     },
    },
    {
-    breakpoint: 768,
+    breakpoint: 1400,
     settings: {
      slidesToShow: 1,
-     slidesToScroll: 1,
-     infinite: true,
-     dots: true,
+     centerMode: true,
+     centerPadding: '40px',
     },
    },
    {
-    breakpoint: 480,
+    breakpoint: 1200,
     settings: {
      slidesToShow: 1,
-     slidesToScroll: 1,
-     infinite: true,
-     dots: true,
+     centerMode: true,
+     centerPadding: '40px',
+    },
+   },
+   {
+    breakpoint: 767,
+    settings: {
+     slidesToShow: 1,
+    },
+   },
+   {
+    breakpoint: 479,
+    settings: {
+     slidesToShow: 1,
+    },
+   },
+   {
+    breakpoint: 319,
+    settings: {
+     slidesToShow: 1,
     },
    },
   ],
