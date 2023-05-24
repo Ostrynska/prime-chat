@@ -6,8 +6,20 @@ import { IoIosCheckmarkCircle } from 'react-icons/io';
 export const Section = styled.section`
  background: #625ffb;
  position: relative;
- padding-top: 165px;
- padding-bottom: 165px;
+ padding-top: 65px;
+ padding-bottom: 65px;
+ @media screen and (min-width: 768px) {
+  padding-top: 95px;
+  padding-bottom: 95px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding-top: 145px;
+  padding-bottom: 145px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding-top: 165px;
+  padding-bottom: 165px;
+ }
 `;
 
 export const Wrap = styled.div`
