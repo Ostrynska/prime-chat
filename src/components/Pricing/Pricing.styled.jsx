@@ -241,6 +241,6 @@ export const Button = styled.button`
  transition: ${mainVars.transitions.main};
  color: ${mainVars.colors.whiteColor};
  &:hover {
-  background: #${mainVars.colors.primaryColor};
+  background: ${mainVars.colors.primaryColor};
  }
 `;
