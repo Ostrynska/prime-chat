@@ -41,6 +41,9 @@ const Chat = () => {
  const [messageList, setMessageList] = useState([]);
  const [user, setUser] = useState('');
 
+ console.log(message);
+ console.log(user);
+
  useEffect(() => {
   socket.current.on('changeOnline', size => {
    setOnlineUsers(size);
