@@ -41,13 +41,12 @@ const Chat = () => {
  const [messageList, setMessageList] = useState([]);
  const [user, setUser] = useState('');
 
- console.log('messageList', messageList);
-
  useEffect(() => {
   socket.current.on('changeOnline', size => {
    setOnlineUsers(size);
   });
  }, []);
+
  useEffect(() => {
   socket.current.on('alertMessage', data => {
    setMessageList([...messageList, data]);
@@ -68,10 +67,7 @@ const Chat = () => {
   socket.current.on('alertMessage', data => {
    setMessageList([...messageList, data]);
   });
-  console.log('user', user);
-  console.log('message', message);
  };
-
  return (
   <Section>
    <Container>
@@ -130,7 +126,7 @@ const Chat = () => {
             setMessage(e.currentTarget.value);
            }}
           />
-          <BtnForm buttononClick={handleSubmit}>SUBMIT</BtnForm>
+          <BtnForm onClick={handleSubmit}>SUBMIT</BtnForm>
          </InputForm>
         </InputFormWrap>
         <ChatBot>
