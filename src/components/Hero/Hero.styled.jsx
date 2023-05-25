@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import { mainVars } from '../../utils/theme';
 
 import arrowDesktop from '../../images/home-arrow.svg';
@@ -137,7 +139,7 @@ export const HeroWrap = styled.div`
  }
 `;
 
-export const ButtonWrap = styled.div`
+export const ButtonWrap = styled(Link)`
  display: block;
  margin-bottom: 10px;
  @media screen and (min-width: 768px) {
