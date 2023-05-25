@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -46,8 +45,6 @@ export const HeaderNav = styled.nav`
   flex-wrap: wrap;
 `;
 
-export const MenuItem = styled.li``;
-
 export const MenuList = styled.ul`
  display: none;
  @media screen and (min-width: 1200px) {
@@ -63,7 +60,7 @@ export const MenuList = styled.ul`
  }
 `;
 
-export const MenuLink = styled(Link)`
+export const MenuItem = styled.li`
  text-decoration: none;
  font-family: 'Inter', sans-serif;
  font-weight: 400;
