@@ -13,8 +13,8 @@ function App() {
   <>
    <Routes>
     <Route path="/" element={<SharedLayout />}>
-     <Route index element={<ChatPage />} />
-     <Route path="/chat" element={<MainPage />} />
+     <Route index element={<MainPage />} />
+     <Route path="/chat" element={<ChatPage />} />
      <Route path="*" element={<NotFoundPage />} />
     </Route>
    </Routes>
