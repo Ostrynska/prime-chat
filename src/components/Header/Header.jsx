@@ -11,7 +11,6 @@ import {
  HeaderNav,
  MenuList,
  MenuItem,
- MenuLink,
  BtnWrap,
 } from './Header.styled';
 
