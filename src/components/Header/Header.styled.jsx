@@ -36,7 +36,7 @@ export const HeaderWrap = styled.header`
  }
 `;
 
-export const HeaderNav = styled.nav`
+export const HeaderNav = styled.div`
  display: flex;
  align-items: center;
  justify-content: center;
