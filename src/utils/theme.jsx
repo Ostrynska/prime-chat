@@ -27,6 +27,7 @@ export const mainVars = {
   borderLightColor: '#eaeaf7',
   platformColor: '#f8f8f8',
   iconColor: '#d2d2d2',
+  btnChat: '#fafafa',
   opacityGreyColor: 'rgba(237, 237, 255, 0.5)',
   inputOrange:
    'linear-gradient(89.88deg, #FFEDD1 1.51%, rgba(255, 255, 255, 0) 84.54%)',
