@@ -1,9 +1,10 @@
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(NavLink)`
  display: flex;
  align-items: center;
 `;
