@@ -5,6 +5,7 @@ import { GlobalStyle } from './GlobalStyles';
 import { SharedLayout } from './components/SharedLayout/SharedLayout';
 
 const MainPage = lazy(() => import('./pages/HomePage'));
+const ChatPage = lazy(() => import('./pages/ChatPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
    <Routes>
     <Route path="/" element={<SharedLayout />}>
      <Route path="/" element={<MainPage />} />
+     <Route path="/chat" element={<ChatPage />} />
      <Route path="*" element={<NotFoundPage />} />
     </Route>
    </Routes>
