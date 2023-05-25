@@ -36,7 +36,7 @@ const Hero = () => {
        Provide excellent customer service. Answer more tickets all-in-one
        Primarily software.
       </Title>
-      <ButtonWrap>
+      <ButtonWrap to="/chat">
        <Button variant="primary" text={'Get started'} />
       </ButtonWrap>
       <Button variant="secondary" text={'Book a demo'} />
