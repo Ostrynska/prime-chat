@@ -138,8 +138,9 @@ export const UserPosition = styled.p`
 
 export const CompanyLogo = styled.img`
  margin-top: 10px;
- @media screen and (min-width: 1920px) {
+ @media screen and (min-width: 1200px) {
   margin-top: 0px;
+  margin-left: auto;
  }
 `;
 
