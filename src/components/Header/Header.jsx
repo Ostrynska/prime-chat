@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 
 import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
-
+import { Link } from 'react-scroll';
 import {
  LogoLink,
  LogoText,
@@ -26,29 +26,29 @@ const Header = () => {
      </LogoLink>
      <MenuList>
       <MenuItem>
-       <MenuLink to="about-us" smooth={true} duration={500}>
+       <Link to="about-us" smooth={true} duration={500}>
         About Us
-       </MenuLink>
+       </Link>
       </MenuItem>
       <MenuItem>
-       <MenuLink to="platform" smooth={true} duration={500}>
+       <Link to="platform" smooth={true} duration={500}>
         Platform
-       </MenuLink>
+       </Link>
       </MenuItem>
       <MenuItem>
-       <MenuLink to="resources" smooth={true} duration={500}>
+       <Link to="resources" smooth={true} duration={500}>
         Resources
-       </MenuLink>
+       </Link>
       </MenuItem>
       <MenuItem>
-       <MenuLink to="solution" smooth={true} duration={500}>
+       <Link to="solution" smooth={true} duration={500}>
         Solution
-       </MenuLink>
+       </Link>
       </MenuItem>
       <MenuItem>
-       <MenuLink to="pricing" smooth={true} duration={500}>
+       <Link to="pricing" smooth={true} duration={500}>
         Pricing
-       </MenuLink>
+       </Link>
       </MenuItem>
      </MenuList>
     </HeaderNav>
