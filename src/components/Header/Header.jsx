@@ -20,7 +20,7 @@ const Header = () => {
   <Container>
    <HeaderWrap>
     <HeaderNav>
-     <LogoLink href="#home">
+     <LogoLink to={'/'}>
       <Logo />
       <LogoText>PrimeChat</LogoText>
      </LogoLink>
