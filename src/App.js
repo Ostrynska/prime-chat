@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 
+import { Toaster } from 'react-hot-toast';
+
 import { GlobalStyle } from './GlobalStyles';
 import { SharedLayout } from './components/SharedLayout/SharedLayout';
 
@@ -19,6 +21,7 @@ function App() {
     </Route>
    </Routes>
    <GlobalStyle />
+   <Toaster position="top-right" reverseOrder={false} />
   </>
  );
 }
