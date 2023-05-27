@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
+import { MdClear } from 'react-icons/md';
+
 export const Section = styled.section`
  padding-bottom: 45px;
  @media screen and (min-width: 768px) {
@@ -22,6 +24,7 @@ export const Wrapper = styled.div`
 
 export const ChatWrap = styled.div`
  width: 100%;
+ ${'' /* height: 985px; */}
  padding: 43px 35px 31px 29px;
  border-radius: 0px 20px 20px 0px;
  ${'' /* border: 1px solid black; */}
@@ -76,7 +79,6 @@ export const NavWrap = styled.div`
  background: ${mainVars.colors.bgColor};
  border-radius: 20px 0px 0px 20px;
 
- display: grid;
  place-items: center;
 `;
 
@@ -111,7 +113,7 @@ export const Item = styled.li`
 
 export const Form = styled.div`
  width: 100%;
- ${'' /* heiht: 100%; */}
+ height: 834px;
  padding: 25px;
 
  background: #f0f0f0;
@@ -131,9 +133,25 @@ export const OnlineUserList = styled.ul`
 export const OnlineUserItem = styled.li`
  width: 296px;
  height: 75px;
+ padding: 10px 20px;
  background: ${mainVars.colors.whiteColor};
  border-radius: 11px;
  box-shadow: 0px 4px 4px 0px #00000040;
+`;
+
+export const OnlineUserItemName = styled.p`
+ font-family: 'Open Sans', sans-serif;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 20px;
+ line-height: 133.2%;
+
+ text-transform: capitalize;
+ color: ${mainVars.colors.titleColor};
+`;
+
+export const ItemWrapper = styled.div`
+ display: flex;
 `;
 
 export const InputForm = styled.form`
@@ -205,4 +223,70 @@ export const BtnForm = styled.button`
 
 export const ChatBot = styled.div`
  margin-top: 40px;
+`;
+
+export const ResetWrap = styled.button`
+ margin-left: 10px;
+ width: 62px;
+ height: 62px;
+
+ border-radius: 50px;
+ background-color: ${mainVars.colors.primaryColor};
+ opacity: 0.1;
+`;
+
+export const ResetForm = styled(MdClear)`
+ width: 20px;
+ height: 20px;
+ color: ${mainVars.colors.whiteColor};
+`;
+
+export const ChatBoxList = styled.ul`
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+`;
+
+export const ChatBoxItem = styled.li`
+ display: flex;
+ align-items: flex-end;
+`;
+
+export const ChatDate = styled.p`
+ margin-left: auto;
+
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 160%;
+
+ color: ${mainVars.colors.textColor};
+`;
+
+export const ChatText = styled.p`
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 160%;
+
+ color: ${mainVars.colors.textColor};
+`;
+
+export const ChatUser = styled.p`
+ margin-right: 25px;
+ font-family: 'Inter', sans-serif;
+ font-size: 22px;
+ line-height: 160%;
+ font-weight: 700;
+ color: ${mainVars.colors.primaryColor};
+`;
+
+export const ChatMessage = styled.div`
+ min-width: 250px;
+ display: flex;
+ align-items: center;
+
+ padding: 14px 20px;
+ border-radius: 25px;
+ background: ${mainVars.colors.whiteColor};
 `;
