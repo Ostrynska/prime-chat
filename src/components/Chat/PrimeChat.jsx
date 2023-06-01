@@ -6,6 +6,7 @@ import { AvatarGenerator } from 'random-avatar-generator';
 import toast from 'react-hot-toast';
 
 import { ReactComponent as UserList } from '../../images/chat/user-list.svg';
+import { ReactComponent as Exit } from '../../images/chat/exit.svg';
 
 import {
  TitleWrap,
@@ -22,8 +23,6 @@ import {
  InputText,
  BtnForm,
  ItemWrapper,
- ResetWrap,
- ResetForm,
  OnlineUserItemName,
  ChatBoxList,
  ChatBoxItem,
@@ -34,6 +33,7 @@ import {
  BtnName,
  BtnNameIcon,
  WelcomeText,
+ ExitForm,
 } from './Chat.styled';
 
 const socket = {
@@ -69,7 +69,12 @@ const PrimeChat = () => {
    setUsersList(prevUsersList => [...prevUsersList, newUser]);
    setMessageList(prevMessageList => [
     ...prevMessageList,
-    { name: newUser.name, text: `User ${newUser.name} joined the chat.` },
+    {
+     name: newUser.name,
+     text: toast(`User ${newUser.name} joined the chat.`, {
+      icon: '🙋‍♀️',
+     }),
+    },
    ]);
   });
 
@@ -79,7 +84,12 @@ const PrimeChat = () => {
    );
    setMessageList(prevMessageList => [
     ...prevMessageList,
-    { name: userLeft.name, text: `User ${userLeft.name} left the chat.` },
+    {
+     name: userLeft.name,
+     text: toast(`User ${userLeft.name} left the chat`, {
+      icon: '👋',
+     }),
+    },
    ]);
   });
 
@@ -97,6 +107,11 @@ const PrimeChat = () => {
 
   if (user === '') {
    toast.error('User name is required. Please enter your name');
+   return;
+  }
+
+  if (message === '') {
+   toast.error('We cannot send empty field. Please enter the message');
    return;
   }
 
@@ -133,6 +148,8 @@ const PrimeChat = () => {
  const handleReset = () => {
   setMessage('');
   setUser('');
+  onlineUsers(0);
+  onlineUsersList([]);
  };
 
  const handleNameSubmit = () => {
@@ -243,9 +260,11 @@ const PrimeChat = () => {
         }}
        />
        <BtnForm onClick={handleSubmit}>SEND</BtnForm>
-       {/* <ResetWrap>
-      <ResetForm onClick={handleReset} />
-     </ResetWrap> */}
+       {isNameSubmitted === true && (
+        <ExitForm onClick={handleReset}>
+         <Exit />
+        </ExitForm>
+       )}
       </form>
      </InputForm>
     </div>
