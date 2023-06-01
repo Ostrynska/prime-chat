@@ -3,6 +3,8 @@ import { mainVars } from '../../utils/theme';
 
 import { MdClear } from 'react-icons/md';
 
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+
 export const Section = styled.section`
  padding-bottom: 45px;
  @media screen and (min-width: 768px) {
@@ -73,7 +75,6 @@ export const ChatPreTitle = styled.h2`
 
 export const NavWrap = styled.div`
  width: 107px;
- height: 100%;
  padding: 35px 26px;
 
  background: ${mainVars.colors.bgColor};
@@ -120,6 +121,8 @@ export const Form = styled.div`
  border-radius: 20px;
 
  display: flex;
+ align-items: stretch;
+ justify-content: space-around;
  gap: 27px;
 `;
 
@@ -150,13 +153,12 @@ export const OnlineUserItemName = styled.p`
  color: ${mainVars.colors.titleColor};
 `;
 
-export const ItemWrapper = styled.div`
+export const ItemWrapper = styled.form`
  display: flex;
 `;
 
-export const InputForm = styled.form`
+export const InputForm = styled.div`
  display: flex;
- flex-direction: row;
 `;
 
 export const InputFormWrap = styled.div`
@@ -177,7 +179,6 @@ export const Input = styled.input`
  font-size: 20px;
  line-height: 160%;
 
- text-transform: capitalize;
  color: ${mainVars.colors.textInputColor};
  transition: ${mainVars.transitions.main};
  &:not(:last-of-type) {
@@ -191,11 +192,13 @@ export const Input = styled.input`
 `;
 
 export const InputName = styled(Input)`
- width: 250px;
+ width: 370px;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const InputText = styled(Input)`
- width: 450px;
+ width: 688px;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const BtnForm = styled.button`
@@ -221,8 +224,45 @@ export const BtnForm = styled.button`
  }
 `;
 
+export const BtnName = styled.button`
+ position: relative;
+`;
+
+export const WelcomeText = styled.p`
+ margin-bottom: 40px;
+ text-align: end;
+ font-family: 'Open Sans', sans-serif;
+ font-style: normal;
+ font-weight: 300;
+ font-size: 30px;
+ line-height: 133.2%;
+
+ text-transform: capitalize;
+ color: ${mainVars.colors.titleColor};
+
+ span {
+  font-weight: 700;
+  color: ${mainVars.colors.primaryColor};
+ }
+`;
+
+export const BtnNameIcon = styled(BsFillCheckCircleFill)`
+ position: absolute;
+ width: 40px;
+ height: 40px;
+ left: 321px;
+ bottom: 21px;
+ color: ${mainVars.colors.primaryColor};
+ transition: ${mainVars.transitions.main};
+
+ &:hover,
+ &:focus {
+  color: ${mainVars.colors.secondaryColor};
+ }
+`;
+
 export const ChatBot = styled.div`
- margin-top: 40px;
+ ${'' /* height: 631px; */}
 `;
 
 export const ResetWrap = styled.button`
@@ -244,16 +284,17 @@ export const ResetForm = styled(MdClear)`
 export const ChatBoxList = styled.ul`
  display: flex;
  flex-direction: column;
- gap: 15px;
 `;
 
 export const ChatBoxItem = styled.li`
  display: flex;
  align-items: flex-end;
+ margin-bottom: 18px;
 `;
 
 export const ChatDate = styled.p`
  margin-left: auto;
+ margin-right: 18px;
 
  font-family: 'Inter', sans-serif;
  font-weight: 400;
@@ -282,11 +323,10 @@ export const ChatUser = styled.p`
 `;
 
 export const ChatMessage = styled.div`
- min-width: 250px;
  display: flex;
  align-items: center;
 
- padding: 14px 20px;
+ padding: 14px 30px;
  border-radius: 25px;
  background: ${mainVars.colors.whiteColor};
 `;

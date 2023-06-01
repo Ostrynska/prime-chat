@@ -5,6 +5,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { AvatarGenerator } from 'random-avatar-generator';
 import toast from 'react-hot-toast';
 
+import { ReactComponent as UserList } from '../../images/chat/user-list.svg';
+
 import {
  TitleWrap,
  ChatTitle,
@@ -29,6 +31,9 @@ import {
  ChatText,
  ChatUser,
  ChatMessage,
+ BtnName,
+ BtnNameIcon,
+ WelcomeText,
 } from './Chat.styled';
 
 const socket = {
@@ -40,12 +45,9 @@ const PrimeChat = () => {
  const [onlineUsersList, setOnlineUsersList] = useState([]);
  const [user, setUser] = useState('');
  const [message, setMessage] = useState('');
- const [messageList, setMessageList] = useState(
-  JSON.parse(localStorage.getItem('messageList')) || []
- );
- const [usersList, setUsersList] = useState(
-  JSON.parse(localStorage.getItem('usersList')) || []
- );
+ const [messageList, setMessageList] = useState([]);
+ const [usersList, setUsersList] = useState([]);
+ const [isNameSubmitted, setIsNameSubmitted] = useState(false);
 
  const generator = new AvatarGenerator();
  const d = new Date();
@@ -84,7 +86,6 @@ const PrimeChat = () => {
   return () => {
    socket.current.off('changeOnline');
    socket.current.off('chatHistory');
-   socket.current.off('onlineUsers');
    socket.current.off('userJoined');
    socket.current.off('userLeft');
    socket.current.off('alertMessage');
@@ -94,40 +95,59 @@ const PrimeChat = () => {
  const handleSubmit = e => {
   e.preventDefault();
 
+  if (user === '') {
+   toast.error('User name is required. Please enter your name');
+   return;
+  }
+
   let today = d.toLocaleString();
 
-  socket.current.emit('addUser', { name: user });
+  //   handleNameSubmit(user);
 
   socket.current.emit('newMessage', { text: message, name: user, date: today });
-
-  addUser(user);
 
   setMessageList(prevMessageList => [
    ...prevMessageList,
    { name: user, text: message, date: today },
   ]);
 
-  if (message === '' || user === '') {
+  if (message === '') {
    return toast.error("This didn't work.");
   }
 
   setMessage('');
-  //   setUser('');
  };
 
  const addUser = name => {
+  if (name === '') {
+   return;
+  }
   const randomAvatar = generator.generateRandomAvatar();
   const newUser = { name, avatar: randomAvatar };
   setUsersList(prevUsersList => [...prevUsersList, newUser]);
 
-  setMessageList(prevMessageList => [...prevMessageList]);
-  localStorage.setItem('usersList', JSON.stringify([...usersList, newUser]));
+  //   setMessageList(prevMessageList => [...prevMessageList]);
+  //   localStorage.setItem('usersList', JSON.stringify([...usersList, newUser]));
  };
 
  const handleReset = () => {
   setMessage('');
   setUser('');
  };
+
+ const handleNameSubmit = () => {
+  socket.current.emit('addUser', { name: user });
+
+  addUser(user);
+  if (user === '') {
+   toast.error('User name is required. Please enter your name');
+   return;
+  }
+  setIsNameSubmitted(true);
+ };
+
+ const isOnline = onlineUsersList.includes(user.name);
+ console.log('isOnline', isOnline);
 
  return (
   <>
@@ -140,44 +160,80 @@ const PrimeChat = () => {
     </ChatPreTitle>
    </TitleWrap>
    <Form>
-    <Scrollbars style={{ height: '100%', width: 308 }}>
-     <OnlineUser>
-      <OnlineUserList>
-       {usersList.map((user, id) => {
-        const isOnline = onlineUsersList.includes(user.name);
-        return (
-         <OnlineUserItem key={id} online={isOnline}>
-          <ItemWrapper>
-           <img src={user.avatar} alt="User Avatar" width={50} />
-           {/* {isOnline === true ? <span>Online</span> : <span>Ofline</span>} */}
-           <div
-            style={{
-             display: 'flex',
-             alignItems: 'center',
-             marginLeft: '20px',
-            }}
-           >
-            <OnlineUserItemName>{user.name}</OnlineUserItemName>
-           </div>
-          </ItemWrapper>
-         </OnlineUserItem>
-        );
-       })}
-      </OnlineUserList>
-     </OnlineUser>
-    </Scrollbars>
+    {usersList.length === 0 ? (
+     <UserList width={296} height={431} />
+    ) : (
+     <Scrollbars style={{ height: '100%', width: 308 }}>
+      <OnlineUser>
+       <OnlineUserList>
+        {usersList.map((user, id) => {
+         const isOnline = onlineUsersList.includes(user.name);
+         return (
+          <OnlineUserItem key={id} online={isOnline}>
+           <ItemWrapper>
+            <img src={user.avatar} alt="User Avatar" width={50} />
+            {isOnline === true ? <span>Online</span> : <span>Ofline</span>}
+            <div
+             style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginLeft: '20px',
+             }}
+            >
+             <OnlineUserItemName>{user.name}</OnlineUserItemName>
+            </div>
+           </ItemWrapper>
+          </OnlineUserItem>
+         );
+        })}
+       </OnlineUserList>
+      </OnlineUser>
+     </Scrollbars>
+    )}
+
     <div>
-     <InputFormWrap>
-      <InputForm>
+     {isNameSubmitted === true ? (
+      <WelcomeText>
+       Welcome, <span>{user}</span>!
+      </WelcomeText>
+     ) : (
+      <InputFormWrap>
+       {/* <InputForm> */}
        <InputName
-        id="filled-basic"
-        label="Enter your name"
-        variant="filled"
+        type="text"
+        placeholder="Enter your name"
         value={user}
         onChange={e => {
          setUser(e.currentTarget.value);
         }}
        />
+       <BtnName onClick={handleNameSubmit}>
+        <BtnNameIcon />
+       </BtnName>
+       {/* </InputForm> */}
+      </InputFormWrap>
+     )}
+
+     <Scrollbars style={{ height: 650, width: '100%' }}>
+      <ChatBot>
+       <ChatBoxList>
+        {messageList.map((item, _id) => {
+         return (
+          <ChatBoxItem key={item._id}>
+           <ChatMessage>
+            <ChatUser>{item.name}</ChatUser>
+            <ChatText>{item.text}</ChatText>
+           </ChatMessage>
+           <ChatDate>{item.date}</ChatDate>
+          </ChatBoxItem>
+         );
+        })}
+       </ChatBoxList>
+      </ChatBot>
+     </Scrollbars>
+
+     <InputForm>
+      <form>
        <InputText
         type="text"
         value={message}
@@ -186,27 +242,12 @@ const PrimeChat = () => {
          setMessage(e.currentTarget.value);
         }}
        />
-       <BtnForm onClick={handleSubmit}>SUBMIT</BtnForm>
-       <ResetWrap>
-        <ResetForm onClick={handleReset} />
-       </ResetWrap>
-      </InputForm>
-     </InputFormWrap>
-     <ChatBot>
-      <ChatBoxList>
-       {messageList.map((item, _id) => {
-        return (
-         <ChatBoxItem key={item._id}>
-          <ChatMessage>
-           <ChatUser>{item.name}</ChatUser>
-           <ChatText>{item.text}</ChatText>
-          </ChatMessage>
-          <ChatDate>{item.date}</ChatDate>
-         </ChatBoxItem>
-        );
-       })}
-      </ChatBoxList>
-     </ChatBot>
+       <BtnForm onClick={handleSubmit}>SEND</BtnForm>
+       {/* <ResetWrap>
+      <ResetForm onClick={handleReset} />
+     </ResetWrap> */}
+      </form>
+     </InputForm>
     </div>
    </Form>
   </>
