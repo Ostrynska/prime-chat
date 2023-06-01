@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
-import { MdClear } from 'react-icons/md';
-
-import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { IoCheckmarkCircleSharp } from 'react-icons/io5';
 
 export const Section = styled.section`
  padding-bottom: 45px;
@@ -26,10 +24,8 @@ export const Wrapper = styled.div`
 
 export const ChatWrap = styled.div`
  width: 100%;
- ${'' /* height: 985px; */}
  padding: 43px 35px 31px 29px;
  border-radius: 0px 20px 20px 0px;
- ${'' /* border: 1px solid black; */}
  background-color: ${mainVars.colors.lightGreyColor};
 `;
 
@@ -159,46 +155,54 @@ export const ItemWrapper = styled.form`
 
 export const InputForm = styled.div`
  display: flex;
+ position: relative;
 `;
 
 export const InputFormWrap = styled.div`
  display: flex;
  flex-direction: column;
  gap: 10px;
+ padding-top: 10px;
 `;
 
 export const Input = styled.input`
  padding: 15px 33px;
 
- background: ${mainVars.colors.whiteColor};
- border-radius: 26px;
-
  font-family: 'Inter', sans-serif;
- font-style: normal;
  font-weight: 500;
  font-size: 20px;
  line-height: 160%;
+`;
+
+export const InputName = styled(Input)`
+ width: 370px;
+ background: linear-gradient(
+  89.88deg,
+  #d3d2ff 1.51%,
+  rgba(255, 255, 255, 0) 84.54%
+ );
+ border-radius: 44px;
+ &:hover,
+ &:focus {
+  border: 1px solid ${mainVars.colors.primaryColor};
+  color: ${mainVars.colors.titleColor};
+ }
+`;
+
+export const InputText = styled(Input)`
+ background: ${mainVars.colors.whiteColor};
+
+ width: 688px;
+ border-radius: 26px;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
  color: ${mainVars.colors.textInputColor};
  transition: ${mainVars.transitions.main};
- &:not(:last-of-type) {
-  margin-right: 10px;
- }
  &:hover,
  &:focus {
   border: 1px solid ${mainVars.colors.darkGreyColor};
   color: ${mainVars.colors.titleColor};
  }
-`;
-
-export const InputName = styled(Input)`
- width: 370px;
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
-export const InputText = styled(Input)`
- width: 688px;
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const BtnForm = styled.button`
@@ -246,7 +250,7 @@ export const WelcomeText = styled.p`
  }
 `;
 
-export const BtnNameIcon = styled(BsFillCheckCircleFill)`
+export const BtnNameIcon = styled(IoCheckmarkCircleSharp)`
  position: absolute;
  width: 40px;
  height: 40px;
@@ -261,24 +265,12 @@ export const BtnNameIcon = styled(BsFillCheckCircleFill)`
  }
 `;
 
-export const ChatBot = styled.div`
- ${'' /* height: 631px; */}
-`;
+export const ChatBot = styled.div``;
 
-export const ResetWrap = styled.button`
- margin-left: 10px;
- width: 62px;
- height: 62px;
-
- border-radius: 50px;
- background-color: ${mainVars.colors.primaryColor};
- opacity: 0.1;
-`;
-
-export const ResetForm = styled(MdClear)`
- width: 20px;
- height: 20px;
- color: ${mainVars.colors.whiteColor};
+export const ExitForm = styled.button`
+ position: absolute;
+ left: -478px;
+ top: 20px;
 `;
 
 export const ChatBoxList = styled.ul`
