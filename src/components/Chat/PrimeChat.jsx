@@ -34,6 +34,7 @@ import {
  BtnNameIcon,
  WelcomeText,
  ExitForm,
+ Online,
 } from './Chat.styled';
 
 const socket = {
@@ -42,7 +43,6 @@ const socket = {
 
 const PrimeChat = () => {
  const [onlineUsers, setOnlineUsers] = useState(0);
- const [onlineUsersList, setOnlineUsersList] = useState([]);
  const [user, setUser] = useState('');
  const [message, setMessage] = useState('');
  const [messageList, setMessageList] = useState([]);
@@ -56,51 +56,15 @@ const PrimeChat = () => {
   socket.current.on('changeOnline', size => {
    setOnlineUsers(size);
   });
-
-  socket.current.on('chatHistory', data => {
-   setMessageList(data);
-  });
-
-  socket.current.on('onlineUsers', data => {
-   setOnlineUsersList(data);
-  });
-
-  socket.current.on('userJoined', newUser => {
-   setUsersList(prevUsersList => [...prevUsersList, newUser]);
-   setMessageList(prevMessageList => [
-    ...prevMessageList,
-    {
-     name: newUser.name,
-     text: toast(`User ${newUser.name} joined the chat.`, {
-      icon: '🙋‍♀️',
-     }),
-    },
-   ]);
-  });
-
-  socket.current.on('userLeft', userLeft => {
-   setUsersList(prevUsersList =>
-    prevUsersList.filter(user => user.name !== userLeft.name)
-   );
-   setMessageList(prevMessageList => [
-    ...prevMessageList,
-    {
-     name: userLeft.name,
-     text: toast(`User ${userLeft.name} left the chat`, {
-      icon: '👋',
-     }),
-    },
-   ]);
-  });
-
-  return () => {
-   socket.current.off('changeOnline');
-   socket.current.off('chatHistory');
-   socket.current.off('userJoined');
-   socket.current.off('userLeft');
-   socket.current.off('alertMessage');
-  };
  }, []);
+ useEffect(() => {
+  socket.current.on('alertMessage', data => {
+   setMessageList([...messageList, data]);
+  });
+  socket.current.on('changeOnline', size => {
+   setOnlineUsers(size);
+  });
+ }, [messageList]);
 
  const handleSubmit = e => {
   e.preventDefault();
@@ -117,18 +81,10 @@ const PrimeChat = () => {
 
   let today = d.toLocaleString();
 
-  //   handleNameSubmit(user);
-
   socket.current.emit('newMessage', { text: message, name: user, date: today });
-
-  setMessageList(prevMessageList => [
-   ...prevMessageList,
-   { name: user, text: message, date: today },
-  ]);
-
-  if (message === '') {
-   return toast.error("This didn't work.");
-  }
+  socket.current.on('alertMessage', data => {
+   setMessageList([...messageList, data]);
+  });
 
   setMessage('');
  };
@@ -140,20 +96,20 @@ const PrimeChat = () => {
   const randomAvatar = generator.generateRandomAvatar();
   const newUser = { name, avatar: randomAvatar };
   setUsersList(prevUsersList => [...prevUsersList, newUser]);
-
-  //   setMessageList(prevMessageList => [...prevMessageList]);
-  //   localStorage.setItem('usersList', JSON.stringify([...usersList, newUser]));
  };
 
  const handleReset = () => {
   setMessage('');
   setUser('');
-  onlineUsers(0);
-  onlineUsersList([]);
  };
 
- const handleNameSubmit = () => {
+ const handleNameSubmit = e => {
+  e.preventDefault();
+
   socket.current.emit('addUser', { name: user });
+  socket.current.on('messageList', data => {
+   setMessageList(data);
+  });
 
   addUser(user);
   if (user === '') {
@@ -162,9 +118,6 @@ const PrimeChat = () => {
   }
   setIsNameSubmitted(true);
  };
-
- const isOnline = onlineUsersList.includes(user.name);
- console.log('isOnline', isOnline);
 
  return (
   <>
@@ -184,12 +137,11 @@ const PrimeChat = () => {
       <OnlineUser>
        <OnlineUserList>
         {usersList.map((user, id) => {
-         const isOnline = onlineUsersList.includes(user.name);
          return (
-          <OnlineUserItem key={id} online={isOnline}>
+          <OnlineUserItem key={id}>
            <ItemWrapper>
             <img src={user.avatar} alt="User Avatar" width={50} />
-            {isOnline === true ? <span>Online</span> : <span>Ofline</span>}
+            <Online />
             <div
              style={{
               display: 'flex',
@@ -215,7 +167,6 @@ const PrimeChat = () => {
       </WelcomeText>
      ) : (
       <InputFormWrap>
-       {/* <InputForm> */}
        <InputName
         type="text"
         placeholder="Enter your name"
@@ -227,11 +178,10 @@ const PrimeChat = () => {
        <BtnName onClick={handleNameSubmit}>
         <BtnNameIcon />
        </BtnName>
-       {/* </InputForm> */}
       </InputFormWrap>
      )}
 
-     <Scrollbars style={{ height: 650, width: '100%' }}>
+     <Scrollbars style={{ height: 420, width: '100%' }}>
       <ChatBot>
        <ChatBoxList>
         {messageList.map((item, _id) => {
