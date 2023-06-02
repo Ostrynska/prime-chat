@@ -16,6 +16,16 @@ export const Section = styled.section`
  }
 `;
 
+export const Online = styled.div`
+ position: absolute;
+ width: 10px;
+ height: 10px;
+ left: 45px;
+ top: 4px;
+ border-radius: 50%;
+ background: green;
+`;
+
 export const Wrapper = styled.div`
  display: flex;
  border-radius: 20px;
@@ -110,7 +120,7 @@ export const Item = styled.li`
 
 export const Form = styled.div`
  width: 100%;
- height: 834px;
+ height: 604px;
  padding: 25px;
 
  background: #f0f0f0;
@@ -151,6 +161,7 @@ export const OnlineUserItemName = styled.p`
 
 export const ItemWrapper = styled.form`
  display: flex;
+ position: relative;
 `;
 
 export const InputForm = styled.div`
@@ -182,6 +193,10 @@ export const InputName = styled(Input)`
   rgba(255, 255, 255, 0) 84.54%
  );
  border-radius: 44px;
+ ::placeholder {
+  color: ${mainVars.colors.primaryColor};
+  font-weight: 600;
+ }
  &:hover,
  &:focus {
   border: 1px solid ${mainVars.colors.primaryColor};
@@ -318,7 +333,7 @@ export const ChatMessage = styled.div`
  display: flex;
  align-items: center;
 
- padding: 14px 30px;
+ padding: 7px 30px;
  border-radius: 25px;
  background: ${mainVars.colors.whiteColor};
 `;
