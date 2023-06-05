@@ -17,6 +17,8 @@ import {
  ItemImageThird,
 } from './Resources.styled';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 import iconChat from '../../images/resources/resourcesIconChat.svg';
 import chatImage from '../../images/resources/chat@1x.png';
 import chatImageRetina from '../../images/resources/chat@2x.png';
@@ -55,9 +57,9 @@ const Resources = () => {
         mobile. Assist them via chat, email, and offer a 24/7 customer
         self-service knowledge base.
        </ItemText>
-       <div style={{ width: 245 }}>
+       <Link style={{ width: 245 }} smooth to="/#subscribes">
         <Button variant="primary" text={'Get started'} />
-       </div>
+       </Link>
       </ItemContent>
       <ItemImageFirst src={isRetina ? chatImageRetina : chatImage} alt="Chat" />
      </Item>
@@ -75,9 +77,9 @@ const Resources = () => {
         mobile. Assist them via chat, email, and offer a 24/7 customer
         self-service knowledge base.
        </ItemText>
-       <div style={{ width: 245 }}>
+       <Link style={{ width: 245 }} smooth to="/#subscribes">
         <Button variant="primary" text={'Get started'} />
-       </div>
+       </Link>
       </ItemContent>
      </Item>
 
@@ -92,9 +94,9 @@ const Resources = () => {
         mobile. Assist them via chat, email, and offer a 24/7 customer
         self-service knowledge base.
        </ItemText>
-       <div style={{ width: 245 }}>
+       <Link style={{ width: 245 }} smooth to="/#subscribes">
         <Button variant="primary" text={'Get started'} />
-       </div>
+       </Link>
       </ItemContent>
       <ItemImageThird
        src={isRetina ? supportImageRetina : supportImage}
