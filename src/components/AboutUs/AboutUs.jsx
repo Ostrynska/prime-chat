@@ -17,6 +17,8 @@ import {
 import { PreTitle } from '../PreTitle/PreTitle';
 import { Button } from '../Button/Button';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 import aboutUsDesktop from '../../images/about-us/aboutUsDesktop@1x.png';
 import aboutUsDesktopRetina from '../../images/about-us/aboutUsDesktop@2x.png';
 
@@ -64,7 +66,9 @@ const AboutUs = () => {
         <CheckText color="checkGreen">SUPPORT CUSTOMERS AT SCALE</CheckText>
        </ListItem>
       </List>
-      <Button variant="primary" text={'Try for free'} />
+      <Link smooth to="/#subscribes">
+       <Button variant="primary" text={'Try for free'} />
+      </Link>
      </Content>
      <ImageWrap>
       <Image
