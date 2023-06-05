@@ -3,7 +3,9 @@ import { Button } from '../Button/Button';
 
 import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
-import { Link } from 'react-scroll';
+
+import { HashLink as Link } from 'react-router-hash-link';
+
 import {
  LogoLink,
  LogoText,
@@ -16,7 +18,7 @@ import {
 
 const Header = () => {
  return (
-  <Container>
+  <Container id="home">
    <HeaderWrap>
     <HeaderNav>
      <LogoLink to={'/'}>
@@ -25,27 +27,27 @@ const Header = () => {
      </LogoLink>
      <MenuList>
       <MenuItem>
-       <Link to="about-us" smooth={true} duration={500}>
+       <Link smooth to="/#about-us">
         About Us
        </Link>
       </MenuItem>
       <MenuItem>
-       <Link to="platform" smooth={true} duration={500}>
+       <Link smooth to="/#platform">
         Platform
        </Link>
       </MenuItem>
       <MenuItem>
-       <Link to="resources" smooth={true} duration={500}>
+       <Link smooth to="/#resources">
         Resources
        </Link>
       </MenuItem>
       <MenuItem>
-       <Link to="solution" smooth={true} duration={500}>
+       <Link smooth to="/#solution">
         Solution
        </Link>
       </MenuItem>
       <MenuItem>
-       <Link to="pricing" smooth={true} duration={500}>
+       <Link smooth to="/#pricing">
         Pricing
        </Link>
       </MenuItem>
