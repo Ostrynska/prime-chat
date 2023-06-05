@@ -4,8 +4,6 @@ import { Button } from '../Button/Button';
 import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
 
-import { HashLink as Link } from 'react-router-hash-link';
-
 import {
  LogoLink,
  LogoText,
@@ -14,6 +12,7 @@ import {
  MenuList,
  MenuItem,
  BtnWrap,
+ Link,
 } from './Header.styled';
 
 const Header = () => {
