@@ -14,6 +14,8 @@ import {
  ButtonWrap,
 } from './Hero.styled';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 import bgImageDesktop from '../../images/home-dashboard@1x.png';
 import bgImageDesktopRetina from '../../images/home-dashboard@2x.png';
 
@@ -39,7 +41,9 @@ const Hero = () => {
       <ButtonWrap to="/chat">
        <Button variant="primary" text={'Get started'} />
       </ButtonWrap>
-      <Button variant="secondary" text={'Book a demo'} />
+      <Link to="/#subscribes">
+       <Button variant="secondary" text={'Book a demo'} />
+      </Link>
      </Wrapper>
      <ImagesWrap>
       <Image
