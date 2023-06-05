@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
+import { HashLink } from 'react-router-hash-link';
+
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
@@ -87,5 +89,16 @@ export const BtnWrap = styled.div`
  }
  @media screen and (min-width: 1920px) {
   margin-left: 115px;
+ }
+`;
+
+export const Link = styled(HashLink)`
+ text-decoration: none;
+ transition: ${mainVars.transitions.main};
+
+ color: ${mainVars.colors.headerColor};
+ &:hover {
+  color: ${mainVars.colors.primaryColor};
+  font-weight: 500;
  }
 `;
