@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+import { HashLink } from 'react-router-hash-link';
 import { RxCross1 } from 'react-icons/rx';
 
 import styled from 'styled-components';
@@ -62,7 +62,7 @@ export const MenuItem = styled.li`
  }
 `;
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled(HashLink)`
  text-decoration: none;
  font-family: 'Inter', sans-serif;
  font-weight: 400;
