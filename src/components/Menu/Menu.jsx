@@ -34,52 +34,27 @@ const BurgerMenu = () => {
    >
     <MenuList>
      <MenuItem>
-      <MenuLink
-       onClick={() => closeMenu()}
-       to="about-us"
-       smooth={true}
-       duration={500}
-      >
+      <MenuLink onClick={() => closeMenu()} smooth to="/#about-us">
        About Us
       </MenuLink>
      </MenuItem>
      <MenuItem>
-      <MenuLink
-       onClick={() => closeMenu()}
-       to="platform"
-       smooth={true}
-       duration={500}
-      >
+      <MenuLink onClick={() => closeMenu()} smooth to="/#platform">
        Platform
       </MenuLink>
      </MenuItem>
      <MenuItem>
-      <MenuLink
-       onClick={() => closeMenu()}
-       to="resources"
-       smooth={true}
-       duration={500}
-      >
+      <MenuLink onClick={() => closeMenu()} smooth to="/#resources">
        Resources
       </MenuLink>
      </MenuItem>
      <MenuItem>
-      <MenuLink
-       onClick={() => closeMenu()}
-       to="solution"
-       smooth={true}
-       duration={500}
-      >
+      <MenuLink onClick={() => closeMenu()} smooth to="/#solution">
        Solution
       </MenuLink>
      </MenuItem>
      <MenuItem>
-      <MenuLink
-       onClick={() => closeMenu()}
-       to="pricing"
-       smooth={true}
-       duration={500}
-      >
+      <MenuLink onClick={() => closeMenu()} smooth to="/#pricing">
        Pricing
       </MenuLink>
      </MenuItem>
