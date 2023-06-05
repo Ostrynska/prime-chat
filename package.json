@@ -19,6 +19,7 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.8.0",
     "react-loader-spinner": "^5.3.4",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^6.11.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",

@@ -1,7 +1,9 @@
 import io from 'socket.io-client';
 import { useState, useEffect } from 'react';
 
-// import { Scrollbars } from 'react-custom-scrollbars';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+
 import { AvatarGenerator } from 'random-avatar-generator';
 import toast from 'react-hot-toast';
 
@@ -133,29 +135,31 @@ const PrimeChat = () => {
     {usersList.length === 0 ? (
      <UserList width={296} height={431} />
     ) : (
-     <OnlineUser>
-      <OnlineUserList>
-       {usersList.map((user, id) => {
-        return (
-         <OnlineUserItem key={id}>
-          <ItemWrapper>
-           <img src={user.avatar} alt="User Avatar" width={50} />
-           <Online />
-           <div
-            style={{
-             display: 'flex',
-             alignItems: 'center',
-             marginLeft: '20px',
-            }}
-           >
-            <OnlineUserItemName>{user.name}</OnlineUserItemName>
-           </div>
-          </ItemWrapper>
-         </OnlineUserItem>
-        );
-       })}
-      </OnlineUserList>
-     </OnlineUser>
+     <PerfectScrollbar>
+      <OnlineUser>
+       <OnlineUserList>
+        {usersList.map((user, id) => {
+         return (
+          <OnlineUserItem key={id}>
+           <ItemWrapper>
+            <img src={user.avatar} alt="User Avatar" width={50} />
+            <Online />
+            <div
+             style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginLeft: '20px',
+             }}
+            >
+             <OnlineUserItemName>{user.name}</OnlineUserItemName>
+            </div>
+           </ItemWrapper>
+          </OnlineUserItem>
+         );
+        })}
+       </OnlineUserList>
+      </OnlineUser>
+     </PerfectScrollbar>
     )}
 
     <div>
@@ -179,23 +183,23 @@ const PrimeChat = () => {
       </InputFormWrap>
      )}
 
-     {/* <Scrollbars style={{ height: 420, width: '100%' }}> */}
-     <ChatBot>
-      <ChatBoxList>
-       {messageList.map((item, _id) => {
-        return (
-         <ChatBoxItem key={item._id}>
-          <ChatMessage>
-           <ChatUser>{item.name}</ChatUser>
-           <ChatText>{item.text}</ChatText>
-          </ChatMessage>
-          <ChatDate>{item.date}</ChatDate>
-         </ChatBoxItem>
-        );
-       })}
-      </ChatBoxList>
-     </ChatBot>
-     {/* </Scrollbars> */}
+     <PerfectScrollbar>
+      <ChatBot>
+       <ChatBoxList>
+        {messageList.map((item, _id) => {
+         return (
+          <ChatBoxItem key={item._id}>
+           <ChatMessage>
+            <ChatUser>{item.name}</ChatUser>
+            <ChatText>{item.text}</ChatText>
+           </ChatMessage>
+           <ChatDate>{item.date}</ChatDate>
+          </ChatBoxItem>
+         );
+        })}
+       </ChatBoxList>
+      </ChatBot>
+     </PerfectScrollbar>
 
      <InputForm>
       <form>
