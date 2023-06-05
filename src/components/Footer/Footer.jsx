@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 import { Container } from '../Container/Conteiner';
 import {
  FooterSection,
@@ -21,6 +21,7 @@ import {
  FooterSupportList,
  FooterSupportItem,
  FooterSupportLink,
+ FooterSupportLinkPage,
  FooterSocialWrap,
  FooterSocialTitle,
  FooterSocialList,
@@ -40,13 +41,13 @@ const Footer = () => {
    <Container>
     <FooterWrap>
      <FooterLogoWrap>
-      <LogoLink href="#home">
+      <LogoLink to={'/'}>
        <Logo />
        <LogoText>Primarily.</LogoText>
       </LogoLink>
       <FooterContactsWrap>
        <FooterContactsItem>
-        <FooterContactsLink href="#">
+        <FooterContactsLink href="https://goo.gl/maps/Cx5XwLTdZTRS3aPP7">
          1811 Silverside Rd, Wilmington,
          <br /> DE 19810, USA
         </FooterContactsLink>
@@ -73,45 +74,45 @@ const Footer = () => {
       <nav>
        <FooterSupportList>
         <FooterSupportItem>
-         <FooterSupportLink to="about-us" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#about-us">
           About Us
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="platform" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#platform">
           Platform
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="resources" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#resources">
           Resources
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink href="#">Blog</FooterSupportLink>
+         <FooterSupportLinkPage to={'/blog'}>Blog</FooterSupportLinkPage>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="pricing" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#pricing">
           Pricing
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="integration" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#integration">
           Integration
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="testimonials" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#testimonials">
           Testimonials
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="permission" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#permission">
           Permission
          </FooterSupportLink>
         </FooterSupportItem>
         <FooterSupportItem>
-         <FooterSupportLink to="subscribe" smooth={true} duration={500}>
+         <FooterSupportLink smooth to="/#subscribe">
           Subscribe
          </FooterSupportLink>
         </FooterSupportItem>
@@ -125,27 +126,27 @@ const Footer = () => {
       <FooterSocialTitle>Follow Us:</FooterSocialTitle>
       <FooterSocialList>
        <FooterSocialItem>
-        <a href="#home">
+        <a href="https://www.instagram.com/">
          <Instagram size={40} />
         </a>
        </FooterSocialItem>
        <FooterSocialItem>
-        <a href="#home">
+        <a href="https://www.facebook.com/">
          <Facebook size={40} />
         </a>
        </FooterSocialItem>
        <FooterSocialItem>
-        <a href="#home">
+        <a href="https://twitter.com/">
          <Twitter size={40} />
         </a>
        </FooterSocialItem>
        <FooterSocialItem>
-        <a href="#home">
+        <a href="https://www.linkedin.com/">
          <Linkedin size={40} />
         </a>
        </FooterSocialItem>
        <FooterSocialItem>
-        <a href="#home">
+        <a href="https://www.youtube.com/s">
          <Youtube size={40} />
         </a>
        </FooterSocialItem>
@@ -159,7 +160,7 @@ const Footer = () => {
         <FooterCopyrightSpan>VictorFlow</FooterCopyrightSpan> powered by{' '}
         <FooterCopyrightSpan>Webflow</FooterCopyrightSpan>.
        </FooterCopyrightText>
-       <Link to="chatbot" smooth={true} duration={500}>
+       <Link smooth to="/#chatbot">
         <UpToTop size={50} />
        </Link>
       </FooterCopyright>
