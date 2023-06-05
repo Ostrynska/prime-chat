@@ -1,4 +1,5 @@
-import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
@@ -121,7 +122,7 @@ export const FooterContactsSpan = styled.span`
  font-weight: 600;
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(NavLink)`
  display: flex;
  align-items: center;
 `;
@@ -165,7 +166,20 @@ export const FooterSupportList = styled.ul`
 `;
 
 export const FooterSupportItem = styled.li``;
-export const FooterSupportLink = styled(Link)`
+export const FooterSupportLink = styled(HashLink)`
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 20px;
+ line-height: 248.5%;
+
+ color: ${mainVars.colors.textColor};
+ transition: ${mainVars.transitions.main};
+ &:hover {
+  color: ${mainVars.colors.primaryColor};
+ }
+`;
+
+export const FooterSupportLinkPage = styled(NavLink)`
  font-family: 'Inter', sans-serif;
  font-weight: 600;
  font-size: 20px;
