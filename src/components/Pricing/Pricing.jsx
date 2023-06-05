@@ -1,6 +1,8 @@
 import { Container } from '../Container/Conteiner';
 import { PreTitle } from '../PreTitle/PreTitle';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 import {
  Section,
  SpanTitle,
@@ -86,7 +88,9 @@ const Pricing = () => {
         <PriceListText>Outcome reporting</PriceListText>
        </PriceListItem>
       </PriceList>
-      <Button>Get started</Button>
+      <Link smooth to="/#subscribes">
+       <Button>Get started</Button>
+      </Link>
      </Item>
 
      <Item>
@@ -148,7 +152,9 @@ const Pricing = () => {
         <PriceListText>Message versioning</PriceListText>
        </PriceListItem>
       </PriceList>
-      <Button>Get started</Button>
+      <Link smooth to="/#subscribes">
+       <Button>Get started</Button>
+      </Link>
      </Item>
 
      <Item>
@@ -220,7 +226,9 @@ const Pricing = () => {
         <PriceListText>Revenue and performance</PriceListText>
        </PriceListItem>
       </PriceList>
-      <Button>Get started</Button>
+      <Link smooth to="/#subscribes">
+       <Button>Get started</Button>
+      </Link>
      </Item>
     </List>
    </Container>
