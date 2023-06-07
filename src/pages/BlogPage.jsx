@@ -1,7 +1,11 @@
-// import Chat from '../components/Chat/Chat';
+import Blog from '../components/Blog/Blog';
 
 const BlogPage = () => {
- return <main>{/* <Chat /> */}</main>;
+ return (
+  <main>
+   <Blog />
+  </main>
+ );
 };
 
 export default BlogPage;
