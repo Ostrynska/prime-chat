@@ -25,6 +25,7 @@ export const mainVars = {
   purpleColor: '#7976ff',
   borderColor: '#d0d0d0',
   borderLightColor: '#eaeaf7',
+  borderPostColor: '#eaeaea',
   platformColor: '#f8f8f8',
   iconColor: '#d2d2d2',
   btnChat: '#fafafa',

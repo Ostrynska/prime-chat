@@ -5,6 +5,7 @@ import PostList from '../PostsList/PostsList';
 
 import { getPosts } from '../../shared/api/posts';
 import { Container } from '../Container/Conteiner';
+import { PreTitle } from '../PreTitle/PreTitle';
 
 import { Section } from './Blog.styled';
 
@@ -32,7 +33,8 @@ const Blog = () => {
  return (
   <Section>
    <Container>
-    <h2>Posts</h2>
+    <PreTitle variant="primary" text={'Blog'} style={{ width: 119 }} />
+    <h2>Articles & Resources</h2>
     {loading && <p>....Loading</p>}
     {error && <p>{error}</p>}
     <PostList items={items} />

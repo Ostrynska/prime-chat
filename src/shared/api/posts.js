@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const postsInstance = axios.create({
- baseURL: 'https://blog-m1zi.onrender.com/api/posts',
+ baseURL: 'https://blog-posts-2bq2.onrender.com/api/posts',
 });
 
 export const getPosts = () => {

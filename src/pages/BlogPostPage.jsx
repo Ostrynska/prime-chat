@@ -1,13 +1,13 @@
-import Blog from '../components/Blog/Blog';
+import Post from '../components/Post/Post';
 import Subscribe from '../components/Subscribe/Subscribe';
 
-const BlogPage = () => {
+const BlogPostPage = () => {
  return (
   <main>
-   <Blog />
+   <Post />
    <Subscribe />
   </main>
  );
 };
 
-export default BlogPage;
+export default BlogPostPage;

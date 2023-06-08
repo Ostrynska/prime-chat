@@ -9,6 +9,7 @@ import { SharedLayout } from './components/SharedLayout/SharedLayout';
 const MainPage = lazy(() => import('./pages/HomePage'));
 const ChatPage = lazy(() => import('./pages/ChatPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
      <Route index element={<MainPage />} />
      <Route path="/chat" element={<ChatPage />} />
      <Route path="/blog" element={<BlogPage />} />
+     <Route path="/blog/:id" element={<BlogPostPage />} />
      <Route path="*" element={<NotFoundPage />} />
     </Route>
    </Routes>
