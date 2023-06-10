@@ -67,7 +67,7 @@ const Post = () => {
     <PageTitle text={'Blog'} title={post.title} />
     <div>
      <Button onClick={goBack}>
-      <IoIosArrowRoundBack style={{ marginRight: 5 }} size={15} />
+      <IoIosArrowRoundBack style={{ marginRight: 5 }} size={25} />
       Go back
      </Button>
      <Image alt="Post" src={post.photoFull} />
