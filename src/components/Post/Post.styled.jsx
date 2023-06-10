@@ -3,20 +3,16 @@ import { mainVars } from '../../utils/theme';
 
 import { ReactComponent as QuoteLogo } from '../../images/quote.svg';
 
-export const Section = styled.section`
- padding-top: 20px;
- padding-bottom: 45px;
+export const Section = styled.div`
+ padding-bottom: 85px;
  @media screen and (min-width: 768px) {
-  padding-top: 40px;
-  padding-bottom: 75px;
+  padding-bottom: 100px;
  }
  @media screen and (min-width: 1200px) {
-  padding-top: 80px;
-  padding-bottom: 115px;
+  padding-bottom: 175px;
  }
  @media screen and (min-width: 1920px) {
-  padding-top: 100px;
-  padding-bottom: 135px;
+  padding-bottom: 201px;
  }
 `;
 
