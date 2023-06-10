@@ -4,28 +4,39 @@ import { mainVars } from '../../utils/theme';
 import { ReactComponent as QuoteLogo } from '../../images/quote.svg';
 
 export const Section = styled.div`
- padding-bottom: 85px;
+ padding-bottom: 45px;
  @media screen and (min-width: 768px) {
-  padding-bottom: 100px;
+  padding-bottom: 75px;
  }
  @media screen and (min-width: 1200px) {
-  padding-bottom: 175px;
+  padding-bottom: 115px;
  }
  @media screen and (min-width: 1920px) {
-  padding-bottom: 201px;
+  padding-bottom: 135px;
  }
 `;
 
 export const Image = styled.img`
  width: 100%;
- height: 614px;
  object-fit: cover;
  border-radius: 25px;
+ @media screen and (min-width: 1200px) {
+  height: 614px;
+ }
 `;
 
 export const PostContent = styled.div`
  margin-top: 38px;
- padding: 0 260px;
+ padding: 0 60px;
+ @media screen and (min-width: 768px) {
+  padding: 0 60px;
+ }
+ @media screen and (min-width: 1200px) {
+  padding: 0 180px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding: 0 260px;
+ }
 `;
 
 export const PostData = styled.p`
@@ -68,10 +79,9 @@ export const PostText = styled.p`
 
 export const PostQuote = styled.div`
  margin-top: 50px;
- padding: 70px 122.5px;
 
- width: 879px;
- height: 362px;
+ padding: 20px 31.5px;
+ width: 100%;
 
  background: ${mainVars.colors.primaryColor};
  border-radius: 25px;
@@ -79,16 +89,31 @@ export const PostQuote = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
+ @media screen and (min-width: 1200px) {
+  padding: 30px 39.5px;
+  width: 815px;
+  width: 599px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding: 70px 122.5px;
+  width: 879px;
+  height: 362px;
+ }
 `;
 
 export const PostQuoteText = styled.p`
  font-family: 'Inter', sans-serif;
  font-weight: 400;
- font-size: 20px;
  line-height: 160%;
 
  text-align: center;
  color: ${mainVars.colors.whiteColor};
+ @media screen and (min-width: 1200px) {
+  font-size: 18px;
+ }
+ @media screen and (min-width: 1920px) {
+  font-size: 20px;
+ }
 `;
 
 export const Quote = styled(QuoteLogo)`
@@ -99,8 +124,8 @@ export const Quote = styled(QuoteLogo)`
 export const PostQuoteWrapp = styled.div`
  margin-bottom: 28px;
 
- width: 101px;
- height: 101px;
+ width: 81px;
+ height: 81px;
 
  display: flex;
  align-items: center;
@@ -108,6 +133,10 @@ export const PostQuoteWrapp = styled.div`
 
  border-radius: 50%;
  background: #ffffff;
+ @media screen and (min-width: 1200px) {
+  width: 101px;
+  height: 101px;
+ }
 `;
 
 export const PostList = styled.ul`
@@ -126,19 +155,29 @@ export const PostList = styled.ul`
 `;
 
 export const Button = styled.button`
- min-width: 140px;
- height: 51px;
- border-radius: 72px;
- background: ${mainVars.colors.primaryColor};
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 18px;
- line-height: 1.61;
- text-align: center;
- text-transform: capitalize;
- color: ${mainVars.colors.whiteColor};
+  min-width: 140px;
+  height: 51px;
+  border-radius: 72px;
+  background: ${mainVars.colors.primaryColor};
 
- position: absolute;
- bottom: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.61;
+  text-align: center;
+  text-transform: capitalize;
+  color: ${mainVars.colors.whiteColor};
+
+  position: absolute;
+  bottom: 60px;
+ }
+ @media screen and (min-width: 1920px) {
+  bottom: 50px;
+ }
 `;
