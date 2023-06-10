@@ -23,6 +23,6 @@ export const Wrapper = styled.div`
  }
  @media screen and (min-width: 1920px) {
   padding: 0 260px;
-  min-width: 1920px;
+  width: 1920px;
  }
 `;
