@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Loader } from '../Loader/Loader';
 
 import PostList from '../PostsList/PostsList';
 
@@ -35,7 +35,7 @@ const Blog = () => {
    <Container>
     <PreTitle variant="primary" text={'Blog'} style={{ width: 119 }} />
     <h2>Articles & Resources</h2>
-    {loading && <p>....Loading</p>}
+    {loading && <Loader />}
     {error && <p>{error}</p>}
     <PostList items={items} />
    </Container>
