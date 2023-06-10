@@ -34,19 +34,12 @@ export const HeaderWrap = styled.header`
   align-items: center;
   justify-content: stretch;
  }
- @media screen and (min-width: 1920px) {
-  ${'' /* flex-wrap: wrap; */}
- }
 `;
 
 export const HeaderNav = styled.div`
  display: flex;
  align-items: center;
  justify-content: center;
-
- @media screen and (min-width: 1200px) {
-  ${'' /* flex-wrap: wrap; */}
- }
 `;
 
 export const MenuList = styled.ul`
@@ -117,7 +110,7 @@ export const Image = styled.img`
   z-index: -2;
   position: absolute;
   width: 393px;
-  top: 150%;
+  top: 190%;
   left: 99%;
   transform: translate(-50%, -50%);
  }
