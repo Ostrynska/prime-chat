@@ -28,6 +28,7 @@ export const HeaderWrap = styled.header`
  display: flex;
  align-items: flex-start;
  margin: 42px 0 60px 0;
+
  @media screen and (min-width: 1200px) {
   margin: 42px 0 81px 0;
   align-items: center;
@@ -101,5 +102,26 @@ export const Link = styled(HashLink)`
  &:hover {
   color: ${mainVars.colors.primaryColor};
   font-weight: 500;
+ }
+`;
+
+export const HeaderDecoration = styled.div`
+ display: flex;
+ position: relative;
+`;
+
+export const Image = styled.img`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+  z-index: -2;
+  position: absolute;
+  width: 393px;
+  top: 150%;
+  left: 99%;
+  transform: translate(-50%, -50%);
+ }
+ @media screen and (min-width: 1920px) {
+  width: 481px;
  }
 `;
