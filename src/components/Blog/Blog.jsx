@@ -5,7 +5,7 @@ import PostList from '../PostsList/PostsList';
 
 import { getPosts } from '../../shared/api/posts';
 import { Container } from '../Container/Conteiner';
-import { PreTitle } from '../PreTitle/PreTitle';
+import PageTitle from '../PageTitle/PageTitle';
 
 import { Section } from './Blog.styled';
 
@@ -33,8 +33,7 @@ const Blog = () => {
  return (
   <Section>
    <Container>
-    <PreTitle variant="primary" text={'Blog'} style={{ width: 119 }} />
-    <h2>Articles & Resources</h2>
+    <PageTitle text={'Blog'} title={'Articles & Resources'} />
     {loading && <Loader />}
     {error && <p>{error}</p>}
     <PostList items={items} />
