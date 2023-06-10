@@ -11,7 +11,7 @@ const PageTitle = ({ text, title }) => {
    <TitleWrapp>
     <PreTitle variant="primary" text={text} style={{ width: 119 }} />
     <Title>
-     {words.join(' ')} <strong>{lastWord}</strong>
+     {words.join(' ')} <span>{lastWord}</span>
     </Title>
     <Image />
    </TitleWrapp>
