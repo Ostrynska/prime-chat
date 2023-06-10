@@ -34,7 +34,7 @@ export const HeaderWrap = styled.header`
   justify-content: stretch;
  }
  @media screen and (min-width: 1920px) {
-  flex-wrap: wrap;
+  ${'' /* flex-wrap: wrap; */}
  }
 `;
 
@@ -44,7 +44,8 @@ export const HeaderNav = styled.div`
  justify-content: center;
 
  @media screen and (min-width: 1200px) {
-  flex-wrap: wrap;
+  ${'' /* flex-wrap: wrap; */}
+ }
 `;
 
 export const MenuList = styled.ul`
