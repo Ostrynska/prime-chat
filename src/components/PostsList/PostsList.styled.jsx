@@ -25,11 +25,11 @@ export const Item = styled.li`
  @media screen and (min-width: 768px) {
   padding: 39px;
   width: 471px;
-  height: 620px;
+  height: 575px;
  }
  @media screen and (min-width: 1200px) {
   width: 460px;
-  height: 662px;
+  height: 605px;
  }
  @media screen and (min-width: 1920px) {
   padding: 47px 48px;
@@ -45,11 +45,9 @@ export const Image = styled.img`
  border-radius: 25px;
  @media screen and (min-width: 768px) {
   width: 390px;
-  height: 270px;
  }
  @media screen and (min-width: 1200px) {
   width: 382px;
-  height: 284px;
  }
  @media screen and (min-width: 1920px) {
   width: 580px;

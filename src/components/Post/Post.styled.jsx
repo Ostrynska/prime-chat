@@ -165,6 +165,7 @@ export const Button = styled.button`
   height: 51px;
   border-radius: 72px;
   background: ${mainVars.colors.primaryColor};
+  transition: ${mainVars.transitions.main};
 
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -175,9 +176,12 @@ export const Button = styled.button`
   color: ${mainVars.colors.whiteColor};
 
   position: absolute;
-  bottom: 60px;
+  bottom: 90px;
  }
  @media screen and (min-width: 1920px) {
-  bottom: 50px;
+  bottom: 80px;
  }
+ &:hover {
+  color: ${mainVars.colors.whiteColor};
+  background-color: ${mainVars.colors.secondaryColor};
 `;

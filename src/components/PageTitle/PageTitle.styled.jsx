@@ -41,7 +41,7 @@ export const TitleWrapp = styled.div`
 
 export const Image = styled(Arrow)`
  display: none;
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 768px) {
   display: flex;
   position: absolute;
   top: -144px;

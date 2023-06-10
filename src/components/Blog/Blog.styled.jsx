@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { mainVars } from '../../utils/theme';
 
 export const Section = styled.section`
  padding-bottom: 45px;
