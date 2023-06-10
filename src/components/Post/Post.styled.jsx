@@ -124,3 +124,21 @@ export const PostList = styled.ul`
   color: ${mainVars.colors.textColor};
  }
 `;
+
+export const Button = styled.button`
+ min-width: 140px;
+ height: 51px;
+ border-radius: 72px;
+ background: ${mainVars.colors.primaryColor};
+
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 18px;
+ line-height: 1.61;
+ text-align: center;
+ text-transform: capitalize;
+ color: ${mainVars.colors.whiteColor};
+
+ position: absolute;
+ bottom: 50px;
+`;

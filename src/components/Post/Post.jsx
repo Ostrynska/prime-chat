@@ -4,6 +4,8 @@ import { Outlet, useParams, useNavigate, useLocation } from 'react-router-dom';
 
 import { getPostById } from '../../shared/api/posts';
 
+import { IoIosArrowRoundBack } from 'react-icons/io';
+
 import { Container } from '../Container/Conteiner';
 import { Loader } from '../Loader/Loader';
 import PageTitle from '../PageTitle/PageTitle';
@@ -19,6 +21,7 @@ import {
  PostQuoteText,
  PostQuoteWrapp,
  Quote,
+ Button,
 } from './Post.styled';
 
 const Post = () => {
@@ -63,7 +66,10 @@ const Post = () => {
    <Container>
     <PageTitle text={'Blog'} title={post.title} />
     <div>
-     <button onClick={goBack}>Go back</button>
+     <Button onClick={goBack}>
+      <IoIosArrowRoundBack style={{ marginRight: 5 }} size={15} />
+      Go back
+     </Button>
      <Image alt="Post" src={post.photoFull} />
      <PostContent>
       <PostData>{post.data}</PostData>

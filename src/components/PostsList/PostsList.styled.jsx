@@ -3,54 +3,58 @@ import { mainVars } from '../../utils/theme';
 
 import { BsArrowRight } from 'react-icons/bs';
 
-// export const PartnersSection = styled.section`
-//  padding-top: 20px;
-//  padding-bottom: 45px;
-//  @media screen and (min-width: 768px) {
-//   padding-top: 40px;
-//   padding-bottom: 75px;
-//  }
-//  @media screen and (min-width: 1200px) {
-//   padding-top: 80px;
-//   padding-bottom: 115px;
-//  }
-//  @media screen and (min-width: 1920px) {
-//   padding-top: 100px;
-//   padding-bottom: 135px;
-//  }
-// `;
-
 export const List = styled.ul`
  display: flex;
  flex-wrap: wrap;
  align-items: stretch;
  justify-content: center;
- @media screen and (min-width: 768px) {
- }
- @media screen and (min-width: 1200px) {
- }
+ gap: 40px;
  @media screen and (min-width: 1920px) {
   gap: 48px;
  }
 `;
 
 export const Item = styled.li`
- padding: 47px 48px;
-
- width: 676px;
- height: 674px;
+ padding: 39px;
+ width: 471px;
+ height: 593px;
 
  background: ${mainVars.colors.platformColor};
  border: 1px solid ${mainVars.colors.borderPostColor};
  border-radius: 30px;
+ @media screen and (min-width: 768px) {
+  padding: 39px;
+  width: 471px;
+  height: 620px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 460px;
+  height: 662px;
+ }
+ @media screen and (min-width: 1920px) {
+  padding: 47px 48px;
+  width: 676px;
+  height: 674px;
+ }
 `;
 
 export const Image = styled.img`
- width: 580px;
- height: 353px;
+ width: 100%;
 
  background: #a6a6a6;
  border-radius: 25px;
+ @media screen and (min-width: 768px) {
+  width: 390px;
+  height: 270px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 382px;
+  height: 284px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 580px;
+  height: 353px;
+ }
 `;
 
 export const ItemContent = styled.div`
