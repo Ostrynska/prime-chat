@@ -118,3 +118,19 @@ export const Image = styled.img`
   width: 481px;
  }
 `;
+export const ImageL = styled.img`
+ display: none;
+ @media screen and (min-width: 1200px) {
+  display: flex;
+  z-index: -2;
+  position: absolute;
+  width: 422px;
+  top: 440%;
+  left: 101%;
+  transform: translate(-50%, -50%);
+ }
+ @media screen and (min-width: 1920px) {
+  width: 481px;
+  top: 500%;
+ }
+`;

@@ -17,15 +17,20 @@ import {
  Link,
  HeaderDecoration,
  Image,
+ ImageL,
 } from './Header.styled';
 
 import imageDesktop from '../../images/header/bg-header@1x.png';
 import imageDesktopRetina from '../../images/header/bg-header@2x.png';
 
+import imageDesktopL from '../../images/header/bg-header-l@1x.png';
+import imageDesktopLRetina from '../../images/header/bg-header-l@2x.png';
+
 const Header = () => {
  const location = useLocation();
  const isRetina = window.devicePixelRatio > 1;
  const isBlogRoute = location.pathname.startsWith('/blog');
+ const isBlogRouteStart = location.pathname.startsWith('/');
 
  return (
   <HeaderWrap id="home">
@@ -71,6 +76,12 @@ const Header = () => {
      {isBlogRoute && (
       <Image
        src={isRetina ? imageDesktopRetina : imageDesktop}
+       alt="Header decoration"
+      />
+     )}
+     {isBlogRouteStart && (
+      <ImageL
+       src={isRetina ? imageDesktopLRetina : imageDesktopL}
        alt="Header decoration"
       />
      )}

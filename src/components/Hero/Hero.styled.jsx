@@ -71,6 +71,7 @@ export const Image = styled.img`
 export const HomeSection = styled.section`
  background-image: url(${arrowDesktop});
  background-repeat: no-repeat;
+ ${'' /* background-attachment: fixed; */}
  width: 100%;
  z-index: -1;
  padding-bottom: 102px;
@@ -78,10 +79,11 @@ export const HomeSection = styled.section`
   padding-bottom: 142px;
  }
  @media screen and (min-width: 1200px) {
+  background-position: 20% 30%;
   padding-bottom: 182px;
  }
  @media screen and (min-width: 1920px) {
-  background-position: 60% 90%;
+  background-position: 40% 50%;
   padding-bottom: 202px;
  }
 `;
@@ -141,7 +143,6 @@ export const HeroWrap = styled.div`
 
 export const ButtonWrap = styled(Link)`
  display: block;
- ${'' /* margin-bottom: 10px; */}
  @media screen and (min-width: 768px) {
   display: inline-block;
   margin-right: 21px;
