@@ -5,7 +5,8 @@ import { Outlet, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getPostById } from '../../shared/api/posts';
 
 import { Container } from '../Container/Conteiner';
-import { PreTitle } from '../PreTitle/PreTitle';
+import { Loader } from '../Loader/Loader';
+import PageTitle from '../PageTitle/PageTitle';
 import {
  Section,
  Image,
@@ -55,13 +56,12 @@ const Post = () => {
    : null;
 
  if (!post) {
-  return null; // Можна показати спінер або індікатор завантаження
+  return <Loader />;
  }
  return (
   <Section>
    <Container>
-    <PreTitle variant="primary" text={'Blog'} style={{ width: 119 }} />
-    <h1>{post.title}</h1>
+    <PageTitle text={'Blog'} title={post.title} />
     <div>
      <button onClick={goBack}>Go back</button>
      <Image alt="Post" src={post.photoFull} />
