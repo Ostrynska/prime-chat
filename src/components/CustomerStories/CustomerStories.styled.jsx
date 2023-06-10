@@ -72,7 +72,7 @@ export const Item = styled.div`
  }
  @media screen and (min-width: 1200px) {
   padding: 53px 68px;
-  max-width: 749px;
+  max-width: 668px;
  }
 `;
 
