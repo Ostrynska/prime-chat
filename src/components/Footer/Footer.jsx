@@ -160,7 +160,7 @@ const Footer = () => {
         <FooterCopyrightSpan>VictorFlow</FooterCopyrightSpan> powered by{' '}
         <FooterCopyrightSpan>Webflow</FooterCopyrightSpan>.
        </FooterCopyrightText>
-       <Link smooth to="/#chatbot">
+       <Link smooth to="/#home">
         <UpToTop size={50} />
        </Link>
       </FooterCopyright>
