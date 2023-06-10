@@ -141,10 +141,10 @@ export const HeroWrap = styled.div`
 
 export const ButtonWrap = styled(Link)`
  display: block;
- margin-bottom: 10px;
+ ${'' /* margin-bottom: 10px; */}
  @media screen and (min-width: 768px) {
   display: inline-block;
   margin-right: 21px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
  }
 `;
