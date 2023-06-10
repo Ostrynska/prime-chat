@@ -9,10 +9,10 @@ export const Section = styled.div`
   padding-bottom: 100px;
  }
  @media screen and (min-width: 1200px) {
-  padding-bottom: 175px;
+  padding-bottom: 150px;
  }
  @media screen and (min-width: 1920px) {
-  padding-bottom: 201px;
+  padding-bottom: 160px;
  }
 `;
 
@@ -26,6 +26,9 @@ export const Title = styled.h1`
  text-transform: capitalize;
 
  color: ${mainVars.colors.headerColor};
+ span {
+  font-weight: 700;
+ }
 `;
 
 export const TitleWrapp = styled.div`
