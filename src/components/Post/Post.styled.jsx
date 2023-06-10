@@ -22,7 +22,8 @@ export const Section = styled.section`
 
 export const Image = styled.img`
  width: 100%;
- height: 765px;
+ height: 614px;
+ object-fit: cover;
  border-radius: 25px;
 `;
 
