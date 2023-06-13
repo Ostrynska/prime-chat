@@ -110,12 +110,13 @@ export const Image = styled.img`
   z-index: -2;
   position: absolute;
   width: 393px;
-  top: 190%;
+  top: 151%;
   left: 99%;
   transform: translate(-50%, -50%);
  }
  @media screen and (min-width: 1920px) {
   width: 481px;
+  top: 190%;
  }
 `;
 export const ImageL = styled.img`
