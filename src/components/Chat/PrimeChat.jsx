@@ -1,4 +1,4 @@
-import { io } from 'socket.io-client';
+import io from 'socket.io-client';
 import { useState, useEffect } from 'react';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
@@ -39,19 +39,9 @@ import {
  Online,
 } from './Chat.styled';
 
-// const socket = {
-//  current: io('https://chat-back-socket.onrender.com'),
-// };
-
-const socket = io('https://chat-back-socket.onrender.com', {
- transports: ['websocket'],
- cors: {
-  origin: 'https://prime-chat.netlify.app',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['my-custom-header'],
-  credentials: true,
- },
-});
+const socket = {
+ current: io('https://chat-back-socket.onrender.com'),
+};
 
 const PrimeChat = () => {
  const [onlineUsers, setOnlineUsers] = useState(0);
