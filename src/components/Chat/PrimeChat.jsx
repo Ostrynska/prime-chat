@@ -43,7 +43,15 @@ import {
 //  current: io('https://chat-back-socket.onrender.com'),
 // };
 
-const socket = io('https://chat-back-socket.onrender.com');
+const socket = io('https://chat-back-socket.onrender.com', {
+ transports: ['websocket'],
+ cors: {
+  origin: 'https://prime-chat.netlify.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['my-custom-header'],
+  credentials: true,
+ },
+});
 
 const PrimeChat = () => {
  const [onlineUsers, setOnlineUsers] = useState(0);
