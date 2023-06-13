@@ -66,12 +66,12 @@ const Post = () => {
    <Container>
     <PageTitle text={'Blog'} title={post.title} />
     <div>
-     <Button onClick={goBack}>
-      <IoIosArrowRoundBack style={{ marginRight: 5 }} size={25} />
-      Go back
-     </Button>
      <Image alt="Post" src={post.photoFull} />
      <PostContent>
+      <Button onClick={goBack}>
+       <IoIosArrowRoundBack style={{ marginRight: 5 }} size={25} />
+       Go back
+      </Button>
       <PostData>{post.data}</PostData>
       <PostTitle>{post.title}</PostTitle>
       <PostText>{contentItems}</PostText>
