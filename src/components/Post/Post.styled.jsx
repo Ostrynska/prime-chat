@@ -26,6 +26,8 @@ export const Image = styled.img`
 `;
 
 export const PostContent = styled.div`
+ position: relative;
+
  margin-top: 38px;
  padding: 0 60px;
  @media screen and (min-width: 768px) {
@@ -176,10 +178,14 @@ export const Button = styled.button`
   color: ${mainVars.colors.whiteColor};
 
   position: absolute;
-  bottom: 90px;
+  transform: translate(-50%, -50%);
+  top: 2%;
+  left: 8%;
  }
  @media screen and (min-width: 1920px) {
-  bottom: 80px;
+  transform: translate(-50%, -50%);
+  top: 2%;
+  left: 5%;
  }
  &:hover {
   color: ${mainVars.colors.whiteColor};
