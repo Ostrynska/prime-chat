@@ -39,10 +39,9 @@ import {
  Online,
 } from './Chat.styled';
 
-const socket = io('https://chat-back-socket.onrender.com', {
- // Налаштування CORS для клієнта
- withCredentials: true,
-});
+const socket = {
+ current: io('https://chat-back-socket.onrender.com'),
+};
 
 const PrimeChat = () => {
  const [onlineUsers, setOnlineUsers] = useState(0);
