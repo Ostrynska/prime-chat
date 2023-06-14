@@ -39,9 +39,11 @@ import {
  Online,
 } from './Chat.styled';
 
-const socket = {
- current: io('https://chat-back-socket.onrender.com'),
-};
+const socket = io('https://chat-back-socket.onrender.com', {
+ extraHeaders: {
+  'Access-Control-Allow-Origin': '*',
+ },
+});
 
 const PrimeChat = () => {
  const [onlineUsers, setOnlineUsers] = useState(0);
