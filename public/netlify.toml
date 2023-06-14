@@ -1,9 +1,11 @@
 [[redirects]]
-to = “https://prime-chat.netlify.app/chat”
-status = 200
-force = true
-headers = {X-From = “Netlify”}
+  from = "/chat"
+  to = "https://prime-chat.netlify.app/chat"
+  status = 200
+  force = true
+  headers = { X-From = "Netlify" }
+
 [[headers]]
-for = "/”
-[headers.values]
-Access-Control-Allow-Origin = “*”
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
