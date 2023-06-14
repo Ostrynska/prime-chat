@@ -40,9 +40,8 @@ import {
 } from './Chat.styled';
 
 const socket = io('https://chat-back-socket.onrender.com', {
- extraHeaders: {
-  'Access-Control-Allow-Origin': '*',
- },
+ // Налаштування CORS для клієнта
+ withCredentials: true,
 });
 
 const PrimeChat = () => {
