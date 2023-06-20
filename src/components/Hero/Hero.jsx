@@ -38,7 +38,7 @@ const Hero = () => {
        Provide excellent customer service. Answer more tickets all-in-one
        Primarily software.
       </Title>
-      <ButtonWrap to="/chat">
+      <ButtonWrap to="https://front-socket-chat.onrender.com">
        <Button variant="primary" text={'Get started'} />
       </ButtonWrap>
       <Link to="/#subscribes">
