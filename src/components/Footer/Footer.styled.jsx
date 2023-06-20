@@ -116,6 +116,9 @@ export const FooterContactsLink = styled.a`
  line-height: 160%;
 
  color: ${mainVars.colors.textColor};
+ &:hover {
+  color: ${mainVars.colors.primaryColor};
+ }
 `;
 
 export const FooterContactsSpan = styled.span`
