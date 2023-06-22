@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+<h1> 📎Social media App</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Prime Chat is a realtime chat application project to learn <b>socket.io</b>.</p>
+<p>App is built using <b>React, Node.js</b>. <b>Firebase</b> is the platform used for authentication and storing data.</p>
 
 ## Available Scripts
 
