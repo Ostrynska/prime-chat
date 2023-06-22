@@ -9,6 +9,13 @@ import {
  ModalCloseButton,
  Title,
  Input,
+ EmailIcon,
+ PasswordIcon,
+ Button,
+ InputWrap,
+ CheckboxLabel,
+ Text,
+ TextLabel,
 } from './Modal.styled';
 
 export const ModalWindow = ({ onClose, openModal }) => {
@@ -44,8 +51,22 @@ export const ModalWindow = ({ onClose, openModal }) => {
       </ModalCloseButton>
       <Title>Sign In</Title>
       <form>
-       <Input />
+       <EmailIcon />
+       <Input placeholder="Email" />
+       <PasswordIcon />
+       <Input placeholder="Password" />
+       <InputWrap>
+        <div>
+         <input type="checkbox" id="remember" name="remember" />
+         <CheckboxLabel for="remember">Remember me</CheckboxLabel>
+        </div>
+        <TextLabel>Forgot password?</TextLabel>
+       </InputWrap>
+       <Button type="submit">Sign up</Button>
       </form>
+      <Text>
+       Don`t have an account? <span>Sign up now</span>
+      </Text>
      </ModalContainer>
     </ModalBody>
    </ModalOverlay>

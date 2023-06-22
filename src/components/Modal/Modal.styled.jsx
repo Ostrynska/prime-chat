@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
+import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
+
 export const ModalOverlay = styled.div`
  position: fixed;
  top: 0;
@@ -30,8 +32,16 @@ export const ModalContainer = styled.div`
  align-items: center;
  flex-direction: column;
  padding: 25px 12px;
+ max-width: 368px;
  @media (min-width: 478px) {
   padding: 50px 40px;
+  max-width: 440px;
+ }
+ @media screen and (min-width: 768px) {
+  max-width: 488px;
+ }
+ @media screen and (min-width: 1200px) {
+  max-width: 575px;
  }
 `;
 
@@ -56,7 +66,7 @@ export const Title = styled.h2`
  margin: 0 0 40px 0;
  fornt-family: 'Open Sans', sans-serif;
  font-weight: 600;
- font-size: 24px;
+ font-size: 26px;
  color: ${mainVars.colors.headerColor};
  line-height: 1.16;
  letter-spacing: -0.02em;
@@ -71,43 +81,139 @@ export const Title = styled.h2`
 `;
 
 export const Input = styled.input`
-  position: relative;
-  box-sizing: border-box;
-  background-color: initial;
-  padding: 12px 16px 12px 40px;
-  width: 100%;
-  height: 45px;
-  border: 1px solid hsla(0, 0%, 100%, 0.3);
-  border-opacity: 0.3;
-  border-radius: 6px;
-  fornt-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.8;
-  outline: none;
+ margin-bottom: 20px;
 
-  letter-spacing: -0.02em;
-  color: black;
+ position: relative;
+ background-color: initial;
+ padding: 12px 16px 12px 40px;
+ width: 100%;
+ height: 45px;
+ border-bottom: 1px solid black;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ fornt-family: 'Open Sans', sans-serif;
+ font-weight: 400;
+ font-size: 22px;
+ line-height: 1.6;
+ color: ${mainVars.colors.textColor};
 
-  :-webkit-autofill,
-  :-webkit-autofill:focus {
-      transition: background-color 600000s 0s, color 600000s 0s;
-  }
-  [data-autocompleted] {
-      background-color: transparent !important;
-  }
-  :hover,
-  :focus {
-    border: 1px solid black;
-    border-radius: 6px;
-  ::placeholder {
-    color: #ffffff;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-    padding: 16px 16px 16px 50px;
-  }
+ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+ :hover,
+ :focus {
+  border-bottom: 2px solid ${mainVars.colors.primaryColor};
+ }
+ @media screen and (min-width: 768px) {
+  padding: 16px 16px 16px 50px;
+ }
+`;
+
+export const EmailIcon = styled(AiOutlineMail)`
+ display: block;
+ position: absolute;
+ height: 18px;
+ width: 18px;
+ opacity: 80%;
+ top: 109.5px;
+ left: 26px;
+ color: ${mainVars.colors.primaryColor};
+ @media screen and (min-width: 477px) {
+  top: 132.5px;
+  left: 48px;
+ }
+ @media screen and (min-width: 768px) {
+  height: 24px;
+  width: 24px;
+  top: 140.5px;
+  left: 48px;
+ }
+ @media screen and (min-width: 1440px) {
+  top: 140.5px;
+  left: 48px;
+ }
+`;
+
+export const PasswordIcon = styled(AiOutlineLock)`
+ display: block;
+ position: absolute;
+ height: 18px;
+ width: 18px;
+ opacity: 80%;
+ top: 173.5px;
+ left: 26px;
+ color: ${mainVars.colors.primaryColor};
+ @media screen and (min-width: 477px) {
+  top: 196.5px;
+  left: 48px;
+ }
+ @media screen and (min-width: 768px) {
+  height: 24px;
+  width: 24px;
+  top: 206.5px;
+  left: 48px;
+ }
+ @media screen and (min-width: 1440px) {
+  top: 206.5px;
+  left: 48px;
+ }
+`;
+
+export const Button = styled.button`
+ margin-top: 20px;
+ padding: 16px 40px;
+
+ width: 100%;
+ height: 61px;
+
+ background: ${mainVars.colors.headerColor};
+ border-radius: 20px;
+
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 18px;
+ line-height: 160%;
+
+ text-transform: uppercase;
+ transition: ${mainVars.transitions.main};
+ color: ${mainVars.colors.whiteColor};
+ &:hover {
+  background: ${mainVars.colors.primaryColor};
+ }
+`;
+
+export const InputWrap = styled.div`
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+`;
+
+export const CheckboxLabel = styled.label`
+ margin-left: 5px;
+ font-family: 'Inter', sans-serif;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 160%;
+ color: ${mainVars.colors.textColor};
+`;
+
+export const Text = styled.p`
+ margin-top: 10px;
+ font-family: 'Inter', sans-serif;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 160%;
+ color: ${mainVars.colors.textColor};
+ span {
+  color: ${mainVars.colors.primaryColor};
+ }
+`;
+
+export const TextLabel = styled.p`
+ font-family: 'Inter', sans-serif;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 160%;
+ color: ${mainVars.colors.primaryColor};
 `;
