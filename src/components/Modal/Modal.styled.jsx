@@ -217,3 +217,36 @@ export const TextLabel = styled.p`
  line-height: 160%;
  color: ${mainVars.colors.primaryColor};
 `;
+
+export const Video = styled.iframe`
+ width: 90%;
+ height: 235px;
+ @media screen and (min-width: 477px) {
+  width: 80%;
+  height: 315px;
+ }
+ @media screen and (min-width: 768px) {
+  width: 80%;
+  height: 370px;
+ }
+ @media screen and (min-width: 968px) {
+  width: 80%;
+  height: 450px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 80%;
+  height: 40%;
+ }
+ @media screen and (min-width: 1440px) {
+  width: 90%;
+  height: 50%;
+ }
+ @media screen and (min-width: 1480px) {
+  width: 80%;
+  height: 50%;
+ }
+ @media screen and (min-width: 1900px) {
+  width: 60%;
+  height: 50%;
+ }
+`;

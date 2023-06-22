@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 import {
@@ -166,7 +168,7 @@ export const Image = styled.img`
  }
 `;
 
-export const ButtonWrap = styled.div`
+export const ButtonWrap = styled(NavLink)`
  margin-bottom: 12px;
  @media screen and (min-width: 1200px) {
   display: inline-block;

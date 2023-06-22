@@ -70,12 +70,7 @@ const BurgerMenu = () => {
       </MenuLink>
      </MenuItem>
     </MenuList>
-    <div
-     onClick={() => {
-      closeMenu();
-      openModal();
-     }}
-    >
+    <div onClick={openModal}>
      <Button variant="secondary" text={'Login'} />
     </div>
     {showModal && <ModalWindow onClose={closeModal} />}

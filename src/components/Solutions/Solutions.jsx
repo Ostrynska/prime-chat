@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container } from '../Container/Conteiner';
 import {
  Section,
@@ -18,12 +19,22 @@ import {
 } from './Solutions.styled';
 import { PreTitle } from '../PreTitle/PreTitle';
 import { ButtonWithIcon } from '../Button/Button';
+import { ModalVideoWindow } from '../Modal/ModalVideo';
 
 import solutionImage from '../../images/solutions/solutionImage@1x.png';
 import solutionImageRetina from '../../images/solutions/solutionImage@2x.png';
 
 const Solutions = () => {
+ const [showModal, setShowModal] = useState(false);
  const isRetina = window.devicePixelRatio > 1;
+
+ const openModal = () => {
+  setShowModal(true);
+ };
+
+ const closeModal = () => {
+  setShowModal(false);
+ };
 
  return (
   <Section id="solution">
@@ -36,10 +47,13 @@ const Solutions = () => {
       </Title>
      </Content>
      <PostTitle>
-      <ButtonWrap>
+      <ButtonWrap to={'/blog'}>
        <ButtonWithIcon variant="primary" text={'Chat With Us'} />
       </ButtonWrap>
-      <ButtonWithIcon variant="icon" text={'Watch Videos'} />
+      <div onClick={openModal}>
+       <ButtonWithIcon variant="icon" text={'Watch Videos'} />
+      </div>
+      {showModal && <ModalVideoWindow onClose={closeModal} />}
      </PostTitle>
     </TitleContent>
     <Post>
