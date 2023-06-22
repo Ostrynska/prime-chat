@@ -3,6 +3,8 @@ import { fallDown as Menu } from 'react-burger-menu';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 import { Button } from '../Button/Button';
+import { ModalWindow } from '../Modal/Modal';
+
 import {
  MenuLink,
  BurgerMenuStyles,
@@ -14,6 +16,7 @@ import {
 
 const BurgerMenu = () => {
  const [menuOpen, setMenuOpen] = useState(false);
+ const [showModal, setShowModal] = useState(false);
 
  const handleStateChange = state => {
   setMenuOpen(state.isOpen);
@@ -21,6 +24,14 @@ const BurgerMenu = () => {
 
  const closeMenu = () => {
   setMenuOpen(false);
+ };
+
+ const openModal = () => {
+  setShowModal(true);
+ };
+
+ const closeModal = () => {
+  setShowModal(false);
  };
  return (
   <BurgerMenuContainer>
@@ -59,7 +70,15 @@ const BurgerMenu = () => {
       </MenuLink>
      </MenuItem>
     </MenuList>
-    <Button variant="secondary" text={'Login'} />
+    <div
+     onClick={() => {
+      closeMenu();
+      openModal();
+     }}
+    >
+     <Button variant="secondary" text={'Login'} />
+    </div>
+    {showModal && <ModalWindow onClose={closeModal} />}
    </Menu>
   </BurgerMenuContainer>
  );

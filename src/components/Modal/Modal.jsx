@@ -18,7 +18,7 @@ import {
  TextLabel,
 } from './Modal.styled';
 
-export const ModalWindow = ({ onClose, openModal }) => {
+export const ModalWindow = ({ onClose }) => {
  useEffect(() => {
   const handleKeyDown = e => {
    if (e.code === 'Escape') {
