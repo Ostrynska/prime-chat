@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Container } from '../Container/Conteiner';
 import { Button } from '../Button/Button';
+import { ModalWindow } from '../Modal/Modal';
 
 import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
@@ -27,7 +29,16 @@ import imageDesktopL from '../../images/header/bg-header-l@1x.png';
 import imageDesktopLRetina from '../../images/header/bg-header-l@2x.png';
 
 const Header = () => {
+ const [showModal, setShowModal] = useState(false);
  const isRetina = window.devicePixelRatio > 1;
+
+ const openModal = () => {
+  setShowModal(true);
+ };
+
+ const closeModal = () => {
+  setShowModal(false);
+ };
 
  return (
   <HeaderWrap id="home">
@@ -66,9 +77,10 @@ const Header = () => {
        </MenuItem>
       </MenuList>
      </HeaderNav>
-     <BtnWrap>
+     <BtnWrap onClick={openModal}>
       <Button variant="secondary" text={'Login'} />
      </BtnWrap>
+     {showModal && <ModalWindow onClose={closeModal} />}
      <BurgerMenu />
      <Routes>
       <Route
