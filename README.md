@@ -26,3 +26,6 @@
 **4. Run Project**
 * `npm start`
  <br>
+ <img src="./public/01.png">
+ <img src="./public/02.png">
+ <img src="./public/03.png">
