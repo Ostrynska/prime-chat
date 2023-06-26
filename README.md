@@ -11,8 +11,8 @@
 <p>The current version of the app allows you to join a chat and send messages in a real-time mode. Our users can test the demo version of the chat by going to the corresponding page and entering their names. The user can also see the chat history, the time and date of the message, and the number of users who are online.  Each user gets a random avatar in the online chat.</p>
 
 ## Tech Stack
-* <b>Client :</b> React JS
-* <b>Server :</b> Node JS
+* <b>Client :</b> React
+* <b>Server :</b> Node.js
 * <b>Database :</b> Mongo DB
 * <b>Deployment :</b> Netlify, Render
 
