@@ -1,7 +1,8 @@
 <h1> 📎Prime Chat web-site</h1>
 
-<p>This is a demo real-time chat application project to learn <b>socket.io</b> (Full Stack Chatting App).</p>
-<p>Web-site is built using <b>React, Node.js</b>. Uses Socket.io for real-time communication and stores user details in encrypted format in <b>Mongo DB</b> Database.</p>
+<p>This is a demo real-time chat application project to learn <b>Socket.io</b> (Full Stack Chatting App).</p>
+<p>The application has been developed taking into account the adaptive layout from mobile devices to desktops and built using <b>React, Node.js</b>. Uses <b>Socket.io</b> for real-time communication and stores user details in encrypted format in <b>Mongo DB</b> Database.</p>
+      
 
 ## Description
 
