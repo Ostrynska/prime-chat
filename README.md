@@ -17,7 +17,9 @@
 * <b>Deployment :</b> Netlify, Render
 
 ## Links To Repositories 
-* <b>[Front-End :](https://github.com/Ostrynska/prime-chat)</b> 
+* <b>Front-End :</b>
+  - [PrimeChat Landing](https://github.com/Ostrynska/prime-chat)
+  - [Chat Demo](https://front-socket-chat.onrender.com)
 * <b>Back-End :</b>
   - [Socket.io](https://github.com/Ostrynska/back-socket)
   - [Blog](https://github.com/Ostrynska/back-blog)
