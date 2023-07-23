@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
 import bgSubscribe from '../../images/subscribe/bgSubscribe@1x.png';
@@ -132,4 +132,52 @@ export const Button = styled.button`
   color: #ffffff;
   background-color: ${mainVars.colors.secondaryColor};
  }
+`;
+
+export const ModalCloseButton = styled.button`
+ border: none;
+ width: 12px;
+ height: 12px;
+ position: absolute;
+ top: 15px;
+ right: 18px;
+ cursor: pointer;
+ background-color: transparent;
+`;
+export const Message = styled.div`
+ display: flex;
+ flex-direction: column;
+`;
+
+export const TextWrappTitle = styled.h2`
+ color: #000;
+
+ padding-bottom: 1.5rem;
+ padding-top: 1.5rem;
+ font-family: 'Inter', sans-serif;
+ font-size: 1.75rem;
+ font-weight: 500;
+ line-height: 1.2;
+ margin-bottom: 0.5rem;
+`;
+
+export const MessageStatus = styled(TextWrappTitle)`
+ ${props =>
+  props.$success &&
+  css`
+   color: green;
+  `}
+ ${props =>
+  props.$error &&
+  css`
+   color: red;
+  `}
+`;
+
+export const MessageStatusText = styled.p`
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+
+ font-family: 'Open Sans', sans-serif;
 `;
